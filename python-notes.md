@@ -874,12 +874,37 @@ True
 >>>
 ```
 
+Compound 'OR' expressions:
+
+  - code example: `(expr1) or (expr 2) or (expr 3) or (expr 4) or ... (expr n)`
+  - python evaluates the expressions from left to right.  
+  - The first true evaluation found, it stops evaluating all other expressions and returns the last evaluated expression
+
+Compound 'AND' expressions:
+
+  - code example: `(expr1) and (expr 2) and (expr 3) and (expr 4) and ... (expr n)`
+  - python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
+  - the value of the last expression, which was found to be false, is returned
 
 
+Identity Operands:
 
+  - Difference between Identity (`x is y`) and equality (`x == y`):
+    - identity (`is`) checks if two items refer to the same underlying object
+    - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
 
+```Python
+# Example
+>>> x = 1001
+>>> y = 1000 + 1
+>>> print(x, y)
+1001 1001
 
-
+>>> x == y
+True
+>>> x is y
+False
+```
 
 
 
