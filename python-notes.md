@@ -2,7 +2,7 @@
 
 Test:
 -----
-```
+```Javascript
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
   dateformat.i18n = require('./lang/' + l)
@@ -16,7 +16,7 @@ Strings:
 
 Strings can be broken up over multiple lines without backspaces or anything
 
-```
+```Python
 >>>my_string = ('This is a super long string const '
                 'spread out over multiple lines. '
                 'And look, no backslash characters '
@@ -27,7 +27,7 @@ Strings can be broken up over multiple lines without backspaces or anything
 
 Triple Quotes:
 
-```
+```Python
 >>>my_string = """
   did you know that you can use triple quotes for multi-line strings as well?
   However, there is a difference in how they are represented.
