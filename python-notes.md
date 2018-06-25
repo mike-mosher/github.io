@@ -1,15 +1,5 @@
 # Random Python Snippets:
 
-Test:
------
-```Javascript
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
 
 Strings:
 ----
@@ -39,7 +29,7 @@ Triple Quotes:
 
 Joining and Splitting Strings:
 
-```
+```Python
 >>> l = ['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
 >>> l
 ['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
@@ -56,7 +46,7 @@ Joining and Splitting Strings:
 ```
 
 Get Subset of a String:
-```
+```Python
 "Hello World"[:5]       # 'Hello'
 ```
 
@@ -64,7 +54,7 @@ Get Subset of a String:
 String Methods:
 
 strip():
-```
+```Python
 # Use this to remove leading and trailing whitespace
 s = ' Hello World '
 s.strip()
@@ -72,7 +62,7 @@ s.strip()
 ```
 
 replace():
-```
+```Python
 # use this to remove all spaces
 s = ' Hello World'
 s.replace()
@@ -80,7 +70,7 @@ s.replace()
 ```
 
 split():
-```
+```Python
 # use this to split the string up into a list of items
 s = 'Hello World'
 s.split()
@@ -99,7 +89,7 @@ String Formatting:
 
 Old Style:
 
-```
+```Python
 >>> 'This is a %s and this is a number/integer: %i' % ('string', 17)
 'This is a string and this is a number/integer: 17'
 ```
@@ -108,7 +98,7 @@ New Style:
   - https://docs.python.org/3/library/string.html#string-formatting
   - Introduced in Python 3, and is prefered over the old style (even though the old style is still allowed)
 
-```
+```Python
 >>>'This is a {} and this is a number/integer: {}'.format('string', 17)
 'This is a string and this is a number/integer: 17'
 >>>
@@ -126,7 +116,7 @@ mber=17)
 New New Style (Python 3.6+):
   - Literal String Interpolation or Formatted String Literals
 
-```
+```Python
 >>> string = 'string'
 >>> number = 17
 >>> f'This is a {string} and this is a number/integer: {number}'
@@ -142,7 +132,7 @@ Diff between String Concatenation and String Interpolation:
 ----
 
 String Concatenation:
-```
+```Python
 >>> name = 'Mike'
 >>> age = 37
 >>>
@@ -150,7 +140,7 @@ String Concatenation:
 ```
 
 String Interpolation:
-```
+```Python
 >>> name = 'Mike'
 >>> age = 37
 >>>
@@ -163,7 +153,7 @@ Pretty Printing Stuff:
 
 you can use json.dumps():
 
-```
+```Python
 import json
 
 >>> d
@@ -202,7 +192,7 @@ ess': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zip
 
 Or better yet, use pprint!:
 
-```
+```Python
 >>> from pprint import pprint
 >>>
 >>> d
@@ -272,7 +262,7 @@ Lists:
 
 Create:
 
-```
+```Python
 l = []
 l = list()
 
@@ -286,7 +276,7 @@ B = A           # both names will point to the same list
 
 Adding items to lists:
 
-```
+```Python
 l.append(x)                     # add to end of list
 l.insert(2, x)                  # add item to index 2 of list (3rd item)
 l.extend(["new", "elements"])   # concat this list to the end of l
@@ -299,7 +289,7 @@ l.extend(["d", "e", "f"])       # ["a", "b", "c", "d", "e", "f"]
 
 Access list items:
 
-```
+```Python
 l = ['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
 l[5]                  # 'elements'
 l.index("elements")   # 5
