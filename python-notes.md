@@ -132,6 +132,7 @@ Diff between String Concatenation and String Interpolation:
 ----
 
 String Concatenation:
+
 ```Python
 >>> name = 'Mike'
 >>> age = 37
@@ -140,6 +141,7 @@ String Concatenation:
 ```
 
 String Interpolation:
+
 ```Python
 >>> name = 'Mike'
 >>> age = 37
@@ -157,11 +159,7 @@ you can use json.dumps():
 import json
 
 >>> d
-{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'addr
-ess': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92
-998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442'
-, 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi
--layered client-server neural-net', 'bs': 'harness real-time e-markets'}}
+{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}
 >>>
 >>> print(json.dumps(d, indent=4))
 {
@@ -196,11 +194,7 @@ Or better yet, use pprint!:
 >>> from pprint import pprint
 >>>
 >>> d
-{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'addr
-ess': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92
-998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442'
-, 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi
--layered client-server neural-net', 'bs': 'harness real-time e-markets'}}
+{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}
 >>>
 >>> pprint(d)
 {'address': {'city': 'Gwenborough',
@@ -281,7 +275,7 @@ l.append(x)                     # add to end of list
 l.insert(2, x)                  # add item to index 2 of list (3rd item)
 l.extend(["new", "elements"])   # concat this list to the end of l
 
--- difference between append and extend:
+# -- difference between append and extend:
 l = ["a", "b", "c"]
 l.append(["d", "e", "f"])       # ["a", "b", "c" ["d", "e", "f"] ]
 l.extend(["d", "e", "f"])       # ["a", "b", "c", "d", "e", "f"]
@@ -305,14 +299,14 @@ l[::2] # get every other item, starting with the first
 
 Searching items in list:
 
-```
+```Python
 if value in L:
   print "list contains", value
 ```          
 
 Deleting items in a list:
 
-```
+```Python
 del L[i]
 del L[i:j]
 item = L.pop() # last item
@@ -323,7 +317,7 @@ L.remove(item)
 
 Copy items from a list:
 
-```
+```Python
 a = [1, 2, 3, 4, 5]
 
 # shallow copy
@@ -339,7 +333,7 @@ b = list.copy()
 
 Methods:
 
-```
+```Python
 list.index(x)       # get index of first matching item
 list.count(x)       # number of x items
 list.sort()
@@ -351,7 +345,7 @@ Notes:
   - If you have multiple variables pointing to a list, then updating it updates both variables
   - to avoid this:
 
-```
+```Python
   L = []
   M = L[:] # create a copy
 
@@ -364,14 +358,14 @@ Dictionaries:
 ----
 
 Create a dictionary:
-```
+```Python
 d = {}
 d = {"name": "Mike", "Age": 7}
 ```
 
 
 Access items:
-```
+```Python
 d["name"]
 d.get("name")
 ```
@@ -382,7 +376,7 @@ this is freaking awesome:
 
 Get an item from a dic, but provide a default value if the provided key doesn't match:
 
-```
+```Python
 d = { 'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3' }
 
 print(d.get('key4', 'default'))
@@ -390,23 +384,20 @@ print(d.get('key4', 'default'))
 # Output: default
 ```
 
-***
-***
-
 
 Adding / Updating items:
-```
+```Python
 d["city"] = "Bayfield"
 ```
 
 Deleting items:
-```
+```Python
 del d["city"]
 dict.clear();         # remove all entries in dict
 ```
 
 Loop over dicts:
-```
+```Python
 for k in d:               # get keys in dict
   print k
 
@@ -419,7 +410,7 @@ for v in d.values():      # get values in dict
 
 Methods:
 
-```
+```Python
 d.has_key(key)      # returns true if key exists
 d.items()           # returns key, value tuples as a list
 d.keys()            # returns list of keys
@@ -431,7 +422,7 @@ Sets:
 ----
 
 Create a Set:
-```
+```Python
 s = set()                       # creates empty set
 s = {}                          # This does not work.  This creates an empty dictionary
 s = {1,2,3,4,5}
@@ -439,12 +430,12 @@ l = [1,2,3,4,5]; s = set(l)     # create a set from a list
 ```
 
 Add to a Set:
-```
+```Python
 s.add("test")
 ```
 
 Remove from a Set:
-```
+```Python
 s.discard("test")
 ```
 
@@ -454,7 +445,7 @@ Tuples:
 ----
 
 Create a Tuple:
-```
+```Python
 t = ()          # empty tuple
 t = 'test',     # tuple with one item (note the comma)
 t = ('test',)
@@ -471,7 +462,7 @@ Advanced Variables:
 
 Underscores and Double Underscores (Dunders):
 
-```
+```Python
 Single Leading Underscore: _var
 Double Trailing Underscore: var_
 Double Leading Underscore: __var
@@ -519,7 +510,7 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 IF Statements:
 ----
 
-```
+```Python
 if condition_1:
     statement_block_1
 elif condition_2:
@@ -530,12 +521,12 @@ else:
 
 Abbreviated if:
 
-```
+```Python
 x if condition else y;
 ```
 
 Ternary if:
-```
+```Python
 # The first is a fairly standard teranary style;
 # <value if true> if <conditional> else <value if false>
 
@@ -549,7 +540,7 @@ print ('passed') if x else print('did not pass')
 Loops:
 ----
 
-```
+```Python
     for loops:
         1)
         for iterating_var in sequence:
@@ -668,7 +659,7 @@ Testing Flags and Vars:
 
 Check if var exists:
 
-```
+```Python
 try:
     x
 except NameError:
@@ -681,7 +672,7 @@ else:
 Check if var is true:
   - See previous section called 'Knowing when something is True or False'
 
-```
+```Python
 >>> a = 0
 >>> b = 1
 >>> c = 'exists'
@@ -699,7 +690,7 @@ exists
 
 Check if a var is false:
 
-```
+```Python
 if not var:
   print('var is false')
 ```
@@ -710,7 +701,7 @@ When a var is false:
 
 How not to check if a var is empty:
 
-```
+```Python
 # Good
 if not x:     # Works for strings, lists, dicts, sets, and tuples. Strings evaluate to False if they are empty.
 
@@ -724,7 +715,7 @@ if foo == "":
 
 Ternary if to check if something is true:
 
-```
+```Python
 # The first is a fairly standard ternary style;
 # <value if true> if <conditional> else <value if false>
 
@@ -742,7 +733,7 @@ Using the 'OR' logical operator:
     - return statements in functions:
       `def greater_than_ten(num): return (num > 10) or False`
 
-```
+```Python
 # Examples:
 
 >>> x = 3
@@ -807,7 +798,7 @@ False
 
 Setting a default value for a variable using the 'OR' logical operand:
 
-```
+```Python
 # One thing we can do from this is set a default value in a variable
 
 >>> x = 0
@@ -840,7 +831,7 @@ Using the 'AND' logical operator:
     - if the first if falsy, there is no way that the overall statement can be true, so it returns the first value and doesn't move forward
     - if the first if true, then the second value can only evaluate to truthy or falsy, so it doesn't need to explicity analyze it, just return the second value
 
-```
+```Python
 # Example:
 
 >>> x = 3
@@ -897,12 +888,12 @@ Comprehensions:
 
 list comprehension:
 
-```
+```Python
 l = [mapping-expression for element in source-list]
 ```
 list comprehension that filters on condition:
 
-```
+```Python
 l = [mapping-expression for element in source-list if filter-expression]
 ```
 
@@ -914,7 +905,7 @@ checking if dict key exists:
 
 How not to do it:
 
-```
+```Python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 if not d['key4']:
@@ -930,7 +921,7 @@ KeyError: 'key4'
 
 How to do it:
 
-```
+```Python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 if 'key4' not d:
@@ -939,7 +930,7 @@ if 'key4' not d:
 
 Newer, cooler way of doing it with setdefault():
 
-```
+```Python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 # If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
@@ -955,7 +946,7 @@ print(d)
 Remove Dups from List:
 ----
 
-```
+```Python
 items = [2, 2, 3, 3, 1]
 
 newitems2 = list(set(items))
@@ -964,14 +955,14 @@ newitems2 = list(set(items))
 
 Set Global Variables programatically:
 
-```
+```Python
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
 globals().update(d)
 ```
 
 Pytonic way of value swapping:
 
-```
+```Python
 """pythonic way of value swapping"""
 a, b = 5, 10
 
@@ -984,7 +975,7 @@ Reading Files:
 ----
 Code to read files
 
-```
+```Python
 
 ###
 ### Read from csv file
@@ -1030,8 +1021,6 @@ with open(SOME_LARGE_FILE) as f:
     for i in f:             # Reads each line individually
         print(i)
 
-
-
 ```
 
 
@@ -1040,7 +1029,7 @@ HTTP Requests:
 
 Basic example:
 
-```
+```Python
 import requests
 
 response = requests.get('http://www.amazon.com')
@@ -1051,7 +1040,7 @@ print(response.headers)
 
 Disable SSL Certificate Verification:
 
-```
+```Python
 requests.get(url, verify=False)
 ```
 
@@ -1061,7 +1050,7 @@ Kerberos:
 ----
 
 How to do Kerberos auth to internal websites:
-````
+````Python
 import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 
@@ -1075,8 +1064,8 @@ print(r.status_code)   # 200 OK
 
 ````
 
-A more complext example of requests, using query string parameters, headers, and ssl verification turned off:
-```
+A more complex example of requests, using query string parameters, headers, and ssl verification turned off:
+```Python
 # Wiki API
 url = 'https://share.amazon.com/sites/ps/Networking/NHO/Lists/Mentee%20Case%20Review/PersonalViews.aspx'
 
@@ -1114,7 +1103,7 @@ Regex:
 ----
 
 
-```
+```Python
 import re
 
 text = 'something here'
@@ -1125,7 +1114,7 @@ match = re.search(r'something', text)
 match.group(0)  # 'something'
 ```
 
-```
+```Python
 # more complex example
 text = 'var stuff = "other stuff in the text";var WPQ2ListData = something I actually want to grep;var WPQ2SchemaData = "other stuff"'
 
@@ -1158,7 +1147,7 @@ json.loads():
 
 converts a string to a dict:
 
- ```
+ ```Python
 import json
 
 s = '{"test": "value"}'
@@ -1172,7 +1161,7 @@ print(d)          # {'test': 'value'}
 
 Get JSON data from URL with requests:
 
-```
+```Python
 import json
 
 r = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -1194,7 +1183,7 @@ Logging:
 
 Below is code that lets you log to a specified log file (change 'logfile.log') and to the console
 
-```
+```Python
 import logging
 
 # set up logging to file
@@ -1227,7 +1216,7 @@ logging.info('This is a log message')
 Most common elements in an iterable:
 ------------------------------------
 
-```
+```Python
 # collections.Counter lets you find the most common
 # elements in an iterable:
 
@@ -1245,7 +1234,7 @@ Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
 Permutations:
 ------------
 
-```
+```Python
 # itertools.permutations() generates permutations
 # for an iterable. Time to brute-force those passwords ;-)
 
@@ -1286,21 +1275,21 @@ Variable Unpacking:
 
 enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
 
-```
+```Python
 for index, item in enumerate(some_list):
     # do something with index and item
 ```
 
 Variable swap can be an example of unpacking:
 
-```
+```Python
 a, b = b, a
 ```
 
 
 Nested unpacking works as well:
 
-```
+```Python
 >>> v = 1
 >>> l = [2,3]
 >>>
@@ -1316,7 +1305,7 @@ Nested unpacking works as well:
 
 Python 3 has an new form of extended unpacking:
 
-```
+```Python
 a, *rest = [1, 2, 3]
 # a = 1, rest = [2, 3]
 
@@ -1326,7 +1315,7 @@ a, *middle, c = [1, 2, 3, 4]
 
 Use a throwaway variable when unpacking:
 
-```
+```Python
 >>> filename = 'foobar.txt'
 >>> basename, __, ext = filename.rpartition('.')
 >>> basename
