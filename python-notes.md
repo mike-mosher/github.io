@@ -534,6 +534,22 @@ print ('passed') if x else print('did not pass')
 
 ```
 
+BREAK Statement:
+----
+
+  - used to break out of a `for` or `while` loop
+  - Note: if you break out of a for or while loop, any corresponding loop else block is not executed.
+
+
+CONTINUE Statement:
+----
+
+  - The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
+
+
+PASS Statement:
+----
+  - `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
 
 
 
