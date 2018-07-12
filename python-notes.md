@@ -83,6 +83,13 @@ s = ' Hello   World'
 # 'Hello World'
 ```
 
+s.title():
+```Python
+# converts string to 'Title' case 
+>>> 'the sun also rises'.title()
+'The Sun Also Rises'
+```
+
 
 
 String Formatting:
