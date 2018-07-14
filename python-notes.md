@@ -437,14 +437,62 @@ l = [1,2,3,4,5]; s = set(l)     # create a set from a list
 ```
 
 Add to a Set:
+  - add a single element
 ```Python
 s.add("test")
 ```
 
+Update a Set:
+  - add multiple elements
+```Python
+s.update([1,2,3,4,5])
+```
+
 Remove from a Set:
+  - removes item from a set, but raises an error if the item doesn't exist 
+```Python
+s.remove("test")
+```
+
+Discard from a Set:
+  - removes item from a set, but doesn't raise any errors if the item doesn't exist 
 ```Python
 s.discard("test")
 ```
+
+
+
+Use case for Sets:
+  - to remove duplicate values 
+  - when combining two lists and need unique items
+
+Example:
+  - using a for loop to remove duplicate items in a list:
+
+```Python
+>>> my_list = [1, 2, 3, 2, 3, 4]
+>>> no_duplicate_list = []
+>>>
+>>> for item in my_list:
+...     if item not in no_duplicate_list:
+...             no_duplicate_list.append(item)
+...
+>>> no_duplicate_list
+[1, 2, 3, 4]
+```
+
+  - Using sets to do the same thing:
+
+```Python
+>>> my_list = [1, 2, 3, 2, 3, 4]
+>>>
+>>> no_duplicate_list = list(set(my_list))
+>>>
+>>> no_duplicate_list
+[1, 2, 3, 4]
+>>>
+```
+
 
 
 
@@ -595,7 +643,7 @@ Loops:
         2)
         while expression: statment
 
-        3)      # else statement is run after the while loop finishes
+        1)      # else statement is run after the while loop finishes
         while expression:
             statement
         else:
