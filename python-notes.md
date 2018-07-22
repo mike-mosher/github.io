@@ -415,6 +415,20 @@ for v in d.values():      # get values in dict
   print v
 ```
 
+
+How to sort a shallow dict:
+```Python
+>>> d = {'test': 'seven', 'apple': 'six', 'zinger': 'five' }
+>>> 
+>>> d2 = { i : d[i] for i in sorted(d) }    # Dict comprehension
+>>> 
+>>> d2
+{'apple': 'six', 'test': 'seven', 'zinger': 'five'}
+ 
+```
+
+
+
 Methods:
 
 ```Python
