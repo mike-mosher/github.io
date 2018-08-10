@@ -405,6 +405,31 @@ if d.get('test'):
   # only runs if this key exists.  If not, it returns NoneType, which evaluates to boolean False
 ```
 
+Crude way of updating a dictionary (d1) with any key/value pairs from d2 that don't exist in d1
+
+```Python
+>>> d1 = {'test1': 'value1', 'test2': 'value2', 'test3': 'value3'}
+>>> d2 = {'test1': 'val1', 'test2': 'val2'}
+>>> 
+>>> d1
+{'test1': 'value1', 'test2': 'value2', 'test3': 'value3'}
+>>> d2
+{'test1': 'val1', 'test2': 'val2'}
+>>> 
+>>> for i, n in d1.items():
+...     d2[i] = d2.get(i, n)
+... 
+>>> d2
+{'test1': 'val1', 'test2': 'val2', 'test3': 'value3'}
+>>> 
+>>> 
+>>> #Now let's do it with a dictionary comprehension
+>>> test= { d2[i] : d2.get(i, n) for i, n in d1.items() }
+>>> test
+{'val1': 'val1', 'val2': 'val2', 'value3': 'value3'}
+
+```
+
 
 Adding / Updating items:
 ```Python
