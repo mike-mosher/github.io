@@ -1107,6 +1107,7 @@ newitems2 = list(set(items))
 
 
 Set Global Variables programatically:
+____
 
 ```Python
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
@@ -1114,6 +1115,7 @@ globals().update(d)
 ```
 
 Pytonic way of value swapping:
+____
 
 ```Python
 """pythonic way of value swapping"""
