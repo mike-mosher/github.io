@@ -377,9 +377,8 @@ d["name"]
 d.get("name")
 ```
 
-***
-this is freaking awesome:
-***
+
+__this is freaking awesome:__
 
 Get an item from a dic, but provide a default value if the provided key doesn't match:
 
@@ -389,6 +388,12 @@ d = { 'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3' }
 print(d.get('key4', 'default'))
 
 # Output: default
+```
+
+You could use this in an IF statement to run code if a key exists
+```Python
+if d.get('test', 0):
+  # We only run this code if d['test'] exists
 ```
 
 
