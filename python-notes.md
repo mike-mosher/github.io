@@ -1080,6 +1080,7 @@ if 'key4' not in d:
   print('key4 not in d')
 ```
 
+
 Newer, cooler way of doing it with setdefault():
 
 ```Python
