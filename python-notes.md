@@ -1076,8 +1076,8 @@ How to do it:
 ```Python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
-if 'key4' not d:
-  print('not in d')
+if 'key4' not in d:
+  print('key4 not in d')
 ```
 
 Newer, cooler way of doing it with setdefault():
@@ -1174,6 +1174,77 @@ with open(SOME_LARGE_FILE) as f:
         print(i)
 
 ```
+
+
+Reading CSV Files:
+----
+
+
+- csv file:
+
+```
+name,department,birthday month
+John Smith,Accounting,November
+Erica Meyers,IT,March
+```
+
+
+```Python
+import csv
+
+with open('employee_birthday.txt', mode='r') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            print(f'Column names are {", ".join(row)}')
+            line_count += 1
+        print(f'\t{row["name"]} works in the {row["department"]} department, and was born in {row["birthday month"]}.')
+        line_count += 1
+    print(f'Processed {line_count} lines.')
+```
+
+Output:
+```
+Column names are name, department, birthday month
+    John Smith works in the Accounting department, and was born in November.
+    Erica Meyers works in the IT department, and was born in March.
+Processed 3 lines.
+```
+
+
+- Reading CSVs with pandas
+
+
+- CSV file:
+```
+Name,Hire Date,Salary,Sick Days remaining
+Graham Chapman,03/15/14,50000.00,10
+John Cleese,06/01/15,65000.00,8
+Eric Idle,05/12/14,45000.00,10
+Terry Jones,11/01/13,70000.00,3
+Terry Gilliam,08/12/14,48000.00,7
+Michael Palin,05/23/13,66000.00,8
+```
+
+```Python 
+import pandas
+df = pandas.read_csv('hrdata.csv')
+print(df)
+```
+
+Output:
+```
+             Name Hire Date   Salary  Sick Days remaining
+0  Graham Chapman  03/15/14  50000.0                   10
+1     John Cleese  06/01/15  65000.0                    8
+2       Eric Idle  05/12/14  45000.0                   10
+3     Terry Jones  11/01/13  70000.0                    3
+4   Terry Gilliam  08/12/14  48000.0                    7
+5   Michael Palin  05/23/13  66000.0                    8
+```
+
+
 
 
 HTTP Requests:
