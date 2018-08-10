@@ -6,7 +6,7 @@ Strings:
 
 Strings can be broken up over multiple lines without backspaces or anything
 
-```Python
+```python3
 >>>my_string = ('This is a super long string const '
                 'spread out over multiple lines. '
                 'And look, no backslash characters '
@@ -17,7 +17,7 @@ Strings can be broken up over multiple lines without backspaces or anything
 
 Triple Quotes:
 
-```Python
+```python3
 >>>my_string = """
   did you know that you can use triple quotes for multi-line strings as well?
   However, there is a difference in how they are represented.
@@ -29,7 +29,7 @@ Triple Quotes:
 
 Joining and Splitting Strings:
 
-```Python
+```python3
 >>> l = ['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
 >>> l
 ['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
@@ -46,7 +46,7 @@ Joining and Splitting Strings:
 ```
 
 Get Subset of a String:
-```Python
+```python3
 "Hello World"[:5]       # 'Hello'
 ```
 
@@ -54,7 +54,7 @@ Get Subset of a String:
 String Methods:
 
 strip():
-```Python
+```python3
 # Use this to remove leading and trailing whitespace
 s = ' Hello World '
 s.strip()
@@ -62,7 +62,7 @@ s.strip()
 ```
 
 replace():
-```Python
+```python3
 # use this to remove all spaces
 s = ' Hello World'
 s.replace()
@@ -70,7 +70,7 @@ s.replace()
 ```
 
 split():
-```Python
+```python3
 # use this to split the string up into a list of items
 s = 'Hello World'
 s.split()
@@ -84,7 +84,7 @@ s = ' Hello   World'
 ```
 
 s.title():
-```Python
+```python3
 # converts string to 'Title' case 
 >>> 'the sun also rises'.title()
 'The Sun Also Rises'
@@ -96,7 +96,7 @@ String Formatting:
 
 Old Style:
 
-```Python
+```python3
 >>> 'This is a %s and this is a number/integer: %i' % ('string', 17)
 'This is a string and this is a number/integer: 17'
 ```
@@ -105,7 +105,7 @@ New Style:
   - https://docs.python.org/3/library/string.html#string-formatting
   - Introduced in Python 3, and is prefered over the old style (even though the old style is still allowed)
 
-```Python
+```python3
 >>>'This is a {} and this is a number/integer: {}'.format('string', 17)
 'This is a string and this is a number/integer: 17'
 >>>
@@ -123,7 +123,7 @@ mber=17)
 New New Style (Python 3.6+):
   - Literal String Interpolation or Formatted String Literals
 
-```Python
+```python3
 >>> string = 'string'
 >>> number = 17
 >>> f'This is a {string} and this is a number/integer: {number}'
@@ -140,7 +140,7 @@ Diff between String Concatenation and String Interpolation:
 
 String Concatenation:
 
-```Python
+```python3
 >>> name = 'Mike'
 >>> age = 37
 >>>
@@ -149,7 +149,7 @@ String Concatenation:
 
 String Interpolation:
 
-```Python
+```python3
 >>> name = 'Mike'
 >>> age = 37
 >>>
@@ -162,7 +162,7 @@ Pretty Printing Stuff:
 
 you can use json.dumps():
 
-```Python
+```python3
 import json
 
 >>> d
@@ -197,7 +197,7 @@ import json
 
 Or better yet, use pprint!:
 
-```Python
+```python3
 >>> from pprint import pprint
 >>>
 >>> d
@@ -263,7 +263,7 @@ Lists:
 
 Create:
 
-```Python
+```python3
 l = []
 l = list()
 
@@ -277,7 +277,7 @@ B = A           # both names will point to the same list
 
 Adding items to lists:
 
-```Python
+```python3
 l.append(x)                     # add to end of list
 l.insert(2, x)                  # add item to index 2 of list (3rd item)
 l.extend(["new", "elements"])   # concat this list to the end of l
@@ -290,7 +290,7 @@ l.extend(["d", "e", "f"])       # ["a", "b", "c", "d", "e", "f"]
 
 Access list items:
 
-```Python
+```python3
 l = ['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
 l[5]                  # 'elements'
 l.index("elements")   # 5
@@ -306,14 +306,14 @@ l[::2] # get every other item, starting with the first
 
 Searching items in list:
 
-```Python
+```python3
 if value in L:
   print "list contains", value
 ```          
 
 Deleting items in a list:
 
-```Python
+```python3
 del L[i]
 del L[i:j]
 item = L.pop() # last item
@@ -324,7 +324,7 @@ L.remove(item)
 
 Copy items from a list:
 
-```Python
+```python3
 a = [1, 2, 3, 4, 5]
 
 # shallow copy
@@ -340,7 +340,7 @@ b = list.copy()
 
 Methods:
 
-```Python
+```python3
 list.index(x)       # get index of first matching item
 list.count(x)       # number of x items
 list.sort()
@@ -352,7 +352,7 @@ Notes:
   - If you have multiple variables pointing to a list, then updating it updates both variables
   - to avoid this:
 
-```Python
+```python3
   L = []
   M = L[:] # create a copy
 
@@ -365,14 +365,14 @@ Dictionaries:
 ----
 
 Create a dictionary:
-```Python
+```python3
 d = {}
 d = {"name": "Mike", "Age": 7}
 ```
 
 
 Access items:
-```Python
+```python3
 d['name']
 d.get('name')
 d.get('name', 'default value if name doesnt exist')
@@ -387,7 +387,7 @@ Difference between the two snippets above:
 
 Get an item from a dic, but provide a default value if the provided key doesn't match:
 
-```Python
+```python3
 d = { 'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3' }
 
 print(d.get('key4', 'default'))
@@ -396,7 +396,7 @@ print(d.get('key4', 'default'))
 ```
 
 You could use this in an IF statement to run code if a key exists
-```Python
+```python3
 if d.get('test', 0):
   # We only run this code if d['test'] exists
 
@@ -407,7 +407,7 @@ if d.get('test'):
 
 Crude way of updating a dictionary (d1) with any key/value pairs from d2 that don't exist in d1
 
-```Python
+```python3
 >>> d1 = {'test1': 'value1', 'test2': 'value2', 'test3': 'value3'}
 >>> d2 = {'test1': 'val1', 'test2': 'val2'}
 >>> 
@@ -432,18 +432,18 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 
 
 Adding / Updating items:
-```Python
+```python3
 d["city"] = "Bayfield"
 ```
 
 Deleting items:
-```Python
+```python3
 del d["city"]
 dict.clear();         # remove all entries in dict
 ```
 
 Loop over dicts:
-```Python
+```python3
 for k in d:               # get keys in dict
   print k
 
@@ -456,7 +456,7 @@ for v in d.values():      # get values in dict
 
 
 How to sort a shallow dict:
-```Python
+```python3
 >>> d = {'test': 'seven', 'apple': 'six', 'zinger': 'five' }
 >>> 
 >>> d2 = { i : d[i] for i in sorted(d) }    # Dict comprehension
@@ -470,7 +470,7 @@ How to sort a shallow dict:
 
 Methods:
 
-```Python
+```python3
 d.has_key(key)      # returns true if key exists
 d.items()           # returns key, value tuples as a list
 d.keys()            # returns list of keys
@@ -482,7 +482,7 @@ Sets:
 ----
 
 Create a Set:
-```Python
+```python3
 s = set()                       # creates empty set
 s = {}                          # This does not work.  This creates an empty dictionary
 s = {1,2,3,4,5}
@@ -491,25 +491,25 @@ l = [1,2,3,4,5]; s = set(l)     # create a set from a list
 
 Add to a Set:
   - add a single element
-```Python
+```python3
 s.add("test")
 ```
 
 Update a Set:
   - add multiple elements
-```Python
+```python3
 s.update([1,2,3,4,5])
 ```
 
 Remove from a Set:
   - removes item from a set, but raises an error if the item doesn't exist 
-```Python
+```python3
 s.remove("test")
 ```
 
 Discard from a Set:
   - removes item from a set, but doesn't raise any errors if the item doesn't exist 
-```Python
+```python3
 s.discard("test")
 ```
 
@@ -522,7 +522,7 @@ Use case for Sets:
 Example:
   - using a for loop to remove duplicate items in a list:
 
-```Python
+```python3
 >>> my_list = [1, 2, 3, 2, 3, 4]
 >>> no_duplicate_list = []
 >>>
@@ -536,7 +536,7 @@ Example:
 
   - Using sets to do the same thing:
 
-```Python
+```python3
 >>> my_list = [1, 2, 3, 2, 3, 4]
 >>>
 >>> no_duplicate_list = list(set(my_list))
@@ -553,7 +553,7 @@ Tuples:
 ----
 
 Create a Tuple:
-```Python
+```python3
 t = ()          # empty tuple
 t = 'test',     # tuple with one item (note the comma)
 t = ('test',)
@@ -570,7 +570,7 @@ Advanced Variables:
 
 Underscores and Double Underscores (Dunders):
 
-```Python
+```python3
 Single Leading Underscore: _var
 Double Trailing Underscore: var_
 Double Leading Underscore: __var
@@ -618,7 +618,7 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 IF Statements:
 ----
 
-```Python
+```python3
 if condition_1:
     statement_block_1
 elif condition_2:
@@ -629,12 +629,12 @@ else:
 
 Abbreviated if:
 
-```Python
+```python3
 x if condition else y;
 ```
 
 Ternary if:
-```Python
+```python3
 # The first is a fairly standard teranary style;
 # <value if true> if <conditional> else <value if false>
 
@@ -664,7 +664,7 @@ PASS Statement:
 Loops:
 ----
 
-```Python
+```python3
     for loops:
         1)
         for iterating_var in sequence:
@@ -783,7 +783,7 @@ Testing Flags and Vars:
 
 Check if var exists:
 
-```Python
+```python3
 try:
     x
 except NameError:
@@ -796,7 +796,7 @@ else:
 Check if var is true:
   - See previous section called 'Knowing when something is True or False'
 
-```Python
+```python3
 >>> a = 0
 >>> b = 1
 >>> c = 'exists'
@@ -814,7 +814,7 @@ exists
 
 Check if a var is false:
 
-```Python
+```python3
 if not var:
   print('var is false')
 ```
@@ -825,7 +825,7 @@ When a var is false:
 
 How not to check if a var is empty:
 
-```Python
+```python3
 # Good
 if not x:     # Works for strings, lists, dicts, sets, and tuples. Strings evaluate to False if they are empty.
 
@@ -839,7 +839,7 @@ if foo == "":
 
 Ternary if to check if something is true:
 
-```Python
+```python3
 # The first is a fairly standard ternary style;
 # <value if true> if <conditional> else <value if false>
 
@@ -857,7 +857,7 @@ Using the 'OR' logical operator:
     - return statements in functions:
       `def greater_than_ten(num): return (num > 10) or False`
 
-```Python
+```python3
 # Examples:
 
 >>> x = 3
@@ -922,7 +922,7 @@ False
 
 Setting a default value for a variable using the 'OR' logical operand:
 
-```Python
+```python3
 # One thing we can do from this is set a default value in a variable
 
 >>> x = 0
@@ -955,7 +955,7 @@ Using the 'AND' logical operator:
     - if the first if falsy, there is no way that the overall statement can be true, so it returns the first value and doesn't move forward
     - if the first if true, then the second value can only evaluate to truthy or falsy, so it doesn't need to explicity analyze it, just return the second value
 
-```Python
+```python3
 # Example:
 
 >>> x = 3
@@ -1017,7 +1017,7 @@ Identity Operands:
     - identity (`is`) checks if two items refer to the same underlying object
     - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
 
-```Python
+```python3
 # Example
 >>> x = 1001
 >>> y = 1000 + 1
@@ -1037,7 +1037,7 @@ Comprehensions:
 
 list comprehension:
 
-```Python
+```python3
 # Template
 
 values = [expression
@@ -1052,7 +1052,7 @@ values = [ expression
 
 Set Comprehensions:
 
-```Python
+```python3
 # Template
 
 dict = { expression for item in collection }
@@ -1071,7 +1071,7 @@ dict = { expression for item in collection }
 
 Dict Comprehensions:
 
-```Python
+```python3
 # Template
 
 dict = { key:value for item in collection }
@@ -1096,7 +1096,7 @@ checking if dict key exists:
 
 How not to do it:
 
-```Python
+```python3
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 if not d['key4']:
@@ -1112,7 +1112,7 @@ KeyError: 'key4'
 
 How to do it:
 
-```Python
+```python3
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 if 'key4' not in d:
@@ -1122,7 +1122,7 @@ if 'key4' not in d:
 
 Newer, cooler way of doing it with setdefault():
 
-```Python
+```python3
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 
 # If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
@@ -1138,7 +1138,7 @@ print(d)
 Remove Dups from List:
 ----
 
-```Python
+```python3
 items = [2, 2, 3, 3, 1]
 
 newitems2 = list(set(items))
@@ -1148,7 +1148,7 @@ newitems2 = list(set(items))
 Set Global Variables programatically:
 ----
 
-```Python
+```python3
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
 globals().update(d)
 ```
@@ -1156,7 +1156,7 @@ globals().update(d)
 Pytonic way of value swapping:
 ----
 
-```Python
+```python3
 """pythonic way of value swapping"""
 a, b = 5, 10
 
@@ -1169,7 +1169,7 @@ Reading Files:
 ----
 Code to read files
 
-```Python
+```python3
 
 ###
 ### Read from csv file
@@ -1231,7 +1231,7 @@ Erica Meyers,IT,March
 ```
 
 
-```Python
+```python3
 import csv
 
 with open('employee_birthday.txt', mode='r') as csv_file:
@@ -1269,7 +1269,7 @@ Terry Gilliam,08/12/14,48000.00,7
 Michael Palin,05/23/13,66000.00,8
 ```
 
-```Python 
+```python3 
 import pandas
 df = pandas.read_csv('hrdata.csv')
 print(df)
@@ -1294,7 +1294,7 @@ HTTP Requests:
 
 Basic example:
 
-```Python
+```python3
 import requests
 
 response = requests.get('http://www.amazon.com')
@@ -1305,7 +1305,7 @@ print(response.headers)
 
 Disable SSL Certificate Verification:
 
-```Python
+```python3
 requests.get(url, verify=False)
 ```
 
@@ -1315,7 +1315,7 @@ Kerberos:
 ----
 
 How to do Kerberos auth to internal websites:
-````Python
+````python3
 import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 
@@ -1330,7 +1330,7 @@ print(r.status_code)   # 200 OK
 ````
 
 A more complex example of requests, using query string parameters, headers, and ssl verification turned off:
-```Python
+```python3
 # Wiki API
 url = 'https://share.amazon.com/sites/ps/Networking/NHO/Lists/Mentee%20Case%20Review/PersonalViews.aspx'
 
@@ -1368,7 +1368,7 @@ Regex:
 ----
 
 
-```Python
+```python3
 import re
 
 text = 'something here'
@@ -1379,7 +1379,7 @@ match = re.search(r'something', text)
 match.group(0)  # 'something'
 ```
 
-```Python
+```python3
 # more complex example
 text = 'var stuff = "other stuff in the text";var WPQ2ListData = something I actually want to grep;var WPQ2SchemaData = "other stuff"'
 
@@ -1412,7 +1412,7 @@ json.loads():
 
 converts a string to a dict:
 
- ```Python
+ ```python3
 import json
 
 s = '{"test": "value"}'
@@ -1426,7 +1426,7 @@ print(d)          # {'test': 'value'}
 
 Get JSON data from URL with requests:
 
-```Python
+```python3
 import json
 
 r = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -1448,7 +1448,7 @@ Logging:
 
 Below is code that lets you log to a specified log file (change 'logfile.log') and to the console
 
-```Python
+```python3
 import logging
 
 # set up logging to file
@@ -1481,7 +1481,7 @@ logging.info('This is a log message')
 Most common elements in an iterable:
 ------------------------------------
 
-```Python
+```python3
 # collections.Counter lets you find the most common
 # elements in an iterable:
 
@@ -1499,7 +1499,7 @@ Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
 Permutations:
 ------------
 
-```Python
+```python3
 # itertools.permutations() generates permutations
 # for an iterable. Time to brute-force those passwords ;-)
 
@@ -1540,21 +1540,21 @@ Variable Unpacking:
 
 enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
 
-```Python
+```python3
 for index, item in enumerate(some_list):
     # do something with index and item
 ```
 
 Variable swap can be an example of unpacking:
 
-```Python
+```python3
 a, b = b, a
 ```
 
 
 Nested unpacking works as well:
 
-```Python
+```python3
 >>> v = 1
 >>> l = [2,3]
 >>>
@@ -1570,7 +1570,7 @@ Nested unpacking works as well:
 
 Python 3 has an new form of extended unpacking:
 
-```Python
+```python3
 a, *rest = [1, 2, 3]
 # a = 1, rest = [2, 3]
 
@@ -1580,7 +1580,7 @@ a, *middle, c = [1, 2, 3, 4]
 
 Use a throwaway variable when unpacking:
 
-```Python
+```python3
 >>> filename = 'foobar.txt'
 >>> basename, __, ext = filename.rpartition('.')
 >>> basename
