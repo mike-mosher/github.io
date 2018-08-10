@@ -373,12 +373,17 @@ d = {"name": "Mike", "Age": 7}
 
 Access items:
 ```Python
-d["name"]
-d.get("name")
+d['name']
+d.get('name')
+d.get('name', 'default value if name doesnt exist')
 ```
 
+Difference between the two snippets above:
+- if the key 'name' doesn't exist in d:
+  - `d['name']` will raise a KeyError
+  - `d.get('name)` will return nothing
+    - ** Actually, it returns a NoneType, which evaluates to boolean False
 
-__this is freaking awesome:__
 
 Get an item from a dic, but provide a default value if the provided key doesn't match:
 
@@ -394,6 +399,10 @@ You could use this in an IF statement to run code if a key exists
 ```Python
 if d.get('test', 0):
   # We only run this code if d['test'] exists
+
+# for clarity, this works just as well
+if d.get('test'):
+  # only runs if this key exists.  If not, it returns NoneType, which evaluates to boolean False
 ```
 
 
