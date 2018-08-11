@@ -1592,3 +1592,5 @@ Use a throwaway variable when unpacking:
 >>>
 ```
 
+
+#update from terminal 
