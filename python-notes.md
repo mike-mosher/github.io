@@ -85,7 +85,7 @@ s = ' Hello   World'
 
 s.title():
 ```python
-# converts string to 'Title' case 
+# converts string to 'Title' case
 >>> 'the sun also rises'.title()
 'The Sun Also Rises'
 ```
@@ -410,19 +410,19 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 ```python
 >>> d1 = {'test1': 'value1', 'test2': 'value2', 'test3': 'value3'}
 >>> d2 = {'test1': 'val1', 'test2': 'val2'}
->>> 
+>>>
 >>> d1
 {'test1': 'value1', 'test2': 'value2', 'test3': 'value3'}
 >>> d2
 {'test1': 'val1', 'test2': 'val2'}
->>> 
+>>>
 >>> for i, n in d1.items():
 ...     d2[i] = d2.get(i, n)
-... 
+...
 >>> d2
 {'test1': 'val1', 'test2': 'val2', 'test3': 'value3'}
->>> 
->>> 
+>>>
+>>>
 >>> #Now let's do it with a dictionary comprehension
 >>> test= { d2[i] : d2.get(i, n) for i, n in d1.items() }
 >>> test
@@ -458,12 +458,12 @@ for v in d.values():      # get values in dict
 How to sort a shallow dict:
 ```python
 >>> d = {'test': 'seven', 'apple': 'six', 'zinger': 'five' }
->>> 
+>>>
 >>> d2 = { i : d[i] for i in sorted(d) }    # Dict comprehension
->>> 
+>>>
 >>> d2
 {'apple': 'six', 'test': 'seven', 'zinger': 'five'}
- 
+
 ```
 
 
@@ -502,13 +502,13 @@ s.update([1,2,3,4,5])
 ```
 
 Remove from a Set:
-  - removes item from a set, but raises an error if the item doesn't exist 
+  - removes item from a set, but raises an error if the item doesn't exist
 ```python
 s.remove("test")
 ```
 
 Discard from a Set:
-  - removes item from a set, but doesn't raise any errors if the item doesn't exist 
+  - removes item from a set, but doesn't raise any errors if the item doesn't exist
 ```python
 s.discard("test")
 ```
@@ -516,7 +516,7 @@ s.discard("test")
 
 
 Use case for Sets:
-  - to remove duplicate values 
+  - to remove duplicate values
   - when combining two lists and need unique items
 
 Example:
@@ -683,8 +683,8 @@ Loops:
         4)
         # An alternative way of iterating through each item is by index offset into the sequence itself
         fruits = ['banana', 'apple',  'mango']
-        for index in range(len(fruits)):
-            print 'Current fruit :', fruits[index]
+        for index in fruits:
+            print('Current fruit: ', i)
 
 
 
@@ -1269,7 +1269,7 @@ Terry Gilliam,08/12/14,48000.00,7
 Michael Palin,05/23/13,66000.00,8
 ```
 
-```python 
+```python
 import pandas
 df = pandas.read_csv('hrdata.csv')
 print(df)
@@ -1591,3 +1591,7 @@ Use a throwaway variable when unpacking:
 'txt'
 >>>
 ```
+
+
+
+# test
