@@ -1592,6 +1592,3 @@ Use a throwaway variable when unpacking:
 >>>
 ```
 
-
-
-# test
