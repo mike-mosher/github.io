@@ -1593,4 +1593,4 @@ Use a throwaway variable when unpacking:
 ```
 
 
-# updated from Atom - second time
+# updated from VSCode - second time
