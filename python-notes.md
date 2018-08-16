@@ -436,6 +436,66 @@ Adding / Updating items:
 d["city"] = "Bayfield"
 ```
 
+Removing items:
+- d.pop(<key>[, <default>])
+- You can use pop to remove an item from the dict and return it
+```python
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>>
+>>> d.pop('b')
+20
+>>> d
+{'a': 10, 'c': 30}
+```
+
+- You can set a default value, incase that key doesn't exist
+```python
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+>>> d.pop('z', -1)
+-1
+>>> d
+{'a': 10, 'b': 20, 'c': 30}
+```
+
+- d.popitem()
+-  removes a random, arbitrary key-value pair from d and returns it as a tuple:
+```python
+>>> d = {'a': 10, 'b': 20, 'c': 30}
+
+>>> d.popitem()
+('c', 30)
+>>> d
+{'a': 10, 'b': 20}
+
+>>> d.popitem()
+('b', 20)
+>>> d
+{'a': 10}
+```
+
+- If d is empty, d.popitem() raises a KeyError exception:
+```python
+>>> d = {}
+>>> d.popitem()
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    d.popitem()
+KeyError: 'popitem(): dictionary is empty'
+```
+
+Updating items:
+- d.update(<obj>)
+- Merges a dictionary with another dictionary, updating the original (d) with the values in <obj> if they overlap
+```python
+>>> d1 = {'a': 10, 'b': 20, 'c': 30}
+>>> d2 = {'b': 200, 'd': 400}
+
+>>> d1.update(d2)
+>>> d1
+{'a': 10, 'b': 200, 'c': 30, 'd': 400}
+```
+
+
 Deleting items:
 ```python
 del d["city"]
@@ -1591,5 +1651,3 @@ Use a throwaway variable when unpacking:
 'txt'
 >>>
 ```
-
-
