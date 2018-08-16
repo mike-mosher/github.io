@@ -288,6 +288,93 @@ l.append(["d", "e", "f"])       # ["a", "b", "c" ["d", "e", "f"] ]
 l.extend(["d", "e", "f"])       # ["a", "b", "c", "d", "e", "f"]
 ```
 
+Adding multiple list values:
+- a[m:n] = <iterable>
+
+```python
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+>>> a[1:4]
+['bar', 'baz', 'qux']
+>>> a[1:4] = [1.1, 2.2, 3.3, 4.4, 5.5]
+>>> a
+['foo', 1.1, 2.2, 3.3, 4.4, 5.5, 'quux', 'corge']
+>>> a[1:6]
+[1.1, 2.2, 3.3, 4.4, 5.5]
+>>> a[1:6] = ['Bark!']
+>>> a
+['foo', 'Bark!', 'quux', 'corge']
+```
+
+- The number of elements inserted need not be equal to the number replaced. Python just grows or shrinks the list as needed.
+- You can insert multiple elements in place of a single element—just use a slice that denotes only one element:
+
+```python
+>>> a = [1, 2, 3]
+>>> a[1:2] = [2.1, 2.2, 2.3]
+>>> a
+[1, 2.1, 2.2, 2.3, 3]
+```
+
+- You can also insert elements into a list without removing anything. Simply specify a slice of the form [n:n] (a zero-length slice) at the desired index:
+
+```python
+>>> a = [1, 2, 7, 8]
+>>> a[2:2] = [3, 4, 5, 6]
+>>> a
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+- You can delete multiple elements out of the middle of a list by assigning the appropriate slice to an empty list. You can also use the del statement with the same slice:
+
+```python
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+>>> a[1:5] = []
+>>> a
+['foo', 'corge']
+
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+>>> del a[1:5]
+>>> a
+['foo', 'corge']
+```
+
+
+Prepending or Appending Items to a List:
+
+- Additional items can be added to the start or end of a list using the + concatenation operator or the += augmented assignment operator:
+```python
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+>>> a += ['grault', 'garply']
+>>> a
+['foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply']
+
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+>>> a = [10, 20] + a
+>>> a
+[10, 20, 'foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+```
+
+- Notes this difference:
+
+```python
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux']
+>>> a += 'corge'
+>>> a
+['foo', 'bar', 'baz', 'qux', 'quux', 'c', 'o', 'r', 'g', 'e']
+```
+
+
+```python
+>>> a = ['foo', 'bar', 'baz', 'qux', 'quux']
+>>> a += ['corge']
+>>> a
+['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+```
+
+
 Access list items:
 
 ```python
@@ -345,6 +432,9 @@ list.index(x)       # get index of first matching item
 list.count(x)       # number of x items
 list.sort()
 list.reverse()
+list.insert(<index>, <obj>)       # Insert obj at index
+list.remove(<obj>)       # removes obj
+list.pop(<index>)   # removes and returns.  You can specify the index, not the obj
 ```
 
 
@@ -612,12 +702,37 @@ Example:
 Tuples:
 ----
 
+- Tuples are identical to lists in all respects, except for the following properties:
+  - Tuples are defined by enclosing the elements in parentheses (()) instead of square brackets ([]).
+  - Tuples are immutable.
+- Everything you’ve learned about lists—they are ordered, they can contain arbitrary objects, they can be indexed and sliced, they can be nested—is true of tuples as well. But they can’t be modified
+
+
 Create a Tuple:
 ```python
 t = ()          # empty tuple
 t = 'test',     # tuple with one item (note the comma)
 t = ('test',)
 t = ('test1', 'test2', 3)
+```
+
+```python
+>>> t = ('foo', 'bar', 'baz', 'qux', 'quux', 'corge')
+>>> t
+('foo', 'bar', 'baz', 'qux', 'quux', 'corge')
+
+>>> t[0]
+'foo'
+>>> t[-1]
+'corge'
+>>> t[1::2]
+('bar', 'qux', 'corge')
+```
+
+- you can reverse, like a list
+```python
+>>> t[::-1]
+('corge', 'quux', 'qux', 'baz', 'bar', 'foo')
 ```
 
 Methods:
