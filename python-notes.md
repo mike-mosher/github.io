@@ -90,6 +90,24 @@ s.title():
 'The Sun Also Rises'
 ```
 
+Right / Left / Center justify:
+ - rjust, ljust, center
+ - example:
+
+```python
+>>> a = 'this is a long text that I will use as the longest'
+>>> b = 'slightly shorter string.  medium'
+>>> c = 'very short'
+>>> width = len(max([a,b,c], key=len)) + 20
+>>>
+>>> for i in [a,b,c]:
+...     print('\'' + i.rjust(width) + '\'')
+...
+'                    this is a long text that I will use as the longest'
+'                                      slightly shorter string.  medium'
+'                                                            very short'
+```
+
 
 
 String Formatting:
@@ -155,6 +173,33 @@ String Interpolation:
 >>>
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
+
+
+Multi-Line Comments:
+----
+
+- two ways:
+  - block out each line with `#`
+
+```python
+# This is a "block comment" in Python, made
+# out of several single-line comments.
+# Pretty great, eh?
+answer = 42
+```
+
+
+  - Use a multi-line string with `"""`
+```python
+"""
+This is a "block comment" in Python, made
+out of a mult-line string constant.
+This actually works quite well!
+"""
+answer = 42
+```
+  - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
+
 
 
 Pretty Printing Stuff:
@@ -422,6 +467,13 @@ b = list(a)
 
 #Python 3 only
 b = list.copy()
+
+# Deepcopy, just like with a dict
+from copy import deepcopy
+
+l = [[1, 2], [3, 4]]
+
+l2 = deepcopy(l)
 ```
 
 
@@ -755,6 +807,61 @@ t = ('test1', 'test2', 3)
 Methods:
   - Tuples have no methods (because they are immutable)
 
+
+Alternate Data Types:
+----
+
+- Defaultdict:
+  - behaves like a normal Python dictionary, except when a key isn't present it'll substitute in a default value rather than raising a KeyError.
+
+```python
+# use defaultdict to count words in a list
+from collections import defaultdict
+import json
+words = ['test', 'test', 'test', 'two', 'two', 'new']
+d = defaultdict(int)
+
+for word in words:
+  d[word] += 1
+
+print(json.dumps(d, indent=4))
+# {
+#     "test": 3,
+#     "two": 2,
+#     "new": 1
+# }
+```
+
+- Create nested / multi-array dictionaries:
+  - use a one-liner function and defaultdicts:
+  - From here: https://gist.github.com/hrldcpr/2012250
+
+```python
+from collections import defaultdict
+import json
+
+# define a makeshift 'tree'
+def tree(): return defaultdict(tree)
+
+"""
+# Can also do the same with the following one-liner:
+tree = lambda: defaultdict(tree)
+"""
+
+users = tree()
+users['harold']['username'] = 'hrldcpr'
+users['handler']['username'] = 'matthandlersux'
+
+print(json.dumps(users, indent=4))
+# {
+#     "harold": {
+#         "username": "hrldcpr"
+#     },
+#     "handler": {
+#         "username": "matthandlersux"
+#     }
+# }
+```
 
 
 Advanced Variables:
