@@ -585,6 +585,23 @@ Updating items:
 {'a': 10, 'b': 200, 'c': 30, 'd': 400}
 ```
 
+Merging Dicts:
+```python
+>>> d1 = { 'a': 1 }
+>>> d2 = { 'b': 2 }
+
+# Normal way of merging
+d1.update(d2)
+
+# can also do any of the following
+d1.update(**d2)
+{**d1, **d2}
+dict(d1.items() | d2.items())
+
+# and result in this
+{'a': 1, 'b': 2}
+```
+
 
 Deleting items:
 ```python
