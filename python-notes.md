@@ -732,8 +732,6 @@ Discard from a Set:
 s.discard("test")
 ```
 
-
-
 Use case for Sets:
   - to remove duplicate values
   - when combining two lists and need unique items
