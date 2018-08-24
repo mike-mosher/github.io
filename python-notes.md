@@ -1915,3 +1915,35 @@ Use a throwaway variable when unpacking:
 >>>
 ```
 
+
+Different ways to do variable unpacking:
+
+- list:
+```python 
+human = ['James', 180, 32, 'm']
+
+name, weight, age, sex = human
+# This is better than: 
+# name = human[0]
+```
+
+- Dict:
+```python 
+human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
+
+name, weight, age, sex = human.values()
+```
+
+- Named Tuple:
+- Note: This isn't variable unpacking, but is still cool
+```python 
+humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
+
+human = humans('James', 180, 32, 'm')
+
+human
+human(name='James', height=180, age=32, sex='m')
+
+human.name
+'James'
+```
