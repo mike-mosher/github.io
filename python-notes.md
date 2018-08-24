@@ -1838,7 +1838,7 @@ Variable Unpacking:
 
 Enumerate:
     - enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
-    - 
+    -
 ```python
 for index, item in enumerate(some_list):
     # do something with index and item
@@ -1846,12 +1846,12 @@ for index, item in enumerate(some_list):
 
     - enumerate also allows you to give the starting number for the index.  Default is 0, but this is useful when you need the index to start at 1
 
-```python 
+```python
 >>> l = ['a', 'b', 'c']
 >>> for i, v in enumerate(l):
 ...     print(i,v)
 ...     
-... 
+...
 0 a
 1 b
 2 c
@@ -1860,7 +1860,7 @@ for index, item in enumerate(some_list):
 >>> for i, v in enumerate(l, 1):
 ...     print(i,v)
 ...     
-... 
+...
 1 a
 2 b
 3 c
@@ -1914,3 +1914,5 @@ Use a throwaway variable when unpacking:
 'txt'
 >>>
 ```
+
+# fake update
