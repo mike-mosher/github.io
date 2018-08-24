@@ -1835,12 +1835,38 @@ Variable Unpacking:
 -------------------
 - A way to assign valuees to multiple variables at one time, say from a list
 
-enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
 
+Enumerate:
+    - enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
+    - 
 ```python
 for index, item in enumerate(some_list):
     # do something with index and item
 ```
+
+    - enumerate also allows you to give the starting number for the index.  Default is 0, but this is useful when you need the index to start at 1
+
+```python 
+>>> l = ['a', 'b', 'c']
+>>> for i, v in enumerate(l):
+...     print(i,v)
+...     
+... 
+0 a
+1 b
+2 c
+>>>
+>>>
+>>> for i, v in enumerate(l, 1):
+...     print(i,v)
+...     
+... 
+1 a
+2 b
+3 c
+```
+
+
 
 Variable swap can be an example of unpacking:
 
