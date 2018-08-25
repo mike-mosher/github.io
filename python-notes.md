@@ -1947,3 +1947,21 @@ human(name='James', height=180, age=32, sex='m')
 human.name
 'James'
 ```
+
+
+Interesting way to handle exceptions:
+-------------------------------------
+
+```python 
+import contextlib
+
+with contextlib.suppress(FileNotFoundError):
+    os.remove('somefile.tmp')
+
+# This is equivalent to:
+
+try:
+    os.remove('somefile.tmp')
+except FileNotFoundError:
+    pass
+```
