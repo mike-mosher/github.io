@@ -1738,6 +1738,65 @@ b = r.json()
 ```
 
 
+Zip() Function:
+---------------
+
+- takes any number of iterables as arguments and returns an iterator over tuples of their corresponding elements
+
+```python
+list_a = [1, 2, 3, 4, 5]
+list_b = ['a', 'b', 'c', 'd', 'e']
+
+zipped_list = zip(list_a, list_b)
+
+print zipped_list # [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]
+```
+
+- If the length of the iterables are not equal, zip creates the list of tuples of length equal to the smallest iterable.
+
+```python
+list_a = [1, 2, 3]
+list_b = ['a', 'b', 'c', 'd', 'e']
+
+zipped_list = list(zip(list_a, list_b))
+
+print(zipped_list) 
+# [(1, 'a'), (2, 'b'), (3, 'c')]
+```
+
+- You can also unzip a list of tuples
+
+```python 
+zipper_list = [(1, 'a'), (2, 'b'), (3, 'c')]
+ 
+list_a, list_b = list(zip(*zipper_list))
+ print(list_a)
+ # (1, 2, 3)
+ print(list_b) 
+ # ('a', 'b', 'c')
+```
+
+- in Python 3, zip() returns a zip object (unlike python2, where it returns a list of tuples)
+  - This is why we have to call list(zip())
+  - zip objects are generators
+
+```python
+list_a = [1, 2, 3]
+list_b = [4, 5, 6]
+
+zipped = zip(a, b) # Output: Zip Object. <zip at 0x4c10a30>
+
+len(zipped) # TypeError: object of type 'zip' has no len()
+
+zipped[0] # TypeError: 'zip' object is not subscriptable
+
+list_c = list(zipped) #Output: [(1, 4), (2, 5), (3, 6)]
+
+list_d = list(zipped) # Output []... Output is empty list becuase by the above statement zip got exhausted.
+```
+
+
+
 
 
 Logging:
