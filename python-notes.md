@@ -174,6 +174,21 @@ String Interpolation:
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
 
+Printing:
+--------
+
+One cool trick with printing
+- How to print out a string with no new line 
+```python
+# use the named argument "end" to explicitly specify the end of line string
+print("Hello World!", end = '')
+print("My name is Karim")
+# output:
+# Hello World!My name is Karim
+```
+
+
+
 
 Multi-Line Comments:
 ----
@@ -295,12 +310,12 @@ Tuple:
 
 Cheatsheet:
 
-  | Data Type | Mutable? | Ordered? | Index-based?   |
-  |---------|------------|----------|----------------|
-  | List:   | yes        | yes      | yes            |
-  | Tuple:  | no         | yes      | yes            |
-  | Dict:   | (values)   | no       | no (key/value) |
-  | Set:    | yes        | no       | yes            |
+  | Data Type | Mutable?   | Ordered? | Index-based?   |
+  |-----------|------------|----------|----------------|
+  | List:     | yes        | yes      | yes            |
+  | Tuple:    | no         | yes      | yes            |
+  | Dict:     | (values)   | no       | no (key/value) |
+  | Set:      | yes        | no       | yes            |
 
 
 Lists:
@@ -501,6 +516,68 @@ Notes:
   # modify L only
   L.append(obj)
 ```
+
+Sorting Lists:
+
+- Sorting numbers is easy with .sort()
+```python
+>>> L = [15, 22.4, 8, 10, 3.14]
+>>> L.sort()
+>>> L
+[3.14, 8, 10, 15, 22.4]
+# Notice that the list L was sorted in place. No new objects were created.
+
+# Create a new sorted list, and leave the original unmodified
+>>> L = [15, 22.4, 8, 10, 3.14]
+>>> sorted_list = sorted(L)
+>>> L
+[15, 22.4, 8, 10, 3.14]
+>>> sorted_list
+[3.14, 8, 10, 15, 22.4]
+
+# Both methods above accept 'reverse=True' to sort descending
+>>> L = [15, 22.4, 8, 10, 3.14]
+>>> L.sort(reverse = True)
+>>> L
+[22.4, 15, 10, 8, 3.14]
+```
+
+- You can do the same with strings (sorting them alphabetically)
+```python
+>>> L = [15, 22.4, 8, 10, 3.14]
+>>> L.sort(reverse = True)
+>>> L
+[22.4, 15, 10, 8, 3.14]
+```
+
+- What about if there are titles (with uppercase letters)
+  - clue: python considers uppercase letters to be lower than lowercase
+```python
+>>> L = ["oranges", "apples", "Bananas"]
+>>> L.sort()
+>>> L
+['Bananas', 'apples', 'oranges']
+```
+
+- How to make sort work case-insensitive?
+  - `sort` and `sorted` have a `key` parameter
+  - This `key` parameter specifies a function that will be called on each list item before making comparisons.
+  - Below is how we sort independent of case:
+```python
+>>> L = ["oranges", "apples", "Bananas"]
+>>> L.sort(key=str.lower)
+>>> L
+['apples', 'Bananas', 'oranges']
+```
+- this will instruct the sort function to perform comparisons between the all-lowercase versions of the strings
+
+
+
+
+
+
+
+
 
 
 Dictionaries:
@@ -1909,8 +1986,6 @@ for index, item in enumerate(some_list):
 >>> l = ['a', 'b', 'c']
 >>> for i, v in enumerate(l):
 ...     print(i,v)
-...     
-...
 0 a
 1 b
 2 c
@@ -1918,11 +1993,24 @@ for index, item in enumerate(some_list):
 >>>
 >>> for i, v in enumerate(l, 1):
 ...     print(i,v)
-...     
-...
 1 a
 2 b
 3 c
+>>> # You could also specify the start param like so
+>>> for i, v in enumerate(l, start=1):
+...     print(i,v)
+```
+
+
+Using enumerate to unpack tuples (in a cool way):
+```python
+>>> L = [('Matt', 20), ('Karim', 30), ('Maya', 40)]
+>>> 
+>>> for idx, (name, age) in enumerate(L):
+...     print(f"Index is {idx}, name is {name}, and age is {age}")
+Index is 0, name is Matt, and age is 20
+Index is 1, name is Karim, and age is 30
+Index is 2, name is Maya, and age is 40
 ```
 
 
