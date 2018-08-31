@@ -1,8 +1,6 @@
-# Random Python Snippets:
+# Random Python Snippets
 
-
-Strings:
-----
+## Strings
 
 Strings can be broken up over multiple lines without backspaces or anything
 
@@ -46,14 +44,15 @@ Joining and Splitting Strings:
 ```
 
 Get Subset of a String:
+
 ```python
 "Hello World"[:5]       # 'Hello'
 ```
 
-
 String Methods:
 
 strip():
+
 ```python
 # Use this to remove leading and trailing whitespace
 s = ' Hello World '
@@ -62,6 +61,7 @@ s.strip()
 ```
 
 replace():
+
 ```python
 # use this to remove all spaces
 s = ' Hello World'
@@ -70,6 +70,7 @@ s.replace()
 ```
 
 split():
+
 ```python
 # use this to split the string up into a list of items
 s = 'Hello World'
@@ -84,15 +85,17 @@ s = ' Hello   World'
 ```
 
 s.title():
+
 ```python
 # converts string to 'Title' case
 >>> 'the sun also rises'.title()
 'The Sun Also Rises'
 ```
 
-Right / Left / Center justify:
- - rjust, ljust, center
- - example:
+Right / Left / Center Justify:
+
+- rjust, ljust, center
+- example:
 
 ```python
 >>> a = 'this is a long text that I will use as the longest'
@@ -108,8 +111,6 @@ Right / Left / Center justify:
 '                                                            very short'
 ```
 
-
-
 String Formatting:
 
 Old Style:
@@ -120,8 +121,9 @@ Old Style:
 ```
 
 New Style:
-  - https://docs.python.org/3/library/string.html#string-formatting
-  - Introduced in Python 3, and is prefered over the old style (even though the old style is still allowed)
+
+- https://docs.python.org/3/library/string.html#string-formatting
+- Introduced in Python 3, and is prefered over the old style (even though the old style is still allowed)
 
 ```python
 >>>'This is a {} and this is a number/integer: {}'.format('string', 17)
@@ -139,7 +141,8 @@ mber=17)
 ```
 
 New New Style (Python 3.6+):
-  - Literal String Interpolation or Formatted String Literals
+
+- Literal String Interpolation or Formatted String Literals
 
 ```python
 >>> string = 'string'
@@ -153,8 +156,7 @@ New New Style (Python 3.6+):
 'five plus 10 is 15 and not 30'
 ```
 
-Diff between String Concatenation and String Interpolation:
-----
+## Diff between String Concatenation and String Interpolation
 
 String Concatenation:
 
@@ -174,11 +176,12 @@ String Interpolation:
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
 
-Printing:
---------
+## Printing
 
 One cool trick with printing
-- How to print out a string with no new line 
+
+- How to print out a string with no new line
+
 ```python
 # use the named argument "end" to explicitly specify the end of line string
 print("Hello World!", end = '')
@@ -187,11 +190,7 @@ print("My name is Karim")
 # Hello World!My name is Karim
 ```
 
-
-
-
-Multi-Line Comments:
-----
+## Multi-Line Comments
 
 - two ways:
   - block out each line with `#`
@@ -203,8 +202,8 @@ Multi-Line Comments:
 answer = 42
 ```
 
+- Use a multi-line string with `"""`
 
-  - Use a multi-line string with `"""`
 ```python
 """
 This is a "block comment" in Python, made
@@ -213,12 +212,10 @@ This actually works quite well!
 """
 answer = 42
 ```
-  - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
+- Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
-
-Pretty Printing Stuff:
-----
+## Pretty Printing Stuff
 
 you can use json.dumps():
 
@@ -283,30 +280,30 @@ Or better yet, use pprint!:
 
 Note: It's important to remember to use 'from pprint import pprint'. If you just use 'import pprint', then you have to run: `pprint.pprint(d)`
 
-
-
-The Low-Down on Datatypes:
-----
+## The Low-Down on Datatypes
 
 List:
-  - mutable
-  - ordered
+
+- mutable
+- ordered
 
 Dict:
-  - mutable (values)
-    - Keys are unique and immutable
-  - unordered
-    - if an ordered dict is needed, then "from collections import OrderedDict"
+
+- mutable (values)
+  - Keys are unique and immutable
+- unordered
+  - if an ordered dict is needed, then "from collections import OrderedDict"
 
 Set:
-  - mutable
-  - unordered
+
+- mutable
+- unordered
 
 Tuple:
-  - immutable
-  - ordered
-  - examples: days of the week, months of the year, any other list you want to hold and not change
 
+- immutable
+- ordered
+- examples: days of the week, months of the year, any other list you want to hold and not change
 
 Cheatsheet:
 
@@ -317,9 +314,7 @@ Cheatsheet:
   | Dict:     | (values)   | no       | no (key/value) |
   | Set:      | yes        | no       | yes            |
 
-
-Lists:
-----
+## Lists
 
 Create:
 
@@ -349,7 +344,8 @@ l.extend(["d", "e", "f"])       # ["a", "b", "c", "d", "e", "f"]
 ```
 
 Adding multiple list values:
-- a[m:n] = <iterable>
+
+- `a[m:n] = <iterable>`
 
 ```python
 >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
@@ -399,10 +395,10 @@ Adding multiple list values:
 ['foo', 'corge']
 ```
 
-
 Prepending or Appending Items to a List:
 
 - Additional items can be added to the start or end of a list using the + concatenation operator or the += augmented assignment operator:
+
 ```python
 >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
 
@@ -426,14 +422,12 @@ Prepending or Appending Items to a List:
 ['foo', 'bar', 'baz', 'qux', 'quux', 'c', 'o', 'r', 'g', 'e']
 ```
 
-
 ```python
 >>> a = ['foo', 'bar', 'baz', 'qux', 'quux']
 >>> a += ['corge']
 >>> a
 ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
 ```
-
 
 Access list items:
 
@@ -456,7 +450,7 @@ Searching items in list:
 ```python
 if value in L:
   print "list contains", value
-```          
+```
 
 Deleting items in a list:
 
@@ -491,7 +485,6 @@ l = [[1, 2], [3, 4]]
 l2 = deepcopy(l)
 ```
 
-
 Methods:
 
 ```python
@@ -504,10 +497,10 @@ list.remove(<obj>)       # removes obj
 list.pop(<index>)   # removes and returns.  You can specify the index, not the obj
 ```
 
-
 Notes:
-  - If you have multiple variables pointing to a list, then updating it updates both variables
-  - to avoid this:
+
+- If you have multiple variables pointing to a list, then updating it updates both variables
+- to avoid this:
 
 ```python
   L = []
@@ -520,6 +513,7 @@ Notes:
 Sorting Lists:
 
 - Sorting numbers is easy with .sort()
+
 ```python
 >>> L = [15, 22.4, 8, 10, 3.14]
 >>> L.sort()
@@ -543,6 +537,7 @@ Sorting Lists:
 ```
 
 - You can do the same with strings (sorting them alphabetically)
+
 ```python
 >>> L = [15, 22.4, 8, 10, 3.14]
 >>> L.sort(reverse = True)
@@ -552,6 +547,7 @@ Sorting Lists:
 
 - What about if there are titles (with uppercase letters)
   - clue: python considers uppercase letters to be lower than lowercase
+
 ```python
 >>> L = ["oranges", "apples", "Bananas"]
 >>> L.sort()
@@ -563,34 +559,27 @@ Sorting Lists:
   - `sort` and `sorted` have a `key` parameter
   - This `key` parameter specifies a function that will be called on each list item before making comparisons.
   - Below is how we sort independent of case:
+
 ```python
 >>> L = ["oranges", "apples", "Bananas"]
 >>> L.sort(key=str.lower)
 >>> L
 ['apples', 'Bananas', 'oranges']
 ```
+
 - this will instruct the sort function to perform comparisons between the all-lowercase versions of the strings
 
-
-
-
-
-
-
-
-
-
-Dictionaries:
-----
+## Dictionaries
 
 Create a dictionary:
+
 ```python
 d = {}
 d = {"name": "Mike", "Age": 7}
 ```
 
-
 Access items:
+
 ```python
 d['name']
 d.get('name')
@@ -598,11 +587,11 @@ d.get('name', 'default value if name doesnt exist')
 ```
 
 Difference between the two snippets above:
+
 - if the key 'name' doesn't exist in d:
   - `d['name']` will raise a KeyError
   - `d.get('name)` will return nothing
     - ** Actually, it returns a NoneType, which evaluates to boolean False
-
 
 Get an item from a dic, but provide a default value if the provided key doesn't match:
 
@@ -615,6 +604,7 @@ print(d.get('key4', 'default'))
 ```
 
 You could use this in an IF statement to run code if a key exists
+
 ```python
 if d.get('test', 0):
   # We only run this code if d['test'] exists
@@ -649,15 +639,17 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 
 ```
 
-
 Adding / Updating items:
+
 ```python
 d["city"] = "Bayfield"
 ```
 
 Removing items:
-- d.pop(<key>[, <default>])
+
+- `d.pop(<key>[, <default>])`
 - You can use pop to remove an item from the dict and return it
+
 ```python
 >>> d = {'a': 10, 'b': 20, 'c': 30}
 >>>
@@ -668,6 +660,7 @@ Removing items:
 ```
 
 - You can set a default value, incase that key doesn't exist
+
 ```python
 >>> d = {'a': 10, 'b': 20, 'c': 30}
 >>> d.pop('z', -1)
@@ -677,7 +670,8 @@ Removing items:
 ```
 
 - d.popitem()
--  removes a random, arbitrary key-value pair from d and returns it as a tuple:
+- removes a random, arbitrary key-value pair from d and returns it as a tuple
+
 ```python
 >>> d = {'a': 10, 'b': 20, 'c': 30}
 
@@ -693,6 +687,7 @@ Removing items:
 ```
 
 - If d is empty, d.popitem() raises a KeyError exception:
+
 ```python
 >>> d = {}
 >>> d.popitem()
@@ -703,8 +698,10 @@ KeyError: 'popitem(): dictionary is empty'
 ```
 
 Updating items:
-- d.update(<obj>)
-- Merges a dictionary with another dictionary, updating the original (d) with the values in <obj> if they overlap
+
+- `d.update(<obj>)`
+- Merges a dictionary with another dictionary, updating the original (d) with the values in `<obj>` if they overlap
+
 ```python
 >>> d1 = {'a': 10, 'b': 20, 'c': 30}
 >>> d2 = {'b': 200, 'd': 400}
@@ -715,6 +712,7 @@ Updating items:
 ```
 
 Merging Dicts:
+
 ```python
 >>> d1 = { 'a': 1 }
 >>> d2 = { 'b': 2 }
@@ -731,14 +729,15 @@ dict(d1.items() | d2.items())
 {'a': 1, 'b': 2}
 ```
 
-
 Deleting items:
+
 ```python
 del d["city"]
 dict.clear();         # remove all entries in dict
 ```
 
 Loop over dicts:
+
 ```python
 for k in d:               # get keys in dict
   print k
@@ -750,8 +749,8 @@ for v in d.values():      # get values in dict
   print v
 ```
 
-
 How to sort a shallow dict:
+
 ```python
 >>> d = {'test': 'seven', 'apple': 'six', 'zinger': 'five' }
 >>>
@@ -762,8 +761,6 @@ How to sort a shallow dict:
 
 ```
 
-
-
 Methods:
 
 ```python
@@ -773,11 +770,10 @@ d.keys()            # returns list of keys
 d.values()          # returns list of values
 ```
 
-
-Sets:
-----
+## Sets
 
 Create a Set:
+
 ```python
 s = set()                       # creates empty set
 s = {}                          # This does not work.  This creates an empty dictionary
@@ -786,35 +782,45 @@ l = [1,2,3,4,5]; s = set(l)     # create a set from a list
 ```
 
 Add to a Set:
-  - add a single element
+
+- add a single element
+
 ```python
 s.add("test")
 ```
 
 Update a Set:
-  - add multiple elements
+
+- add multiple elements
+
 ```python
 s.update([1,2,3,4,5])
 ```
 
 Remove from a Set:
-  - removes item from a set, but raises an error if the item doesn't exist
+
+- removes item from a set, but raises an error if the item doesn't exist
+
 ```python
 s.remove("test")
 ```
 
 Discard from a Set:
-  - removes item from a set, but doesn't raise any errors if the item doesn't exist
+
+- removes item from a set, but doesn't raise any errors if the item doesn't exist
+
 ```python
 s.discard("test")
 ```
 
 Use case for Sets:
-  - to remove duplicate values
-  - when combining two lists and need unique items
+
+- to remove duplicate values
+- when combining two lists and need unique items
 
 Example:
-  - using a for loop to remove duplicate items in a list:
+
+- using a for loop to remove duplicate items in a list:
 
 ```python
 >>> my_list = [1, 2, 3, 2, 3, 4]
@@ -828,7 +834,7 @@ Example:
 [1, 2, 3, 4]
 ```
 
-  - Using sets to do the same thing:
+- Using sets to do the same thing:
 
 ```python
 >>> my_list = [1, 2, 3, 2, 3, 4]
@@ -840,19 +846,15 @@ Example:
 >>>
 ```
 
-
-
-
-Tuples:
-----
+## Tuples
 
 - Tuples are identical to lists in all respects, except for the following properties:
   - Tuples are defined by enclosing the elements in parentheses (()) instead of square brackets ([]).
   - Tuples are immutable.
 - Everything you’ve learned about lists—they are ordered, they can contain arbitrary objects, they can be indexed and sliced, they can be nested—is true of tuples as well. But they can’t be modified
 
-
 Create a Tuple:
+
 ```python
 t = ()          # empty tuple
 t = 'test',     # tuple with one item (note the comma)
@@ -874,17 +876,17 @@ t = ('test1', 'test2', 3)
 ```
 
 - you can reverse, like a list
+
 ```python
 >>> t[::-1]
 ('corge', 'quux', 'qux', 'baz', 'bar', 'foo')
 ```
 
 Methods:
-  - Tuples have no methods (because they are immutable)
 
+- Tuples have no methods (because they are immutable)
 
-Alternate Data Types:
-----
+## Alternate Data Types
 
 - Defaultdict:
   - behaves like a normal Python dictionary, except when a key isn't present it'll substitute in a default value rather than raising a KeyError.
@@ -938,9 +940,7 @@ print(json.dumps(users, indent=4))
 # }
 ```
 
-
-Advanced Variables:
-----
+## Advanced Variables
 
 Underscores and Double Underscores (Dunders):
 
@@ -988,9 +988,7 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 
 ```
 
-
-IF Statements:
-----
+## IF Statements
 
 ```python
 if condition_1:
@@ -1008,6 +1006,7 @@ x if condition else y;
 ```
 
 Ternary if:
+
 ```python
 # The first is a fairly standard teranary style;
 # <value if true> if <conditional> else <value if false>
@@ -1016,27 +1015,20 @@ print ('passed') if x else print('did not pass')
 
 ```
 
-BREAK Statement:
-----
+## BREAK Statement
 
-  - used to break out of a `for` or `while` loop
-  - Note: if you break out of a for or while loop, any corresponding loop else block is not executed.
+- used to break out of a `for` or `while` loop
+- Note: if you break out of a for or while loop, any corresponding loop else block is not executed.
 
+## CONTINUE Statement
 
-CONTINUE Statement:
-----
+- The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
 
-  - The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
+## PASS Statement
 
+- `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
 
-PASS Statement:
-----
-  - `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
-
-
-
-Loops:
-----
+## Loops
 
 ```python
     for loops:
@@ -1078,12 +1070,11 @@ Loops:
 
 ```
 
-
-Operators:
-----
+## Operators
 
 Relational Operators:
-  - Relational operators compares the values. It either returns True or False according to the condition.
+
+- Relational operators compares the values. It either returns True or False according to the condition.
 
   | Operator  | Example     | Meaning  | Result         |
   |-----------|-------------|----------|----------------|
@@ -1094,10 +1085,9 @@ Relational Operators:
   | >	        | a > b	      | Greater than                | True if a is greater than b; False otherwise |
   | >=        | a >= b	    | Greater than or equal to    | True if a is greater than or equal to b; False otherwise |
 
-
 Logical Operators:
-  - used to combine expressions and test 'truthy'ness
 
+- used to combine expressions and test 'truthy'ness
 
   | Operator  | Example     | Result         |
   |-----------|-------------|----------------|
@@ -1106,9 +1096,9 @@ Logical Operators:
   | and       | x and y     | True if both x and y are True; False otherwise |
 
 Bitwise Operators:
-  - Bitwise operators acts on bits and performs bit by bit operation.
-  - They operate on numbers (normally), but instead of treating that number as if it were a single value, they treat it as if it were a string of bits, written in binary.
 
+- Bitwise operators acts on bits and performs bit by bit operation.
+- They operate on numbers (normally), but instead of treating that number as if it were a single value, they treat it as if it were a string of bits, written in binary.
 
   | Operator    | Syntax            | Desc        |
   |-------------|-------------------|-------------|
@@ -1117,10 +1107,9 @@ Bitwise Operators:
   | ~           | ~x                | Bitwise NOT |
   | ^           | x ^ y             | Bitwise XOR |
 
-
 Assignment Operators:
-  - Assignment operators are used to assign values to the variables
 
+- Assignment operators are used to assign values to the variables
 
   | Operator    | Syntax            |
   |-------------|-------------------|
@@ -1130,30 +1119,24 @@ Assignment Operators:
   | *star*=     | a *star*= b       |
   | /=          | a /= b; a = a / b |
 
-
 Difference between 'and' and '&':
-  - 'and' is a logical operator (used to combine expressions and test truthyness)
-  - '&' is a bitwise operator (used to do binary comparisons)
 
-
+- 'and' is a logical operator (used to combine expressions and test truthyness)
+- '&' is a bitwise operator (used to do binary comparisons)
 
 Knowing when something is True or False:
 
-  - Items considered False:
-    - Boolean value 'False'
-    - Any value that is numerically zero (0, 0.0, 0.0j)
-    - An empty string
-    - An empty object ([], {}, etc)
-    - 'None' object
+- Items considered False:
+  - Boolean value 'False'
+  - Any value that is numerically zero (0, 0.0, 0.0j)
+  - An empty string
+  - An empty object ([], {}, etc)
+  - 'None' object
 
-  - Items considered true:
-    - Virtually any other object built into Python is regarded as True.
+- Items considered true:
+  - Virtually any other object built into Python is regarded as True.
 
-
-
-
-Testing Flags and Vars:
-----
+## Testing Flags and Vars
 
 Check if var exists:
 
@@ -1166,9 +1149,9 @@ else:
     x_exists = True
 ```
 
-
 Check if var is true:
-  - See previous section called 'Knowing when something is True or False'
+
+- See previous section called 'Knowing when something is True or False'
 
 ```python
 >>> a = 0
@@ -1194,8 +1177,8 @@ if not var:
 ```
 
 When a var is false:
-  - See previous section 'Knowing when something is True or False'
 
+- See previous section 'Knowing when something is True or False'
 
 How not to check if a var is empty:
 
@@ -1210,7 +1193,6 @@ if foo == "":
 # "" is a magical value. You should never check against magical values (more commonly known as magical numbers)
 ```
 
-
 Ternary if to check if something is true:
 
 ```python
@@ -1221,15 +1203,15 @@ print ('passed') if x else print('did not pass')
 
 ```
 
-
 Using the 'OR' logical operator:
-  - if the first value is 'truthy', then it returns the first value and moves on / doesn't analyze the second
-  - if the first value is 'falsy', then it returns the second value, no matter what it is, and moves on / doesn't analyze the second value
-  - This is called the lazy OR
-  - When to use this:
-    - if statements: `if x or y:`
-    - return statements in functions:
-      `def greater_than_ten(num): return (num > 10) or False`
+
+- if the first value is 'truthy', then it returns the first value and moves on / doesn't analyze the second
+- if the first value is 'falsy', then it returns the second value, no matter what it is, and moves on / doesn't analyze the second value
+- This is called the lazy OR
+- When to use this:
+  - if statements: `if x or y:`
+  - return statements in functions:
+    `def greater_than_ten(num): return (num > 10) or False`
 
 ```python
 # Examples:
@@ -1293,7 +1275,6 @@ False
 >>>
 ```
 
-
 Setting a default value for a variable using the 'OR' logical operand:
 
 ```python
@@ -1318,16 +1299,15 @@ Setting a default value for a variable using the 'OR' logical operand:
 >>>
 ```
 
-
-
 Using the 'AND' logical operator:
-  - if the first value is 'truthy', then it returns the second value and moves on / doesn't analyze the second
-  - if the first value is 'falsy', then it returns the first value and moves on / doesn't analyze the second value
-  - This is the exact opposite of the 'OR' logical operator
-  - One way to think about this:
-    - both need to be true for the overall `x and y` statement to be true
-    - if the first if falsy, there is no way that the overall statement can be true, so it returns the first value and doesn't move forward
-    - if the first if true, then the second value can only evaluate to truthy or falsy, so it doesn't need to explicity analyze it, just return the second value
+
+- if the first value is 'truthy', then it returns the second value and moves on / doesn't analyze the second
+- if the first value is 'falsy', then it returns the first value and moves on / doesn't analyze the second value
+- This is the exact opposite of the 'OR' logical operator
+- One way to think about this:
+  - both need to be true for the overall `x and y` statement to be true
+  - if the first if falsy, there is no way that the overall statement can be true, so it returns the first value and doesn't move forward
+  - if the first if true, then the second value can only evaluate to truthy or falsy, so it doesn't need to explicity analyze it, just return the second value
 
 ```python
 # Example:
@@ -1374,22 +1354,21 @@ True
 
 Compound 'OR' expressions:
 
-  - code example: `(expr1) or (expr 2) or (expr 3) or (expr 4) or ... (expr n)`
-  - python evaluates the expressions from left to right.  
-  - The first true evaluation found, it stops evaluating all other expressions and returns the last evaluated expression
+- code example: `(expr1) or (expr 2) or (expr 3) or (expr 4) or ... (expr n)`
+- python evaluates the expressions from left to right.  
+- The first true evaluation found, it stops evaluating all other expressions and returns the last evaluated expression
 
 Compound 'AND' expressions:
 
-  - code example: `(expr1) and (expr 2) and (expr 3) and (expr 4) and ... (expr n)`
-  - python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
-  - the value of the last expression, which was found to be false, is returned
-
+- code example: `(expr1) and (expr 2) and (expr 3) and (expr 4) and ... (expr n)`
+- python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
+- the value of the last expression, which was found to be false, is returned
 
 Identity Operands:
 
-  - Difference between Identity (`x is y`) and equality (`x == y`):
-    - identity (`is`) checks if two items refer to the same underlying object
-    - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
+- Difference between Identity (`x is y`) and equality (`x == y`):
+  - identity (`is`) checks if two items refer to the same underlying object
+  - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
 
 ```python
 # Example
@@ -1404,10 +1383,7 @@ True
 False
 ```
 
-
-
-Comprehensions:
-----
+## Comprehensions
 
 list comprehension:
 
@@ -1462,11 +1438,7 @@ dict = { key:value for item in collection }
 >>>
 ```
 
-
-
-
-checking if dict key exists:
-----
+## Checking if dict key exists
 
 How not to do it:
 
@@ -1483,7 +1455,6 @@ Traceback (most recent call last):
 KeyError: 'key4'
 ```
 
-
 How to do it:
 
 ```python
@@ -1492,7 +1463,6 @@ d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
 if 'key4' not in d:
   print('key4 not in d')
 ```
-
 
 Newer, cooler way of doing it with setdefault():
 
@@ -1508,9 +1478,7 @@ print(d)
 
 ```
 
-
-Remove Dups from List:
-----
+## Remove Dups from List
 
 ```python
 items = [2, 2, 3, 3, 1]
@@ -1518,17 +1486,14 @@ items = [2, 2, 3, 3, 1]
 newitems2 = list(set(items))
 ```
 
-
-Set Global Variables programatically:
-----
+## Set Global Variables programatically
 
 ```python
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
 globals().update(d)
 ```
 
-Pytonic way of value swapping:
-----
+## Pytonic way of value swapping
 
 ```python
 """pythonic way of value swapping"""
@@ -1537,10 +1502,8 @@ a, b = 5, 10
 a, b = b, a
 ```
 
+## Reading Files
 
-
-Reading Files:
-----
 Code to read files
 
 ```python
@@ -1591,19 +1554,15 @@ with open(SOME_LARGE_FILE) as f:
 
 ```
 
-
-Reading CSV Files:
-----
-
+## Reading CSV Files
 
 - csv file:
 
-```
+```python
 name,department,birthday month
 John Smith,Accounting,November
 Erica Meyers,IT,March
 ```
-
 
 ```python
 import csv
@@ -1621,19 +1580,19 @@ with open('employee_birthday.txt', mode='r') as csv_file:
 ```
 
 Output:
-```
+
+```python
 Column names are name, department, birthday month
     John Smith works in the Accounting department, and was born in November.
     Erica Meyers works in the IT department, and was born in March.
 Processed 3 lines.
 ```
 
-
 - Reading CSVs with pandas
 
+CSV file:
 
-- CSV file:
-```
+```python
 Name,Hire Date,Salary,Sick Days remaining
 Graham Chapman,03/15/14,50000.00,10
 John Cleese,06/01/15,65000.00,8
@@ -1650,7 +1609,8 @@ print(df)
 ```
 
 Output:
-```
+
+```pyton
              Name Hire Date   Salary  Sick Days remaining
 0  Graham Chapman  03/15/14  50000.0                   10
 1     John Cleese  06/01/15  65000.0                    8
@@ -1660,11 +1620,7 @@ Output:
 5   Michael Palin  05/23/13  66000.0                    8
 ```
 
-
-
-
-HTTP Requests:
-----
+## HTTP Requests
 
 Basic example:
 
@@ -1683,12 +1639,10 @@ Disable SSL Certificate Verification:
 requests.get(url, verify=False)
 ```
 
-
-
-Kerberos:
-----
+## Kerberos
 
 How to do Kerberos auth to internal websites:
+
 ````python
 import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
@@ -1704,6 +1658,7 @@ print(r.status_code)   # 200 OK
 ````
 
 A more complex example of requests, using query string parameters, headers, and ssl verification turned off:
+
 ```python
 # Wiki API
 url = 'https://share.amazon.com/sites/ps/Networking/NHO/Lists/Mentee%20Case%20Review/PersonalViews.aspx'
@@ -1737,10 +1692,7 @@ headers['User-Agent'] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWe
 r = requests.get(url, auth=kerberos_auth, headers=headers, params=params, verify=False)
 ```
 
-
-Regex:
-----
-
+## Regex
 
 ```python
 import re
@@ -1766,21 +1718,23 @@ match.group(3)    # ';var WPQ2SchemaData'
 
 ```
 
-
-JSON:
-----
+## JSON
 
 dump:
- - Used to write data to a file (deserialization)
+
+- Used to write data to a file (deserialization)
+
 dumps:
- - Used to deserialize data to a string
+
+- Used to deserialize data to a string
 
 load:
- - Used to convert (serialize) data from a file into a json object (or dict in Python)
+
+- Used to convert (serialize) data from a file into a json object (or dict in Python)
+
 loads:
- - Used to convert (serialize) a string into a json object (or dict in Python)
 
-
+- Used to convert (serialize) a string into a json object (or dict in Python)
 
 json.loads():
 
@@ -1814,9 +1768,7 @@ a = json.loads(r.text)
 b = r.json()
 ```
 
-
-Zip() Function:
----------------
+## Zip() Function
 
 - takes any number of iterables as arguments and returns an iterator over tuples of their corresponding elements
 
@@ -1837,19 +1789,19 @@ list_b = ['a', 'b', 'c', 'd', 'e']
 
 zipped_list = list(zip(list_a, list_b))
 
-print(zipped_list) 
+print(zipped_list)
 # [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
 
 - You can also unzip a list of tuples
 
-```python 
+```python
 zipper_list = [(1, 'a'), (2, 'b'), (3, 'c')]
- 
+
 list_a, list_b = list(zip(*zipper_list))
  print(list_a)
  # (1, 2, 3)
- print(list_b) 
+ print(list_b)
  # ('a', 'b', 'c')
 ```
 
@@ -1872,12 +1824,7 @@ list_c = list(zipped) #Output: [(1, 4), (2, 5), (3, 6)]
 list_d = list(zipped) # Output []... Output is empty list becuase by the above statement zip got exhausted.
 ```
 
-
-
-
-
-Logging:
-----
+## Logging
 
 Below is code that lets you log to a specified log file (change 'logfile.log') and to the console
 
@@ -1909,10 +1856,7 @@ logging.info('This is a log message')
 
 ```
 
-
-
-Most common elements in an iterable:
-------------------------------------
+## Most common elements in an iterable
 
 ```python
 # collections.Counter lets you find the most common
@@ -1928,9 +1872,7 @@ Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
 [('l', 3), ('o', 2), ('e', 1)]
 ```
 
-
-Permutations:
-------------
+## Permutations
 
 ```python
 # itertools.permutations() generates permutations
@@ -1966,15 +1908,14 @@ Permutations:
 ('D', 'C', 'B', 'A')
 ```
 
+## Variable Unpacking
 
-Variable Unpacking:
--------------------
 - A way to assign valuees to multiple variables at one time, say from a list
 
-
 Enumerate:
-    - enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop:
-    -
+
+- enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop
+
 ```python
 for index, item in enumerate(some_list):
     # do something with index and item
@@ -2001,11 +1942,11 @@ for index, item in enumerate(some_list):
 ...     print(i,v)
 ```
 
-
 Using enumerate to unpack tuples (in a cool way):
+
 ```python
 >>> L = [('Matt', 20), ('Karim', 30), ('Maya', 40)]
->>> 
+>>>
 >>> for idx, (name, age) in enumerate(L):
 ...     print(f"Index is {idx}, name is {name}, and age is {age}")
 Index is 0, name is Matt, and age is 20
@@ -2013,14 +1954,11 @@ Index is 1, name is Karim, and age is 30
 Index is 2, name is Maya, and age is 40
 ```
 
-
-
 Variable swap can be an example of unpacking:
 
 ```python
 a, b = b, a
 ```
-
 
 Nested unpacking works as well:
 
@@ -2062,28 +2000,30 @@ Use a throwaway variable when unpacking:
 >>>
 ```
 
-
 Different ways to do variable unpacking:
 
-- list:
-```python 
+- list
+
+```python
 human = ['James', 180, 32, 'm']
 
 name, weight, age, sex = human
-# This is better than: 
+# This is better than:
 # name = human[0]
 ```
 
 - Dict:
-```python 
+
+```python
 human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
 
 name, weight, age, sex = human.values()
 ```
 
-- Named Tuple:
+- Named Tuple
 - Note: This isn't variable unpacking, but is still cool
-```python 
+
+```python
 humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
 
 human = humans('James', 180, 32, 'm')
@@ -2095,11 +2035,9 @@ human.name
 'James'
 ```
 
+## Interesting way to handle exceptions
 
-Interesting way to handle exceptions:
--------------------------------------
-
-```python 
+```python
 import contextlib
 
 with contextlib.suppress(FileNotFoundError):
