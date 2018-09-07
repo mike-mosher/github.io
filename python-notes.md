@@ -1364,6 +1364,22 @@ Compound 'AND' expressions:
 - python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
 - the value of the last expression, which was found to be false, is returned
 
+Any() and All() Functions:
+
+- any function:
+  - takes a iterable as input 
+  - Will return True if any of the items are truthy.  False if all are Falsy (or input is empty)
+  - You can think of it like a series of `OR` comparisons between the items 
+  
+
+```python
+>>> any([False, True, False])
+>>> True  # At least one item is Truthy
+>>> 
+>>> all([False, True, False])
+>>> False # At least one item was not Truthy
+```
+
 Identity Operands:
 
 - Difference between Identity (`x is y`) and equality (`x == y`):
