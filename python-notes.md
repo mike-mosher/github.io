@@ -1366,10 +1366,13 @@ Compound 'AND' expressions:
 
 Any() and All() Functions:
 
-- any function:
+- Any() function:
   - takes a iterable as input 
   - Will return True if any of the items are truthy.  False if all are Falsy (or input is empty)
   - You can think of it like a series of `OR` comparisons between the items 
+- All() function:
+  - returns True when all items are Truthy 
+  - You can think of it like a seres of `AND` comparisons between the items
   
 
 ```python
