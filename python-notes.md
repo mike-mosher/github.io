@@ -1,5 +1,18 @@
 # Random Python Snippets
 
+## Naming Things
+
+Three ways to name a multi-word variable:
+
+- Camel Case: `distanceToNearestTown`
+- Pascal Case: `DistanceToNearestTown`
+- Snake Case: `distance_to_nearest_town`
+
+Which way is the best?
+
+- PEP8 recommends Snake Case
+- https://www.python.org/dev/peps/pep-0008/
+
 ## Strings
 
 Strings can be broken up over multiple lines without backspaces or anything
