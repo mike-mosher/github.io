@@ -458,6 +458,30 @@ l[start:stop:step]
 l[::2] # get every other item, starting with the first
 ```
 
+- Note about slices:
+  - lists don't error out if you are trying to acces a slice of the list that is past the start or end boundry.
+
+```python 
+a = [1,2,3,4,5]
+>>> a = [1,2,3,4,5]
+>>> 
+>>> first_twenty_items = a[:20]  # Python doesn't care if you are trying to access items out of bounds
+>>> first_twenty_items
+[1, 2, 3, 4, 5]
+>>> last_twenty_items = a[-20:]  # Python doesn't care if you are trying to access items out of bounds
+>>> last_twenty_items
+[1, 2, 3, 4, 5]
+>>> 
+```
+
+- In contrast, you will get an eerror if you try to access a specific item out of bounds
+
+```python 
+>>> a[20]
+IndexError: list index out of range
+```
+
+
 Searching items in list:
 
 ```python
@@ -649,7 +673,25 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 >>> test= { d2[i] : d2.get(i, n) for i, n in d1.items() }
 >>> test
 {'val1': 'val1', 'val2': 'val2', 'value3': 'value3'}
+```
 
+- intersectionality / commonality of two dicts:
+
+```python
+>>> a = {
+...    'x' : 1,
+...    'y' : 2,
+...    'z' : 3
+... }
+>>> 
+>>> b = {
+...    'w' : 10,
+...    'x' : 11,
+...    'y' : 2
+... }
+>>> 
+>>> a.items() & b.items()
+{('y', 2)}
 ```
 
 Adding / Updating items:
@@ -2082,3 +2124,13 @@ try:
 except FileNotFoundError:
     pass
 ```
+
+
+## General Guidance
+
+- Use list comprehensions instead of maps and filters
+- Use `enumerate` over `range`
+- Avoid `else` blocks after `for` and `while` loops 
+- Functions:
+  - Prefer to return exceptions instead of `None`
+  - 
