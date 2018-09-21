@@ -2133,4 +2133,42 @@ except FileNotFoundError:
 - Avoid `else` blocks after `for` and `while` loops 
 - Functions:
   - Prefer to return exceptions instead of `None`
-  - 
+
+
+# Random 
+
+## Print emojis on the command line:
+
+```python
+# pip install emoji
+from emoji import emojize
+print(emojize(":thumbs_up:"))
+ 👍
+```
+
+## `sh` module
+
+- replacement for OS module
+- lets you call any program as ordinary function
+
+```python
+from sh import ifconfig
+print(ifconfig("wlan0"))
+
+
+from sh import *
+sh.pwd()
+sh.mkdir('new_folder')
+sh.touch('new_file.txt')
+sh.whoami()
+sh.echo('This is great!')
+
+# ls command
+sh.ls("-l", "/tmp", color="never")
+
+# piping ls -l to wc -l
+sh.wc(sh.ls("-1"), "-l")
+
+# git
+sh.git.show("HEAD")
+```
