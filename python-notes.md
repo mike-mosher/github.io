@@ -547,6 +547,23 @@ Notes:
   L.append(obj)
 ```
 
+Reversing a list:
+
+- If you want to iterate over the reversed list, use `reversed`:
+
+```python
+original_list = [1, 2, 3, 4, 5]
+for element in reversed(original_list):
+    print(element)
+````
+
+- If you want need the whole list, and don't need to iterate over the reversed list, use `sorted`:
+
+```python
+reversed_list = sorted(original_list, reverse=True)
+````
+
+
 Sorting Lists:
 
 - Sorting numbers is easy with .sort()
