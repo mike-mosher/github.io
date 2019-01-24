@@ -233,6 +233,7 @@ answer = 42
 ```python
 >>> print('test')
 test
+# Custom return carriage
 >>> print('specify', 'a', 'custom', 'return', 'carriage', end='\n\n\n')
 specify a custom return carriage
 
@@ -241,11 +242,17 @@ specify a custom return carriage
 >>> print('specify', 'an', 'empty', 'return', 'carriage', end='')
 specify an empty return carriage>>>
 >>>
+# Custom separator
 >>> print('multiple', 'words', 'separated', 'by', 'space', 'by', 'default')
 multiple words separated by space by default
 >>> print('multiple', 'words', 'separated', 'by', 'custom', 'separator', sep='-')
 multiple-words-separated-by-custom-separator
 >>> 
+# Printing to file
+>>> with open('file.txt', 'w') as f:
+...     print('print to file', file=f)
+...     
+>>>
 ```
 
 ## Pretty Printing Stuff
