@@ -228,6 +228,26 @@ answer = 42
 
 - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
+## Printing Stuff
+
+```python
+>>> print('test')
+test
+>>> print('specify', 'a', 'custom', 'return', 'carriage', end='\n\n\n')
+specify a custom return carriage
+
+
+>>> 
+>>> print('specify', 'an', 'empty', 'return', 'carriage', end='')
+specify an empty return carriage>>>
+>>>
+>>> print('multiple', 'words', 'separated', 'by', 'space', 'by', 'default')
+multiple words separated by space by default
+>>> print('multiple', 'words', 'separated', 'by', 'custom', 'separator', sep='-')
+multiple-words-separated-by-custom-separator
+>>> 
+```
+
 ## Pretty Printing Stuff
 
 you can use json.dumps():
