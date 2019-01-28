@@ -1762,19 +1762,78 @@ if response:
     print('Success!')
 ```
 
+Passing Query String Parameters to a request:
+```python 
+url = 'http://example.com'
+params = {
+    'user': 'mike',
+    'age': 100,
+    'sex': 'M'
+}
+response = requests.get(url, params=params)
+response.url
+# 'http://example.com/?name=mike&age=100&sex=M'
+``` 
+
+Passing Headers to a request:
+```python
+url = 'http://example.com'
+headers = {
+    'Content-Type': 'application/json'
+}
+response = request.get(url, headers=headers)
+```
+
 Disable SSL Certificate Verification:
 
 ```python
 requests.get(url, verify=False)
 ```
 
-Response object from a Request:
+Setting the data / body in a request:
 
-- response.content = raw content in bytes
-- response.text = raw content returned as a string 
-- response.json = content returned as a json string (if the response is valid json)
-- response.headers = all the headers, as a json object (so you can do things like `response.headers['Content-Type']`)
-- 
+- Mostly used for `PUT`, `POST`, and `PATCH` methods
+- You can send data in the body of a request as a dictionary, a list of tuples, bytes, or a file-like object
+- You will use the `data` parameter, and most times use a dictionary object (for example, if the content type is: application/x-www-form-urlencoded)
+- You can also set the request data / body as json data using the `json` parameter 
+- When you pass JSON data via json, requests will serialize your data and add the correct Content-Type header for you.
+  - You will mostly use the json parameter when posting data to APIs
+
+```python 
+url = 'http://httpbin.org/post'
+data = {
+    'username': 'your mom', 
+    'password': 'your moms password'
+}
+response = requests.post(url, data=data)
+response = requests.post(url, json=data)
+```
+
+Viewing / Validating request properties:
+
+- you can access all of the properties of the prepared request using the `.request` object:
+- valid properties of the `.request` object are:
+  - body 
+  - headers
+  - method 
+  - path_url (just the path, not the domain)
+  - url
+
+```python 
+response = request.post(url, headers=headers, params=params, json=data)
+print(response.request.url)
+print(response.request.headers)
+print(response.request.body)
+
+``` 
+
+Viewing / Validating Response properties:
+
+- valid properties of the response object:
+  - response.content = raw content in bytes
+  - response.text = raw content returned as a string 
+  - response.json = content returned as a json string (if the response is valid json)
+  - response.headers = all the headers, as a json object (so you can do things like `response.headers['Content-Type']`)
 
 ## Kerberos
 
