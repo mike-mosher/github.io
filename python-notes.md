@@ -1738,7 +1738,7 @@ Output:
 5   Michael Palin  05/23/13  66000.0                    8
 ```
 
-## HTTP Requests
+## HTTP Requests / Working with Requests module
 
 Basic example:
 
@@ -1749,6 +1749,17 @@ response = requests.get('http://www.amazon.com')
 
 print(response.status_code)
 print(response.headers)
+```
+
+Simple check if a response is good or not:
+
+    - If you use a Response instance in a conditional expression, it will evaluate to True if the status code was between 200 and 400, and False otherwise.
+
+```python 
+response = requests.get('http://www.amazon.com')
+
+if response:
+    print('Success!')
 ```
 
 Disable SSL Certificate Verification:
