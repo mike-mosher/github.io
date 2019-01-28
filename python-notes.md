@@ -1754,8 +1754,10 @@ print(response.headers)
 Simple check if a response is good or not:
 
 - If you use a Response instance in a conditional expression, it will evaluate to True if the status code was between 200 and 400, and False otherwise.
+- This is the same as `response.ok`
+- using `if response:` or `if response.ok:` are NOT the same as `if response.status_code == 200`
 
-```python 
+```python
 response = requests.get('http://www.amazon.com')
 
 if response:
@@ -1763,6 +1765,7 @@ if response:
 ```
 
 Passing Query String Parameters to a request:
+
 ```python 
 url = 'http://example.com'
 params = {
@@ -1773,9 +1776,10 @@ params = {
 response = requests.get(url, params=params)
 response.url
 # 'http://example.com/?name=mike&age=100&sex=M'
-``` 
+```
 
 Passing Headers to a request:
+
 ```python
 url = 'http://example.com'
 headers = {
@@ -1799,7 +1803,7 @@ Setting the data / body in a request:
 - When you pass JSON data via json, requests will serialize your data and add the correct Content-Type header for you.
   - You will mostly use the json parameter when posting data to APIs
 
-```python 
+```python
 url = 'http://httpbin.org/post'
 data = {
     'username': 'your mom', 
@@ -1813,19 +1817,19 @@ Viewing / Validating request properties:
 
 - you can access all of the properties of the prepared request using the `.request` object:
 - valid properties of the `.request` object are:
-  - body 
+  - body
   - headers
-  - method 
+  - method
   - path_url (just the path, not the domain)
   - url
 
-```python 
+```python
 response = request.post(url, headers=headers, params=params, json=data)
 print(response.request.url)
 print(response.request.headers)
 print(response.request.body)
 
-``` 
+```
 
 Viewing / Validating Response properties:
 
@@ -1834,6 +1838,13 @@ Viewing / Validating Response properties:
   - response.text = raw content returned as a string 
   - response.json = content returned as a json string (if the response is valid json)
   - response.headers = all the headers, as a json object (so you can do things like `response.headers['Content-Type']`)
+  - response.cookies
+  - response.encoding
+  - response.is_redirect
+  - response.ok
+    - Very similar, and equivelant, to just checking `response`
+    - Returns True if status_code is less than 400, False if not
+    - using `if response:` or `if response.ok:` are NOT the same as `if response.status_code == 200`
 
 ## Kerberos
 
