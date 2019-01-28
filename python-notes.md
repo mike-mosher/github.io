@@ -1753,7 +1753,7 @@ print(response.headers)
 
 Simple check if a response is good or not:
 
-    - If you use a Response instance in a conditional expression, it will evaluate to True if the status code was between 200 and 400, and False otherwise.
+- If you use a Response instance in a conditional expression, it will evaluate to True if the status code was between 200 and 400, and False otherwise.
 
 ```python 
 response = requests.get('http://www.amazon.com')
@@ -1767,6 +1767,14 @@ Disable SSL Certificate Verification:
 ```python
 requests.get(url, verify=False)
 ```
+
+Response object from a Request:
+
+- response.content = raw content in bytes
+- response.text = raw content returned as a string 
+- response.json = content returned as a json string (if the response is valid json)
+- response.headers = all the headers, as a json object (so you can do things like `response.headers['Content-Type']`)
+- 
 
 ## Kerberos
 
