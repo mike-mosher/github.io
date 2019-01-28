@@ -238,7 +238,7 @@ test
 specify a custom return carriage
 
 
->>> 
+>>>
 >>> print('specify', 'an', 'empty', 'return', 'carriage', end='')
 specify an empty return carriage>>>
 >>>
@@ -247,11 +247,11 @@ specify an empty return carriage>>>
 multiple words separated by space by default
 >>> print('multiple', 'words', 'separated', 'by', 'custom', 'separator', sep='-')
 multiple-words-separated-by-custom-separator
->>> 
+>>>
 # Printing to file
 >>> with open('file.txt', 'w') as f:
 ...     print('print to file', file=f)
-...     
+...
 >>>
 ```
 
@@ -488,26 +488,25 @@ l[::2] # get every other item, starting with the first
 - Note about slices:
   - lists don't error out if you are trying to acces a slice of the list that is past the start or end boundry.
 
-```python 
+```python
 a = [1,2,3,4,5]
 >>> a = [1,2,3,4,5]
->>> 
+>>>
 >>> first_twenty_items = a[:20]  # Python doesn't care if you are trying to access items out of bounds
 >>> first_twenty_items
 [1, 2, 3, 4, 5]
 >>> last_twenty_items = a[-20:]  # Python doesn't care if you are trying to access items out of bounds
 >>> last_twenty_items
 [1, 2, 3, 4, 5]
->>> 
+>>>
 ```
 
-- In contrast, you will get an eerror if you try to access a specific item out of bounds
+- In contrast, you will get an error if you try to access a specific item out of bounds
 
-```python 
+```python
 >>> a[20]
 IndexError: list index out of range
 ```
-
 
 Searching items in list:
 
@@ -589,7 +588,6 @@ for element in reversed(original_list):
 ```python
 reversed_list = sorted(original_list, reverse=True)
 ````
-
 
 Sorting Lists:
 
@@ -727,13 +725,13 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 ...    'y' : 2,
 ...    'z' : 3
 ... }
->>> 
+>>>
 >>> b = {
 ...    'w' : 10,
 ...    'x' : 11,
 ...    'y' : 2
 ... }
->>> 
+>>>
 >>> a.items() & b.items()
 {('y', 2)}
 ```
@@ -1466,18 +1464,17 @@ Compound 'AND' expressions:
 Any() and All() Functions:
 
 - Any() function:
-  - takes a iterable as input 
+  - takes a iterable as input
   - Will return True if any of the items are truthy.  False if all are Falsy (or input is empty)
-  - You can think of it like a series of `OR` comparisons between the items 
+  - You can think of it like a series of `OR` comparisons between the items
 - All() function:
-  - returns True when all items are Truthy 
+  - returns True when all items are Truthy
   - You can think of it like a seres of `AND` comparisons between the items
-  
 
 ```python
 >>> any([False, True, False])
 >>> True  # At least one item is Truthy
->>> 
+>>>
 >>> all([False, True, False])
 >>> False # At least one item was not Truthy
 ```
@@ -1766,7 +1763,7 @@ if response:
 
 Passing Query String Parameters to a request:
 
-```python 
+```python
 url = 'http://example.com'
 params = {
     'user': 'mike',
@@ -1799,14 +1796,14 @@ Setting the data / body in a request:
 - Mostly used for `PUT`, `POST`, and `PATCH` methods
 - You can send data in the body of a request as a dictionary, a list of tuples, bytes, or a file-like object
 - You will use the `data` parameter, and most times use a dictionary object (for example, if the content type is: application/x-www-form-urlencoded)
-- You can also set the request data / body as json data using the `json` parameter 
+- You can also set the request data / body as json data using the `json` parameter
 - When you pass JSON data via json, requests will serialize your data and add the correct Content-Type header for you.
   - You will mostly use the json parameter when posting data to APIs
 
 ```python
 url = 'http://httpbin.org/post'
 data = {
-    'username': 'your mom', 
+    'username': 'your mom',
     'password': 'your moms password'
 }
 response = requests.post(url, data=data)
@@ -1835,7 +1832,7 @@ Viewing / Validating Response properties:
 
 - valid properties of the response object:
   - response.content = raw content in bytes
-  - response.text = raw content returned as a string 
+  - response.text = raw content returned as a string
   - response.json = content returned as a json string (if the response is valid json)
   - response.headers = all the headers, as a json object (so you can do things like `response.headers['Content-Type']`)
   - response.cookies
@@ -2258,17 +2255,15 @@ except FileNotFoundError:
     pass
 ```
 
-
 ## General Guidance
 
 - Use list comprehensions instead of maps and filters
 - Use `enumerate` over `range`
-- Avoid `else` blocks after `for` and `while` loops 
+- Avoid `else` blocks after `for` and `while` loops
 - Functions:
   - Prefer to return exceptions instead of `None`
 
-
-# Random 
+# Random
 
 ## Print emojis on the command line:
 
