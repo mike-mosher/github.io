@@ -1703,38 +1703,6 @@ Column names are name, department, birthday month
 Processed 3 lines.
 ```
 
-- Reading CSVs with pandas
-
-CSV file:
-
-```python
-Name,Hire Date,Salary,Sick Days remaining
-Graham Chapman,03/15/14,50000.00,10
-John Cleese,06/01/15,65000.00,8
-Eric Idle,05/12/14,45000.00,10
-Terry Jones,11/01/13,70000.00,3
-Terry Gilliam,08/12/14,48000.00,7
-Michael Palin,05/23/13,66000.00,8
-```
-
-```python
-import pandas
-df = pandas.read_csv('hrdata.csv')
-print(df)
-```
-
-Output:
-
-```pyton
-             Name Hire Date   Salary  Sick Days remaining
-0  Graham Chapman  03/15/14  50000.0                   10
-1     John Cleese  06/01/15  65000.0                    8
-2       Eric Idle  05/12/14  45000.0                   10
-3     Terry Jones  11/01/13  70000.0                    3
-4   Terry Gilliam  08/12/14  48000.0                    7
-5   Michael Palin  05/23/13  66000.0                    8
-```
-
 ## HTTP Requests / Working with Requests module
 
 Basic example:
@@ -2299,4 +2267,86 @@ sh.wc(sh.ls("-1"), "-l")
 
 # git
 sh.git.show("HEAD")
+```
+
+# Pandas
+
+- scrape any tables from a webpage
+
+```
+import pandas
+
+url = 'http://apps.sandiego.gov/sdfiredispatch/'
+
+# Tell pandas that the first row of the tablular data is the header row with 'header=0'
+# Tell pandas to convert text-based dates into time objects with 'parse_dates=["Call Date"]'
+html_tables = pandas.read_html(url, header=0, parse_dates=["Call Date"])
+
+print(html_tables)
+
+# Output
+             Call Date        Call Type              Street                             Cross Streets    Unit
+0  2017-06-02 17:27:58          Medical         HIGHLAND AV                 WIGHTMAN ST/UNIVERSITY AV     E17
+1  2017-06-02 17:27:58          Medical         HIGHLAND AV                 WIGHTMAN ST/UNIVERSITY AV     M34
+2  2017-06-02 17:23:51          Medical          EMERSON ST                    LOCUST ST/EVERGREEN ST     E22
+3  2017-06-02 17:23:51          Medical          EMERSON ST                    LOCUST ST/EVERGREEN ST     M47
+4  2017-06-02 17:23:15          Medical         MARAUDER WY                     BARON LN/FROBISHER ST     E38
+5  2017-06-02 17:23:15          Medical         MARAUDER WY                     BARON LN/FROBISHER ST     M41
+
+# or use 'to_json' to print as json data
+print(html_tables.to_json(orient="records", date_format="iso"))
+
+# Output 
+[
+  {
+    "Call Date": "2017-06-02T17:34:00.000Z",
+    "Call Type": "Medical",
+    "Street": "ROSECRANS ST",
+    "Cross Streets": "HANCOCK ST/ALLEY",
+    "Unit": "M21"
+  },
+  {
+    "Call Date": "2017-06-02T17:34:00.000Z",
+    "Call Type": "Medical",
+    "Street": "ROSECRANS ST",
+    "Cross Streets": "HANCOCK ST/ALLEY",
+    "Unit": "T20"
+  }
+  // ...
+]
+
+# Or save to CSV file 
+html_tables.to_csv("data.csv", index=False)
+```
+
+- Reading CSVs with pandas
+
+CSV file:
+
+```python
+Name,Hire Date,Salary,Sick Days remaining
+Graham Chapman,03/15/14,50000.00,10
+John Cleese,06/01/15,65000.00,8
+Eric Idle,05/12/14,45000.00,10
+Terry Jones,11/01/13,70000.00,3
+Terry Gilliam,08/12/14,48000.00,7
+Michael Palin,05/23/13,66000.00,8
+```
+
+```python
+import pandas
+df = pandas.read_csv('hrdata.csv')
+print(df)
+```
+
+Output:
+
+```pyton
+             Name Hire Date   Salary  Sick Days remaining
+0  Graham Chapman  03/15/14  50000.0                   10
+1     John Cleese  06/01/15  65000.0                    8
+2       Eric Idle  05/12/14  45000.0                   10
+3     Terry Jones  11/01/13  70000.0                    3
+4   Terry Gilliam  08/12/14  48000.0                    7
+5   Michael Palin  05/23/13  66000.0                    8
 ```
