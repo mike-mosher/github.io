@@ -189,20 +189,6 @@ String Interpolation:
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
 
-## Printing
-
-One cool trick with printing
-
-- How to print out a string with no new line
-
-```python
-# use the named argument "end" to explicitly specify the end of line string
-print("Hello World!", end = '')
-print("My name is Karim")
-# output:
-# Hello World!My name is Karim
-```
-
 ## Multi-Line Comments
 
 - two ways:
@@ -228,7 +214,8 @@ answer = 42
 
 - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
-## Printing Stuff
+
+## Printing
 
 ```python
 >>> print('test')
@@ -486,7 +473,7 @@ l[::2] # get every other item, starting with the first
 ```
 
 - Note about slices:
-  - lists don't error out if you are trying to acces a slice of the list that is past the start or end boundry.
+  - lists don't error out if you are trying to access a slice of the list that is past the start or end boundry.
 
 ```python
 a = [1,2,3,4,5]
@@ -1590,15 +1577,6 @@ d.setdefault('key3', 'wrongVal3')   # Since 'key3' exists, it will not set the v
 d.setdefault('key4', 'val4')        # Since 'key4' doesn't exist, it will create and set value passed in second argument
 print(d)
 # {'key1': 'val1', 'key2': 'val2', 'key3': 'val3', 'key4': 'val4'}
-
-```
-
-## Remove Dups from List
-
-```python
-items = [2, 2, 3, 3, 1]
-
-newitems2 = list(set(items))
 ```
 
 ## Set Global Variables programatically
