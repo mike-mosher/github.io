@@ -38,6 +38,21 @@ Triple Quotes:
 '\n  did you know that you can use triple quotes for multi-line strings as well?\n  However, there is a difference in how they are represented.\n  See output.\n'
 ```
 
+Triple Quote, but keeping indentation
+
+- You can use `textwrap.dedent` to keep the indentation of multi-line text 
+
+```python 
+import textwrap 
+
+code_block = textwrap.dedent("""
+        def newfunc(input):
+            print(input)
+""")
+code_block
+>>>'\ndef newfunc(input):\n    print(input)\n'
+```
+
 Joining and Splitting Strings:
 
 ```python
@@ -167,6 +182,15 @@ New New Style (Python 3.6+):
 >>> b = 10
 >>> f'five plus 10 is {a + b} and not {2 * (a + b)}'
 'five plus 10 is 15 and not 30'
+```
+
+- One off:
+- Formatting a number in the thousands:
+
+```python 
+>>> number = 1234567890
+>>> f"{number:,}"
+'1,234,567,890'
 ```
 
 ## Diff between String Concatenation and String Interpolation
