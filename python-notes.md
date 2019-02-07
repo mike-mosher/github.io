@@ -1927,8 +1927,14 @@ d = json.loads(s)
 
 print(type(d))    # dict
 print(d)          # {'test': 'value'}
-
  ```
+
+- To preserve order:
+
+```python 
+from collections import OrderedDict
+json_obj = json.loads(string_var, object_pairs_hook=OrderedDict)
+``` 
 
 Get JSON data from URL with requests:
 
@@ -2365,3 +2371,36 @@ import sys
 script_name   = sys.argv[0]
 arguments     = sys.argv[1:]    # list of arguments
 ```
+
+
+# Command Execution
+
+```python
+import os
+<str> = os.popen(<command>).read()
+```
+
+Or:
+
+```python
+>>> import subprocess
+>>> a = subprocess.run(['ls', '-a'], stdout=subprocess.PIPE)
+>>> a.stdout
+b'.\n..\nfile1.txt\nfile2.txt\n'
+>>> a.returncode
+0
+``` 
+
+
+# Progress Bar
+
+```python
+$ pip3 install tqdm
+from tqdm import tqdm
+from time import sleep
+for i in tqdm([1, 2, 3]):
+    sleep(0.2)
+for i in tqdm(range(100)):
+    sleep(0.02)
+``` 
+
