@@ -244,6 +244,10 @@ answer = 42
 ```python
 >>> print('test')
 test
+>>>
+>>>print('item1', 'item2')
+item1 item2
+>>>
 # Custom return carriage
 >>> print('specify', 'a', 'custom', 'return', 'carriage', end='\n\n\n')
 specify a custom return carriage
@@ -2351,4 +2355,13 @@ Output:
 3     Terry Jones  11/01/13  70000.0                    3
 4   Terry Gilliam  08/12/14  48000.0                    7
 5   Michael Palin  05/23/13  66000.0                    8
+```
+
+
+# Command Line Arguments 
+
+```python
+import sys
+script_name   = sys.argv[0]
+arguments     = sys.argv[1:]    # list of arguments
 ```
