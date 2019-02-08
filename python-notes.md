@@ -498,6 +498,8 @@ l[:]                  # shorthand to return the full list
 
 l[start:stop:step]
 l[::2] # get every other item, starting with the first
+
+l[::-1] # get every item of the list in reverse order
 ```
 
 - Note about slices:
@@ -541,10 +543,63 @@ item = L.pop(index)
 L.remove(item)
 ```
 
+- differences between the ways to delete items in a list:
+  - https://stackoverflow.com/questions/11520492/difference-between-del-remove-and-pop-on-lists/11520540
+
+
+- `remove` removes the first matching value, not a specific index:
+
+```python
+>>> a = [0, 2, 3, 2]
+>>> a.remove(2)
+>>> a
+[0, 3, 2]
+```
+
+- `del` removes the item at a specific index:
+
+```python
+>>> a = [3, 2, 2, 1]
+>>> del a[1]
+>>> a
+[3, 2, 1]
+```
+
+- and op removes the item at a specific index and returns it.
+
+```python
+>>> a = [4, 3, 5]
+>>> a.pop(1)
+3
+>>> a
+[4, 5]
+```
+
+- Their error modes are different too:
+
+```python 
+>>> a = [4, 5, 6]
+>>> a.remove(7)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> del a[7]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+>>> a.pop(7)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: pop index out of range
+```
+
 Copy items from a list:
 
 ```python
 a = [1, 2, 3, 4, 5]
+
+# b and a point to same object in memory, both will be updated if one is updated
+b = a 
 
 # shallow copy
 b = a[:]
@@ -596,13 +651,13 @@ Reversing a list:
 original_list = [1, 2, 3, 4, 5]
 for element in reversed(original_list):
     print(element)
-````
+```
 
 - If you want need the whole list, and don't need to iterate over the reversed list, use `sorted`:
 
 ```python
 reversed_list = sorted(original_list, reverse=True)
-````
+```
 
 Sorting Lists:
 
@@ -624,10 +679,8 @@ Sorting Lists:
 [3.14, 8, 10, 15, 22.4]
 
 # Both methods above accept 'reverse=True' to sort descending
->>> L = [15, 22.4, 8, 10, 3.14]
 >>> L.sort(reverse = True)
->>> L
-[22.4, 15, 10, 8, 3.14]
+>>> sorted(L, reverse=True)
 ```
 
 - You can do the same with strings (sorting them alphabetically)
@@ -697,15 +750,15 @@ print(d.get('key4', 'default'))
 # Output: default
 ```
 
-You could use this in an IF statement to run code if a key exists
+How to check a dict for a key in an if statment:
 
 ```python
-if d.get('test', 0):
-  # We only run this code if d['test'] exists
-
-# for clarity, this works just as well
 if d.get('test'):
   # only runs if this key exists.  If not, it returns NoneType, which evaluates to boolean False
+
+if d.has_key(key):
+
+if 'test' in d:
 ```
 
 Crude way of updating a dictionary (d1) with any key/value pairs from d2 that don't exist in d1
@@ -961,7 +1014,7 @@ Example:
 ## Tuples
 
 - Tuples are identical to lists in all respects, except for the following properties:
-  - Tuples are defined by enclosing the elements in parentheses (()) instead of square brackets ([]).
+  - Tuples are defined by enclosing the elements in parentheses () instead of square brackets [].
   - Tuples are immutable.
 - Everything you’ve learned about lists—they are ordered, they can contain arbitrary objects, they can be indexed and sliced, they can be nested—is true of tuples as well. But they can’t be modified
 
@@ -973,6 +1026,8 @@ t = 'test',     # tuple with one item (note the comma)
 t = ('test',)
 t = ('test1', 'test2', 3)
 ```
+
+Access Tuple Items:
 
 ```python
 >>> t = ('foo', 'bar', 'baz', 'qux', 'quux', 'corge')
@@ -1594,6 +1649,12 @@ if 'key4' not in d:
   print('key4 not in d')
 ```
 
+- Or:
+
+```python
+if d.has_key(key)
+```
+
 Newer, cooler way of doing it with setdefault():
 
 ```python
@@ -1821,7 +1882,7 @@ Viewing / Validating Response properties:
 
 How to do Kerberos auth to internal websites:
 
-````python
+```python
 import requests
 from requests_kerberos import HTTPKerberosAuth, OPTIONAL
 
@@ -1833,7 +1894,7 @@ r = requests.get(url, auth=kerberos_auth, verify=False)
 
 print(r.status_code)   # 200 OK
 
-````
+```
 
 A more complex example of requests, using query string parameters, headers, and ssl verification turned off:
 
