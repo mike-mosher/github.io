@@ -1736,6 +1736,14 @@ with open(SOME_LARGE_FILE) as f:
 
 ```
 
+## Write to a file
+
+```python
+with open('data.txt', 'w') as f:
+    data = 'some data to be written to the file'
+    f.write(data)
+```
+
 ## Reading CSV Files
 
 - csv file:
@@ -1961,7 +1969,7 @@ match.group(3)    # ';var WPQ2SchemaData'
 
 dump:
 
-- Used to write data to a file (deserialization)
+- Used to write data to a file (serialization)
 
 dumps:
 
@@ -1969,11 +1977,11 @@ dumps:
 
 load:
 
-- Used to convert (serialize) data from a file into a json object (or dict in Python)
+- Used to convert (deserialize) data from a file into a json object (or dict in Python)
 
 loads:
 
-- Used to convert (serialize) a string into a json object (or dict in Python)
+- Used to convert (deserialize) a string into a json object (or dict in Python)
 
 json.loads():
 
