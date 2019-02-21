@@ -203,7 +203,7 @@ New New Style (Python 3.6+):
 '1,234,567,890'
 ```
 
-## [Diff between String Concatenation and String Interpolation] (#stings-concatenation-vs-interpolcation)
+## [Diff between String Concatenation and String Interpolation](#stings-concatenation-vs-interpolcation)
 
 String Concatenation:
 
@@ -223,7 +223,7 @@ String Interpolation:
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
 
-## [Multi-Line Comments] (#strings-multiline-comments)
+## [Multi-Line Comments](#strings-multiline-comments)
 
 - two ways:
   - block out each line with `#`
@@ -249,7 +249,7 @@ answer = 42
 - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
 
-## [Printing] (#strings-printing)
+## [Printing](#strings-printing)
 
 ```python
 >>> print('test')
@@ -280,7 +280,7 @@ multiple-words-separated-by-custom-separator
 >>>
 ```
 
-## [Pretty Printing Stuff] (#strings-pretty-printing)
+## [Pretty Printing Stuff](#strings-pretty-printing)
 
 you can use json.dumps():
 
@@ -347,7 +347,7 @@ Note: It's important to remember to use 'from pprint import pprint'. If you just
 
 ---
 
-# [The Low-Down on Datatypes] (#datatypes)
+# [The Low-Down on Datatypes](#datatypes)
 
 List:
 
@@ -381,7 +381,7 @@ Cheatsheet:
   | Dict:     | (values)   | no       | no (key/value) |
   | Set:      | yes        | no       | yes            |
 
-## [Lists] (#datatypes-lists)
+## [Lists](#datatypes-lists)
 
 Create:
 
@@ -439,7 +439,7 @@ Adding multiple list values:
 [1, 2.1, 2.2, 2.3, 3]
 ```
 
-- You can also insert elements into a list without removing anything. Simply specify a slice of the form [n:n] (a zero-length slice) at the desired index:
+- You can also insert elements into a list without removing anything. Simply specify a slice of the form [n:n](a zero-length slice) at the desired index:
 
 ```python
 >>> a = [1, 2, 7, 8]
@@ -728,7 +728,7 @@ Sorting Lists:
 
 - this will instruct the sort function to perform comparisons between the all-lowercase versions of the strings
 
-## [Dictionaries] (#datatypes-dict)
+## [Dictionaries](#datatypes-dict)
 
 Create a dictionary:
 
@@ -811,10 +811,6 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 {('x', 11), ('w', 10), ('x', 1), ('z', 3)}
 >>>
 ```
-
-
-
-
 
 Adding / Updating items:
 
