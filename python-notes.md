@@ -1172,7 +1172,8 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 ```
 
 ---
-# [If Statements](#if-statements)
+
+# [IF Statements](#if-statements)
 
 ```python
 if condition_1:
@@ -1264,9 +1265,9 @@ print ('passed') if x else print('did not pass')
 
 ```
 
-## Operators
+# [Operators](#operators)
 
-Relational Operators:
+## [Relational Operators](#operators-relational)
 
 - Relational operators compares the values. It either returns True or False according to the condition.
 
