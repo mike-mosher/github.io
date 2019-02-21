@@ -178,7 +178,6 @@ New New Style (Python 3.6+):
 
 - Literal String Interpolation or Formatted String Literals
 
-<a name="string-formatting-new-new-style-string-interpolation"></a>
 ```python
 >>> string = 'string'
 >>> number = 17

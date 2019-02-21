@@ -1,0 +1,21 @@
+
+
+- Adding hyperlinked anchor to headers:
+
+## [Naming Things](#naming-things)
+
+
+- Adding non-hyperlinked anchor to any non-header area:
+
+<a name="string-formatting-new-new-style"></a>
+New New Style (Python 3.6+):
+
+
+- Adding the same to a block of code:
+
+<a name="string-formatting-new-new-style-string-interpolation"></a>
+```python 
+...
+```
+
+
