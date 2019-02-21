@@ -1,5 +1,9 @@
 # Random Python Snippets
 
+[//]: # (This is a comment. This will not make it into the final HTML)
+[//]: # (I am using the following code to make linkable sections of the page that are not headers, and which also don't display the text as hyperlinks)
+[//]: # ("<a name="sub-link"></a>")
+
 ---
 
 ## [Naming Things](#naming-things)
@@ -173,8 +177,6 @@ mber=17)
 'This is a string and this is a number/integer: 17'
 ```
 
-[//]: # (This is a comment)
-[//]: # (The section below will create a linkable section of the page without creating a hyperlink)
 <a name="string-formatting-new-new-style"></a>
 New New Style (Python 3.6+):
 
