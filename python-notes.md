@@ -146,7 +146,8 @@ Right / Left / Center Justify:
 String Formatting:
 
 ### <a name="pookie"></a>Some heading
-Old Style:{#string-formatting-old-style}
+
+Old Style:<a name="string-formatting-old-style"></a>
 
 ```python
 >>> 'This is a %s and this is a number/integer: %i' % ('string', 17)
