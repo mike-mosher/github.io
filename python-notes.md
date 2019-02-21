@@ -173,6 +173,16 @@ mber=17)
 'This is a string and this is a number/integer: 17'
 ```
 
+{#test: .foo}
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+[Read more](http://www.stackoverflow.com "read more"){#link-sf .btn-read-more}
+
+### My Great Heading {#custom-id: .foo}
+
 <a name="string-formatting-new-new-style"></a>
 New New Style (Python 3.6+):
 
