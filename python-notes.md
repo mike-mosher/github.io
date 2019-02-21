@@ -1,6 +1,6 @@
 # Random Python Snippets
 
-## Naming Things
+## [Naming Things](#naming-things)
 
 Three ways to name a multi-word variable:
 
