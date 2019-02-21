@@ -148,7 +148,8 @@ String Formatting:
 ### <a name="pookie"></a>Some heading
 ### another heading{#string-formatting-another-heading}
 
-Old Style:<a name="string-formatting-old-style"></a>
+<a name="string-formatting-old-style"></a>
+Old Style:
 
 ```python
 >>> 'This is a %s and this is a number/integer: %i' % ('string', 17)
