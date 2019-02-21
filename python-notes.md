@@ -1265,6 +1265,8 @@ print ('passed') if x else print('did not pass')
 
 ```
 
+---
+
 # [Operators](#operators)
 
 ## [Relational Operators](#operators-relational)
@@ -1280,7 +1282,7 @@ print ('passed') if x else print('did not pass')
   | >	        | a > b	      | Greater than                | True if a is greater than b; False otherwise |
   | >=        | a >= b	    | Greater than or equal to    | True if a is greater than or equal to b; False otherwise |
 
-Logical Operators:
+## [Logical Operators](#operators-logical)
 
 - used to combine expressions and test 'truthy'ness
 
@@ -1290,7 +1292,7 @@ Logical Operators:
   | or        | x or y      | True if either x or y is True; False otherwise |
   | and       | x and y     | True if both x and y are True; False otherwise |
 
-Bitwise Operators:
+## [Bitwise Operators](#operators-bitwise)
 
 - Bitwise operators acts on bits and performs bit by bit operation.
 - They operate on numbers (normally), but instead of treating that number as if it were a single value, they treat it as if it were a string of bits, written in binary.
@@ -1302,7 +1304,7 @@ Bitwise Operators:
   | ~           | ~x                | Bitwise NOT |
   | ^           | x ^ y             | Bitwise XOR |
 
-Assignment Operators:
+## [Assignment Operators](#operators-assignment)
 
 - Assignment operators are used to assign values to the variables
 
@@ -1331,7 +1333,9 @@ Knowing when something is True or False:
 - Items considered true:
   - Virtually any other object built into Python is regarded as True.
 
-## Testing Flags and Vars
+---
+
+# [Testing Flags and Vars](#testing-flags-and-vars)
 
 Check if var exists:
 
@@ -1596,9 +1600,11 @@ True
 False
 ```
 
-## Comprehensions
+---
 
-list comprehension:
+# [Comprehensions](#comprehensions)
+
+## [List Comprehension](#comprehensions-list)
 
 ```python
 # Template
@@ -1613,7 +1619,7 @@ values = [ expression
           for item in collection ]
 ```
 
-Set Comprehensions:
+## [Set Comprehension](#comprehensions-set)
 
 ```python
 # Template
@@ -1632,7 +1638,7 @@ dict = { expression for item in collection }
 >>>
 ```
 
-Dict Comprehensions:
+## [Dict Comprehension](#comprehensions-dict)
 
 ```python
 # Template
