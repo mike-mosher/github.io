@@ -145,6 +145,7 @@ Right / Left / Center Justify:
 
 String Formatting:
 
+### <a name="pookie"></a>Some heading
 Old Style:{#string-formatting-old-style}
 
 ```python
