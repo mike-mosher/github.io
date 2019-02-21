@@ -145,7 +145,7 @@ Right / Left / Center Justify:
 
 String Formatting:
 
-Old Style:
+Old Style{#string-formatting-old-style}:
 
 ```python
 >>> 'This is a %s and this is a number/integer: %i' % ('string', 17)
