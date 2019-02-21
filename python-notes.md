@@ -146,6 +146,7 @@ Right / Left / Center Justify:
 String Formatting:
 
 ### <a name="pookie"></a>Some heading
+### another heading{#string-formatting-another-heading}
 
 Old Style:<a name="string-formatting-old-style"></a>
 
