@@ -203,7 +203,7 @@ New New Style (Python 3.6+):
 '1,234,567,890'
 ```
 
-## Diff between String Concatenation and String Interpolation
+## [Diff between String Concatenation and String Interpolation] (#stings-concatenation-vs-interpolcation)
 
 String Concatenation:
 
@@ -223,7 +223,7 @@ String Interpolation:
 >>> greeting = 'My name is {} and I am {} years old'.format(name, age)
 ```
 
-## Multi-Line Comments
+## [Multi-Line Comments] (#strings-multiline-comments)
 
 - two ways:
   - block out each line with `#`
@@ -249,7 +249,7 @@ answer = 42
 - Note: This actually isn't technically a comment, but actually makes a multi-line string.  However, it's never accessed, so when Python is compiled, this string isn't referenced
 
 
-## Printing
+## [Printing] (#strings-printing)
 
 ```python
 >>> print('test')
@@ -280,7 +280,7 @@ multiple-words-separated-by-custom-separator
 >>>
 ```
 
-## Pretty Printing Stuff
+## [Pretty Printing Stuff] (#strings-pretty-printing)
 
 you can use json.dumps():
 
@@ -345,7 +345,9 @@ Or better yet, use pprint!:
 
 Note: It's important to remember to use 'from pprint import pprint'. If you just use 'import pprint', then you have to run: `pprint.pprint(d)`
 
-## The Low-Down on Datatypes
+---
+
+# [The Low-Down on Datatypes] (#datatypes)
 
 List:
 
@@ -379,7 +381,7 @@ Cheatsheet:
   | Dict:     | (values)   | no       | no (key/value) |
   | Set:      | yes        | no       | yes            |
 
-## Lists
+## [Lists] (#datatypes-lists)
 
 Create:
 
@@ -726,7 +728,7 @@ Sorting Lists:
 
 - this will instruct the sort function to perform comparisons between the all-lowercase versions of the strings
 
-## Dictionaries
+## [Dictionaries] (#datatypes-dict)
 
 Create a dictionary:
 
