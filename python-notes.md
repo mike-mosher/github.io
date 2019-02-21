@@ -756,7 +756,7 @@ How to check a dict for a key in an if statment:
 if d.get('test'):
   # only runs if this key exists.  If not, it returns NoneType, which evaluates to boolean False
 
-if d.has_key(key):
+
 
 if 'test' in d:
 ```
@@ -785,24 +785,24 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 {'val1': 'val1', 'val2': 'val2', 'value3': 'value3'}
 ```
 
-- intersectionality / commonality of two dicts:
+- intersectionality / commonality of two dicts (&) vs difference between dicts (^)
 
 ```python
->>> a = {
-...    'x' : 1,
-...    'y' : 2,
-...    'z' : 3
-... }
->>>
->>> b = {
-...    'w' : 10,
-...    'x' : 11,
-...    'y' : 2
-... }
+>>> a
+{'x': 1, 'y': 2, 'z': 3}
+>>> b
+{'w': 10, 'x': 11, 'y': 2}
 >>>
 >>> a.items() & b.items()
 {('y', 2)}
+>>> a.items() ^ b.items()
+{('x', 11), ('w', 10), ('x', 1), ('z', 3)}
+>>>
 ```
+
+
+
+
 
 Adding / Updating items:
 
@@ -885,7 +885,7 @@ Merging Dicts:
 # Normal way of merging
 d1.update(d2)
 
-# can also do any of the following
+# can also do any of the following, they are all equal
 d1.update(**d2)
 {**d1, **d2}
 dict(d1.items() | d2.items())
@@ -929,7 +929,7 @@ How to sort a shallow dict:
 Methods:
 
 ```python
-d.has_key(key)      # returns true if key exists
+# d.has_key(key)    # has_key was removed in Python 3. From the documentation: Removed dict.has_key() – use the `in` operator instead.
 d.items()           # returns key, value tuples as a list
 d.keys()            # returns list of keys
 d.values()          # returns list of values
@@ -2274,11 +2274,11 @@ name, weight, age, sex = human.values()
 ```
 
 - Named Tuple
-- Note: This isn't variable unpacking, but is still cool
+- Note: This isn't variable unpacking, but is still cool. 
 
 ```python
+from collections import namedtuple
 humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
-
 human = humans('James', 180, 32, 'm')
 
 human
@@ -2422,7 +2422,7 @@ print(df)
 
 Output:
 
-```pyton
+```python
              Name Hire Date   Salary  Sick Days remaining
 0  Graham Chapman  03/15/14  50000.0                   10
 1     John Cleese  06/01/15  65000.0                    8
@@ -2473,3 +2473,185 @@ for i in tqdm(range(100)):
     sleep(0.02)
 ``` 
 
+
+# Copy and Deepcopy objects
+
+- copy a list and dict 
+
+```python 
+l = ['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+d = {'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+l2 = l.copy() 
+d2 = d.copy() 
+
+from copy import copy 
+from copy import deepcopy 
+
+l2 = copy(l)
+d2 = copy(d)
+
+l2 
+>>>['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+d2
+>>>{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+
+l2 = deepcopy(l)
+d2 = deepcopy(d)
+
+l2 
+>>>['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+d2
+>>>{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+``` 
+
+- Difference between a shallow copy and deep copy:
+  - a shallow copy will copy the objects of the list of dict with a depth of 1.  Any nested lists or dicts are just references to the original object in memory.  Modifying the nested list / dict in the original object will modify it in the shallow copied object 
+  - a deep copy will create new objects and nested objects during the copy, not just references to the original object in memory
+
+
+## Updating / merging Dictionaries:
+
+Taking two dicts (d1, d2), how can you update d1 with values from d2, overwriting any values?
+
+```python  
+d1 = {'x': 1, 'y': 2, 'z': 3}
+d2 = {'w': 10, 'x': 11, 'y': 2}
+d1.update(d2)
+d1
+>>>
+{'x': 11, 'y': 2, 'z': 3, 'w': 10}
+``` 
+
+Taking two dicts (d1, d2), how can you update d1 with values from d2, but not overwriting current values in d1?
+```python  
+d1 = {'x': 1, 'y': 2, 'z': 3}
+d2 = {'w': 10, 'x': 11, 'y': 2}
+
+# setdefault: If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
+for k,v in d2.items():
+    d1.setdefault(k,v)
+
+d1
+>>> {'x': 1, 'y': 2, 'z': 3, 'w': 10}
+``` 
+
+
+# Triple Quotes
+
+- you can write:
+
+```python 
+song = """Happy birthday to you
+Happy birthday to you
+Happy birthday dear Gail
+Happy birthday to you
+"""
+```
+
+- The only downside here is that the first line doesn’t align nicely with the lines which follow. The way around this is to embed a \newline escape sequence, meaning both backslash and newline are ignored.
+
+```python 
+song = """\
+Happy birthday to you
+Happy birthday to you
+Happy birthday dear Gail
+Happy birthday to you
+"""
+```
+
+# How to skip the first item of an iterable:
+
+```python 
+next(<iter>)
+for element in <iter>:
+    ...
+``` 
+
+# Justifying Strings:
+
+```python 
+{<el>:<10}       # '<el>      '
+{<el>:>10}       # '      <el>'
+{<el>:^10}       # '   <el>   '
+{<el>:->10}      # '------<el>'
+{<el>:>0}        # '<el>'
+``` 
+
+# Args and Kwargs
+
+- This:
+
+```python 
+args   = (1, 2)
+kwargs = {'x': 3, 'y': 4, 'z': 5}
+func(*args, **kwargs)  
+``` 
+
+- Is the same as:
+
+```pyton 
+func(1, 2, x=3, y=4, z=5)
+``` 
+
+# Exceptions
+
+```python 
+try:
+    x = int(input('Please enter a number: '))
+except ValueError:
+    print('Oops!  That was no valid number.  Try again...')
+else:
+    print('Thank you.')
+```
+
+- Raise an error:
+
+```python 
+raise ValueError('A very specific message!')
+```
+
+# Try with Finally:
+
+- In the block below, `other_code()` will run before any return in the `except` block
+- `other_code()` in the `finally` block will run if there is a TypeError exception and `still_other_code()` will not 
+- `other_code()` will run even if an exception is raised that is not TypeError 
+- `other_code()` will run even if there are `break` or `continue` statements 
+
+```python 
+try:
+    run_code1()
+except TypeError:
+    run_code2()
+    return None   # The finally block is run before the method returns
+finally:
+    other_code()
+    
+still_other_code()
+```
+
+
+
+
+```python 
+
+```
+
+```python 
+
+```
+
+```python 
+
+```
+
+```python 
+
+```
+
+```python 
+
+```
+
+```python 
+
+```
