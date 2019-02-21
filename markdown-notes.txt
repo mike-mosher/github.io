@@ -1,4 +1,9 @@
 
+- Adding comments to the Markdown that will not be added to the HTML:
+
+[//]: # (This may be the most platform independent comment)
+- https://stackoverflow.com/a/20885980
+
 
 - Adding hyperlinked anchor to headers:
 
