@@ -812,6 +812,10 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 >>>
 ```
 
+
+
+
+
 Adding / Updating items:
 
 ```python
@@ -943,7 +947,7 @@ d.keys()            # returns list of keys
 d.values()          # returns list of values
 ```
 
-## Sets
+## [Sets](#datatypes-sets)
 
 Create a Set:
 
@@ -1019,7 +1023,7 @@ Example:
 >>>
 ```
 
-## Tuples
+## [Tuples](#datatypes-tuples)
 
 - Tuples are identical to lists in all respects, except for the following properties:
   - Tuples are defined by enclosing the elements in parentheses () instead of square brackets [].
@@ -1061,7 +1065,7 @@ Methods:
 
 - Tuples have no methods (because they are immutable)
 
-## Alternate Data Types
+## [Alternate Data Types](#datatypes-alternate-data-types)
 
 - Defaultdict:
   - behaves like a normal Python dictionary, except when a key isn't present it'll substitute in a default value rather than raising a KeyError.
@@ -1115,7 +1119,9 @@ print(json.dumps(users, indent=4))
 # }
 ```
 
-## Advanced Variables
+---
+
+# [Advanced Variables](#advanced-variables)
 
 Underscores and Double Underscores (Dunders):
 
@@ -1163,7 +1169,9 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 
 ```
 
-## IF Statements
+---
+
+# [If Statements](#if-statements)
 
 ```python
 if condition_1:
@@ -1190,20 +1198,30 @@ print ('passed') if x else print('did not pass')
 
 ```
 
-## BREAK Statement
+---
+
+##[BREAK Statement](#break-statement)
+
+---
 
 - used to break out of a `for` or `while` loop
 - Note: if you break out of a for or while loop, any corresponding loop else block is not executed.
 
-## CONTINUE Statement
+---
+
+# [CONTINUE Statement](#continue-statment)
 
 - The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
 
-## PASS Statement
+---
+
+# [PASS Statement](#pass-statement)
 
 - `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
 
-## Loops
+---
+
+# [Loops](#loops)
 
 ```python
     for loops:
