@@ -1065,6 +1065,8 @@ Methods:
 
 - Tuples have no methods (because they are immutable)
 
+---
+
 ## [Alternate Data Types](#datatypes-alternate-data-types)
 
 - Defaultdict:
@@ -1121,7 +1123,7 @@ print(json.dumps(users, indent=4))
 
 ---
 
-# [Advanced Variables](#advanced-variables)
+## [Advanced Variables](#advanced-variables)
 
 Underscores and Double Underscores (Dunders):
 
@@ -1170,7 +1172,6 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 ```
 
 ---
-
 # [If Statements](#if-statements)
 
 ```python
@@ -1200,7 +1201,7 @@ print ('passed') if x else print('did not pass')
 
 ---
 
-##[BREAK Statement](#break-statement)
+# [BREAK Statement](#break-statement)
 
 ---
 
