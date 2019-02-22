@@ -89,6 +89,7 @@
   - [loop over dict values](https://mike-mosher.github.io/python-notes.html#)
   - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#)
 
+test 
 
 - [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -151,6 +152,7 @@
       - [How to sort a list of strings and have it be case insensitive?](https://mike-mosher.github.io/python-notes.html#lists-sorting)
   - [combining lists and de-duping  (hint: using sets)](https://mike-mosher.github.io/python-notes.html#lists-sorting)
 
+test
 
 - [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -164,6 +166,7 @@
     - [discard](https://mike-mosher.github.io/python-notes.html#sets-delete)
     - [difference?](https://mike-mosher.github.io/python-notes.html#sets-delete)
 
+test
 
 - [Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -172,10 +175,12 @@
   - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
   - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)
 
+test
 
 - [Named Tuples:](https://mike-mosher.github.io/python-notes.html#named-tuple)
   - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#named-tuple)
 
+test
 
 - [Deepcopy:](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
   - [How to copy a list](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
