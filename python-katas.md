@@ -43,7 +43,7 @@
 
 ## [Data Types](https://mike-mosher.github.io/python-notes.html#datatypes)
 
-- [Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
+[Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
@@ -89,9 +89,7 @@
   - [loop over dict values](https://mike-mosher.github.io/python-notes.html#)
   - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#)
 
-test 
-
-- [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
+[Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [create](https://mike-mosher.github.io/python-notes.html#lists-create)
@@ -152,9 +150,7 @@ test
       - [How to sort a list of strings and have it be case insensitive?](https://mike-mosher.github.io/python-notes.html#lists-sorting)
   - [combining lists and de-duping  (hint: using sets)](https://mike-mosher.github.io/python-notes.html#lists-sorting)
 
-test
-
-- [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
+[Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [create](https://mike-mosher.github.io/python-notes.html#sets-create)
@@ -166,23 +162,20 @@ test
     - [discard](https://mike-mosher.github.io/python-notes.html#sets-delete)
     - [difference?](https://mike-mosher.github.io/python-notes.html#sets-delete)
 
-test
 
-- [Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
+[Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [create](https://mike-mosher.github.io/python-notes.html#tuple-create)
   - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
   - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)
 
-test
 
-- [Named Tuples:](https://mike-mosher.github.io/python-notes.html#named-tuple)
+[Named Tuples:](https://mike-mosher.github.io/python-notes.html#named-tuple)
   - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#named-tuple)
 
-test
 
-- [Deepcopy:](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
+[Deepcopy:](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
   - [How to copy a list](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
     - [using build in method of List class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
     - [using built in python class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
@@ -197,140 +190,174 @@ test
 
 ## [Alternate Data Types](https://mike-mosher.github.io/python-notes.html##datatypes-alternate-data-types)
 
-  - [DefaultDict](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
-    - [purpose](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
-    - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
+[DefaultDict](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
+  - [purpose](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
+  - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
 
-  - [OrderedDict](https://mike-mosher.github.io/python-notes.html#datatypes)
-    - [Purpose](https://mike-mosher.github.io/python-notes.html#datatypes)
-    - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes)
+[OrderedDict](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [Purpose](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes)
 
 ---
 
-## [Logic](#)
+## Logic:
+  - [if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
+  - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#if-statements)
+  - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
+  - [Ternary if](https://mike-mosher.github.io/python-notes.html#if-statements)
+  - [Break](https://mike-mosher.github.io/python-notes.html#break-statement)
+  - [Continue](https://mike-mosher.github.io/python-notes.html#continute-statement)
+  - [Pass](https://mike-mosher.github.io/python-notes.html#pass-statement)
 
-  - Logic:
-    - [if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
-    - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#if-statements)
-    - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
-    - [Ternary if](https://mike-mosher.github.io/python-notes.html#if-statements)
-    - [Break](https://mike-mosher.github.io/python-notes.html#break-statement)
-    - [Continue](https://mike-mosher.github.io/python-notes.html#continute-statement)
-    - [Pass](https://mike-mosher.github.io/python-notes.html#pass-statement)
-  - [Loops:](https://mike-mosher.github.io/python-notes.html#loops)
-    - [for loop](https://mike-mosher.github.io/python-notes.html#loops)
-    - [for else loop](https://mike-mosher.github.io/python-notes.html#loops)
-    - [while statement](https://mike-mosher.github.io/python-notes.html#loops)
-    - [while else statement](https://mike-mosher.github.io/python-notes.html#loops)
-    - [How to use enumrate with a for loop](https://mike-mosher.github.io/python-notes.html#loops)
+---
 
-  - [Operators:](https://mike-mosher.github.io/python-notes.html#operators)
-    - [Relational:](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [not equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [less than](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [less than or equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [greater than](https://mike-mosher.github.io/python-notes.html#operators-relational)
-      - [greater than or equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
-    - [Logical:](https://mike-mosher.github.io/python-notes.html#operators-logical)
-      - [NOT](https://mike-mosher.github.io/python-notes.html#operators-logical)
-        - [how to write it](https://mike-mosher.github.io/python-notes.html#operators-logical)
-        - [how to use NOT operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-      - [OR](https://mike-mosher.github.io/python-notes.html#)
-        - [how to write it](https://mike-mosher.github.io/python-notes.html#)
-        - [how to use OR operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-        - [using or when setting a value to var, and want to set a default value](https://mike-mosher.github.io/python-notes.html#)
-        - [Compound OR expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
-      - [AND](https://mike-mosher.github.io/python-notes.html#)
-        - [how to write it](https://mike-mosher.github.io/python-notes.html#)
-        - [how to use AND operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-        - [Compound AND expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
-    - [Assignment:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-      - [short hand of the following:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-        - [a = a + b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-        - [a = a - b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-        - [a = a * b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-        - [a = a / b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-    - [Identity:](https://mike-mosher.github.io/python-notes.html#)
-      - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#)
-        - [what does each do](https://mike-mosher.github.io/python-notes.html#)
-        - [how are they different](https://mike-mosher.github.io/python-notes.html#)
-        - [when to use each](https://mike-mosher.github.io/python-notes.html#)
-      - [difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-  - [Logic:](https://mike-mosher.github.io/python-notes.html#)
-    - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#)
-        - [What items evaluate to boolean False?](https://mike-mosher.github.io/python-notes.html#)
-    - [check if var exists](https://mike-mosher.github.io/python-notes.html#)
-    - [check if var is true](https://mike-mosher.github.io/python-notes.html#)
-    - [check if var is false](https://mike-mosher.github.io/python-notes.html#)
-    - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
-    - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
-    - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
+## [Loops:](https://mike-mosher.github.io/python-notes.html#loops)
+  - [for loop](https://mike-mosher.github.io/python-notes.html#loops)
+  - [for else loop](https://mike-mosher.github.io/python-notes.html#loops)
+  - [while statement](https://mike-mosher.github.io/python-notes.html#loops)
+  - [while else statement](https://mike-mosher.github.io/python-notes.html#loops)
+  - [How to use enumrate with a for loop](https://mike-mosher.github.io/python-notes.html#loops)
 
-  - [Comprehensions:](https://mike-mosher.github.io/python-notes.html#comprehensions)
-    - [list](https://mike-mosher.github.io/python-notes.html#comprehensions-list)
-    - [set](https://mike-mosher.github.io/python-notes.html#comprehensions-set)
-    - [dict](https://mike-mosher.github.io/python-notes.html#comprehensions-dict)
+---
 
-  - Built in functions:
-    - [any()](https://mike-mosher.github.io/python-notes.html#and-all)
-    - [all()](https://mike-mosher.github.io/python-notes.html#and-all)
+## [Operators:](https://mike-mosher.github.io/python-notes.html#operators)
+  - [Relational:](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [not equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [less than](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [less than or equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [greater than](https://mike-mosher.github.io/python-notes.html#operators-relational)
+    - [greater than or equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
+  - [Logical:](https://mike-mosher.github.io/python-notes.html#operators-logical)
+    - [NOT](https://mike-mosher.github.io/python-notes.html#operators-logical)
+      - [how to write it](https://mike-mosher.github.io/python-notes.html#operators-logical)
+      - [how to use NOT operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
+    - [OR](https://mike-mosher.github.io/python-notes.html#)
+      - [how to write it](https://mike-mosher.github.io/python-notes.html#)
+      - [how to use OR operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
+      - [using or when setting a value to var, and want to set a default value](https://mike-mosher.github.io/python-notes.html#)
+      - [Compound OR expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
+    - [AND](https://mike-mosher.github.io/python-notes.html#)
+      - [how to write it](https://mike-mosher.github.io/python-notes.html#)
+      - [how to use AND operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
+      - [Compound AND expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
+  - [Assignment:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
+    - [short hand of the following:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
+      - [a = a + b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
+      - [a = a - b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
+      - [a = a * b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
+      - [a = a / b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
 
-  - [Random:](https://mike-mosher.github.io/python-notes.html#)
-    - [how to swap values of variables.](https://mike-mosher.github.io/python-notes.html#)
-        - [replace value of a with value of b, and vice versa](https://mike-mosher.github.io/python-notes.html#)
+---
 
-  - [Variable unpacking:](https://mike-mosher.github.io/python-notes.html#)
-    - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#)
-    - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#)
-      - [if `v = 1, l = [2,3]`, how to unpack this so that `a = 1, b = 2, c = 3`](https://mike-mosher.github.io/python-notes.html#)
-    - [python3 extended unpacking](https://mike-mosher.github.io/python-notes.html#)
-      - [using `*` to unpack lists.](https://mike-mosher.github.io/python-notes.html#)
-          - [taking a list and setting most values](https://mike-mosher.github.io/python-notes.html#)
-              - [to one var and only on value to another var](https://mike-mosher.github.io/python-notes.html#)
-    - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#)
-      - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#)
-          - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#)
+## [Identity:](https://mike-mosher.github.io/python-notes.html#)
+  - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#)
+    - [what does each do](https://mike-mosher.github.io/python-notes.html#)
+    - [how are they different](https://mike-mosher.github.io/python-notes.html#)
+    - [when to use each](https://mike-mosher.github.io/python-notes.html#)
+  - [difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#operators-assignment)
 
-  - [Files:](https://mike-mosher.github.io/python-notes.html#files)
-    - [How to read from a file](https://mike-mosher.github.io/python-notes.html#files-reading)
-      - [how to open a file and read and mess with each line, one at a time](https://mike-mosher.github.io/python-notes.html#files-reading)
-      - [how to open a file and get the entire contents](https://mike-mosher.github.io/python-notes.html#files-reading)
-    - [How to write to a file](https://mike-mosher.github.io/python-notes.html#files-writing)
-    - [CSV files](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
-      - [How to read a CSV file](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
-        - [using csv module](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
-        - [using pandas](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
+---
 
-  - [HTTP Requests:](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [How to check if a response is good or not (two ways)](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [How to set query string params in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [How to set headers in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [How to set the body of the POST request](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [how to send a request and disable ssl cert verification](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [How to check the properties of the HTTP request](https://mike-mosher.github.io/python-notes.html#http-requests)
-        - [(method, url, body, headers, etc)](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [What data can we see of the response, and how do we access it?](https://mike-mosher.github.io/python-notes.html#http-requests)
+## [Logic:](https://mike-mosher.github.io/python-notes.html#)
+  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#)
+      - [What items evaluate to boolean False?](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var exists](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is true](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is false](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
+  - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
+  - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
 
-  - [regex:](https://mike-mosher.github.io/python-notes.html#regex)
-    - [how to search text with regex statement](https://mike-mosher.github.io/python-notes.html#regex)
+---
 
-  - [json:](https://mike-mosher.github.io/python-notes.html#json)
-    - [how to write (serialize) data to a file](https://mike-mosher.github.io/python-notes.html#json)
-    - [how to write (serialize) data to a string](https://mike-mosher.github.io/python-notes.html#json)
-    - [how to convert (deserialize) data from a file into a dict object](https://mike-mosher.github.io/python-notes.html#json)
-    - [how to convert (deserialize) data from a string into a dict object](https://mike-mosher.github.io/python-notes.html#json)
-    - [how to pretty print the contents of a dict using json module](https://mike-mosher.github.io/python-notes.html#json)
-    - [How to get json data from a URL](https://mike-mosher.github.io/python-notes.html#json)
-      - [there is a long way](https://mike-mosher.github.io/python-notes.html#json)
-      - [and there is a short way (using the requests module)](https://mike-mosher.github.io/python-notes.html#json)
+## [Comprehensions:](https://mike-mosher.github.io/python-notes.html#comprehensions)
+  - [list](https://mike-mosher.github.io/python-notes.html#comprehensions-list)
+  - [set](https://mike-mosher.github.io/python-notes.html#comprehensions-set)
+  - [dict](https://mike-mosher.github.io/python-notes.html#comprehensions-dict)
 
-  - [logging:](https://mike-mosher.github.io/python-notes.html#logging)
-    - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#logging)
+---
 
-  - [Zip:](https://mike-mosher.github.io/python-notes.html#zip)
-    - [what does it do, why use it?](https://mike-mosher.github.io/python-notes.html#zip)
-    - [How to zip](https://mike-mosher.github.io/python-notes.html#zip)
-    - [how to unzip](https://mike-mosher.github.io/python-notes.html#zip)
-  - [Command Line Arguments:](https://mike-mosher.github.io/python-notes.html#cli)
-    - [How to parse command line arguments with sys module](https://mike-mosher.github.io/python-notes.html#cli)
+## Built in functions:
+  - [any()](https://mike-mosher.github.io/python-notes.html#and-all)
+  - [all()](https://mike-mosher.github.io/python-notes.html#and-all)
+
+---
+
+## [Random:](https://mike-mosher.github.io/python-notes.html#)
+  - [how to swap values of variables.](https://mike-mosher.github.io/python-notes.html#)
+      - [replace value of a with value of b, and vice versa](https://mike-mosher.github.io/python-notes.html#)
+
+---
+
+## [Variable unpacking:](https://mike-mosher.github.io/python-notes.html#)
+  - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#)
+  - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#)
+    - [if `v = 1, l = [2,3]`, how to unpack this so that `a = 1, b = 2, c = 3`](https://mike-mosher.github.io/python-notes.html#)
+  - [python3 extended unpacking](https://mike-mosher.github.io/python-notes.html#)
+    - [using `*` to unpack lists.](https://mike-mosher.github.io/python-notes.html#)
+        - [taking a list and setting most values](https://mike-mosher.github.io/python-notes.html#)
+            - [to one var and only on value to another var](https://mike-mosher.github.io/python-notes.html#)
+  - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#)
+    - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#)
+        - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#)
+
+---
+
+## [Files:](https://mike-mosher.github.io/python-notes.html#files)
+  - [How to read from a file](https://mike-mosher.github.io/python-notes.html#files-reading)
+    - [how to open a file and read and mess with each line, one at a time](https://mike-mosher.github.io/python-notes.html#files-reading)
+    - [how to open a file and get the entire contents](https://mike-mosher.github.io/python-notes.html#files-reading)
+  - [How to write to a file](https://mike-mosher.github.io/python-notes.html#files-writing)
+  - [CSV files](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
+    - [How to read a CSV file](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
+      - [using csv module](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
+      - [using pandas](https://mike-mosher.github.io/python-notes.html#files-reading-csv)
+
+---
+
+## [HTTP Requests:](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [How to check if a response is good or not (two ways)](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [How to set query string params in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [How to set headers in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [How to set the body of the POST request](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [how to send a request and disable ssl cert verification](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [How to check the properties of the HTTP request](https://mike-mosher.github.io/python-notes.html#http-requests)
+      - [(method, url, body, headers, etc)](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [What data can we see of the response, and how do we access it?](https://mike-mosher.github.io/python-notes.html#http-requests)
+
+---
+
+## [regex:](https://mike-mosher.github.io/python-notes.html#regex)
+  - [how to search text with regex statement](https://mike-mosher.github.io/python-notes.html#regex)
+
+---
+
+## [json:](https://mike-mosher.github.io/python-notes.html#json)
+  - [how to write (serialize) data to a file](https://mike-mosher.github.io/python-notes.html#json)
+  - [how to write (serialize) data to a string](https://mike-mosher.github.io/python-notes.html#json)
+  - [how to convert (deserialize) data from a file into a dict object](https://mike-mosher.github.io/python-notes.html#json)
+  - [how to convert (deserialize) data from a string into a dict object](https://mike-mosher.github.io/python-notes.html#json)
+  - [how to pretty print the contents of a dict using json module](https://mike-mosher.github.io/python-notes.html#json)
+  - [How to get json data from a URL](https://mike-mosher.github.io/python-notes.html#json)
+    - [there is a long way](https://mike-mosher.github.io/python-notes.html#json)
+    - [and there is a short way (using the requests module)](https://mike-mosher.github.io/python-notes.html#json)
+
+---
+
+## [logging:](https://mike-mosher.github.io/python-notes.html#logging)
+  - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#logging)
+
+---
+
+## [Zip:](https://mike-mosher.github.io/python-notes.html#zip)
+  - [what does it do, why use it?](https://mike-mosher.github.io/python-notes.html#zip)
+  - [How to zip](https://mike-mosher.github.io/python-notes.html#zip)
+  - [how to unzip](https://mike-mosher.github.io/python-notes.html#zip)
+
+---
+
+## [Command Line Arguments:](https://mike-mosher.github.io/python-notes.html#cli)
+  - [How to parse command line arguments with sys module](https://mike-mosher.github.io/python-notes.html#cli)
+
+---
