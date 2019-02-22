@@ -2,7 +2,7 @@
 
 [//]: # (This is a comment. This will not make it into the final HTML)
 [//]: # (I am using the following code to make linkable sections of the page that are not headers, and which also don't display the text as hyperlinks)
-[//]: # ("<a name="sub-link"></a>")
+[//]: # (<a name="sub-link"></a>)
 
 ---
 
@@ -61,6 +61,7 @@ code_block
 >>>'\ndef newfunc(input):\n    print(input)\n'
 ```
 
+<a name="strings-joining-splitting"></a>
 Joining and Splitting Strings:
 
 ```python
@@ -79,6 +80,7 @@ Joining and Splitting Strings:
 'This is how you join'
 ```
 
+<a name="strings-subset"></a>
 Get Subset of a String:
 
 ```python
@@ -87,6 +89,7 @@ Get Subset of a String:
 
 String Methods:
 
+<a name="strings-strip"></a>
 strip():
 
 ```python
@@ -96,6 +99,7 @@ s.strip()
 #'Hello World'
 ```
 
+<a name="strings-replace"></a>
 replace():
 
 ```python
@@ -105,6 +109,7 @@ s.replace()
 # 'HelloWorld'
 ```
 
+<a name="strings-split"></a>
 split():
 
 ```python
@@ -120,6 +125,7 @@ s = ' Hello   World'
 # 'Hello World'
 ```
 
+<a name="strings-title"></a>
 s.title():
 
 ```python
@@ -128,6 +134,7 @@ s.title():
 'The Sun Also Rises'
 ```
 
+<a name="strings-justify"></a>
 Right / Left / Center Justify:
 
 - rjust, ljust, center
@@ -147,6 +154,7 @@ Right / Left / Center Justify:
 '                                                            very short'
 ```
 
+<a name="strings-formatting"></a>
 String Formatting:
 
 <a name="string-formatting-old-style"></a>
@@ -157,6 +165,7 @@ Old Style:
 'This is a string and this is a number/integer: 17'
 ```
 
+<a name="string-formatting-new-style"></a>
 New Style:
 
 - https://docs.python.org/3/library/string.html#string-formatting
@@ -383,6 +392,7 @@ Cheatsheet:
 
 ## [Lists](#datatypes-lists)
 
+<a name="lists-create"></a>
 Create:
 
 ```python
@@ -397,6 +407,7 @@ A = []
 B = A           # both names will point to the same list
 ```
 
+<a name="lists-add"></a>
 Adding items to lists:
 
 ```python
@@ -496,6 +507,7 @@ Prepending or Appending Items to a List:
 ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
 ```
 
+<a name="lists-acess"></a>
 Access list items:
 
 ```python
@@ -544,6 +556,7 @@ if value in L:
   print "list contains", value
 ```
 
+<a name="lists-delete"></a>
 Deleting items in a list:
 
 ```python
@@ -605,6 +618,7 @@ Traceback (most recent call last):
 IndexError: pop index out of range
 ```
 
+<a name="lists-copy"></a>
 Copy items from a list:
 
 ```python
@@ -655,6 +669,7 @@ Notes:
   L.append(obj)
 ```
 
+<a name="lists-reversing"></a>
 Reversing a list:
 
 - If you want to iterate over the reversed list, use `reversed`:
@@ -671,6 +686,7 @@ for element in reversed(original_list):
 reversed_list = sorted(original_list, reverse=True)
 ```
 
+<a name="lists-sorting"></a>
 Sorting Lists:
 
 - Sorting numbers is easy with .sort()
@@ -730,6 +746,7 @@ Sorting Lists:
 
 ## [Dictionaries](#datatypes-dict)
 
+<a name="dict-create"></a>
 Create a dictionary:
 
 ```python
@@ -737,6 +754,7 @@ d = {}
 d = {"name": "Mike", "Age": 7}
 ```
 
+<a name="dict-access"></a>
 Access items:
 
 ```python
@@ -797,6 +815,7 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 {'val1': 'val1', 'val2': 'val2', 'value3': 'value3'}
 ```
 
+<a name="dict-intersectionality-diff"></a>
 - intersectionality / commonality of two dicts (&) vs difference between dicts (^)
 
 ```python
@@ -812,10 +831,7 @@ Crude way of updating a dictionary (d1) with any key/value pairs from d2 that do
 >>>
 ```
 
-
-
-
-
+<a name="dict-add"></a>
 Adding / Updating items:
 
 ```python
@@ -874,6 +890,7 @@ Traceback (most recent call last):
 KeyError: 'popitem(): dictionary is empty'
 ```
 
+<a name="dict-update"></a>
 Updating items:
 
 - `d.update(<obj>)`
@@ -888,6 +905,7 @@ Updating items:
 {'a': 10, 'b': 200, 'c': 30, 'd': 400}
 ```
 
+<a name="dict-merge"></a>
 Merging Dicts:
 
 ```python
@@ -906,6 +924,7 @@ dict(d1.items() | d2.items())
 {'a': 1, 'b': 2}
 ```
 
+<a name="dict-delete"></a>
 Deleting items:
 
 ```python
@@ -926,6 +945,7 @@ for v in d.values():      # get values in dict
   print v
 ```
 
+<a name="dict-sort"></a>
 How to sort a shallow dict:
 
 ```python
@@ -938,6 +958,7 @@ How to sort a shallow dict:
 
 ```
 
+<a name="dict-methods"></a>
 Methods:
 
 ```python
@@ -949,6 +970,7 @@ d.values()          # returns list of values
 
 ## [Sets](#datatypes-sets)
 
+<a name="sets-create"></a>
 Create a Set:
 
 ```python
@@ -958,6 +980,7 @@ s = {1,2,3,4,5}
 l = [1,2,3,4,5]; s = set(l)     # create a set from a list
 ```
 
+<a name="sets-add"></a>
 Add to a Set:
 
 - add a single element
@@ -966,6 +989,7 @@ Add to a Set:
 s.add("test")
 ```
 
+<a name="sets-update"></a>
 Update a Set:
 
 - add multiple elements
@@ -974,6 +998,7 @@ Update a Set:
 s.update([1,2,3,4,5])
 ```
 
+<a name="sets-delete"></a>
 Remove from a Set:
 
 - removes item from a set, but raises an error if the item doesn't exist
@@ -1030,6 +1055,7 @@ Example:
   - Tuples are immutable.
 - Everything you’ve learned about lists—they are ordered, they can contain arbitrary objects, they can be indexed and sliced, they can be nested—is true of tuples as well. But they can’t be modified
 
+<a name="tuple-create"></a>
 Create a Tuple:
 
 ```python
@@ -1039,6 +1065,7 @@ t = ('test',)
 t = ('test1', 'test2', 3)
 ```
 
+<a name="tuple-access"></a>
 Access Tuple Items:
 
 ```python
@@ -1563,6 +1590,7 @@ Compound 'AND' expressions:
 - python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
 - the value of the last expression, which was found to be false, is returned
 
+<a name="and-all"></a>
 Any() and All() Functions:
 
 - Any() function:
