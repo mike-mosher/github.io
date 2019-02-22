@@ -1657,9 +1657,9 @@ dict = { key:value for item in collection }
 >>>
 ```
 
-## Checking if dict key exists
+Checking if dict key exists
 
-How not to do it:
+- How not to do it:
 
 ```python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
@@ -1674,7 +1674,7 @@ Traceback (most recent call last):
 KeyError: 'key4'
 ```
 
-How to do it:
+- How to do it:
 
 ```python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
@@ -1689,7 +1689,7 @@ if 'key4' not in d:
 if d.has_key(key)
 ```
 
-Newer, cooler way of doing it with setdefault():
+- Newer, cooler way of doing it with setdefault():
 
 ```python
 d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
@@ -1702,14 +1702,14 @@ print(d)
 # {'key1': 'val1', 'key2': 'val2', 'key3': 'val3', 'key4': 'val4'}
 ```
 
-## Set Global Variables programatically
+# [Set Global Variables Programatically](#set-global-vars-programatically)
 
 ```python
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
 globals().update(d)
 ```
 
-## Pytonic way of value swapping
+# [Pytonic way of value swapping](#variable-value-swapping)
 
 ```python
 """pythonic way of value swapping"""
@@ -1718,7 +1718,11 @@ a, b = 5, 10
 a, b = b, a
 ```
 
-## Reading Files
+---
+
+# [Files](#files)
+
+## [Reading Files](#files-reading)
 
 Code to read files
 
@@ -1770,7 +1774,7 @@ with open(SOME_LARGE_FILE) as f:
 
 ```
 
-## Write to a file
+## [Write to a File](#files-writing)
 
 ```python
 with open('data.txt', 'w') as f:
@@ -1778,7 +1782,7 @@ with open('data.txt', 'w') as f:
     f.write(data)
 ```
 
-## Reading CSV Files
+## [Reading CSV Files](#files-reading-csv)
 
 - csv file:
 
@@ -1812,7 +1816,9 @@ Column names are name, department, birthday month
 Processed 3 lines.
 ```
 
-## HTTP Requests / Working with Requests module
+---
+
+# [HTTP Requests / Working with Requests Module](#http-requests)
 
 Basic example:
 
@@ -1920,7 +1926,7 @@ Viewing / Validating Response properties:
     - Returns True if status_code is less than 400, False if not
     - using `if response:` or `if response.ok:` are NOT the same as `if response.status_code == 200`
 
-## Kerberos
+## [Kerberos](#http-requests-kerberos)
 
 How to do Kerberos auth to internal websites:
 
@@ -1973,7 +1979,9 @@ headers['User-Agent'] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWe
 r = requests.get(url, auth=kerberos_auth, headers=headers, params=params, verify=False)
 ```
 
-## Regex
+---
+
+# [Regex](#regex)
 
 ```python
 import re
@@ -1999,7 +2007,9 @@ match.group(3)    # ';var WPQ2SchemaData'
 
 ```
 
-## JSON
+---
+
+# [Json](#json)
 
 dump:
 
@@ -2055,7 +2065,9 @@ a = json.loads(r.text)
 b = r.json()
 ```
 
-## Zip() Function
+---
+
+# [Zip() Function](#zip)
 
 - takes any number of iterables as arguments and returns an iterator over tuples of their corresponding elements
 
@@ -2111,7 +2123,9 @@ list_c = list(zipped) #Output: [(1, 4), (2, 5), (3, 6)]
 list_d = list(zipped) # Output []... Output is empty list becuase by the above statement zip got exhausted.
 ```
 
-## Logging
+---
+
+# [Logging](#logging)
 
 Below is code that lets you log to a specified log file (change 'logfile.log') and to the console
 
@@ -2143,7 +2157,9 @@ logging.info('This is a log message')
 
 ```
 
-## Most common elements in an iterable
+---
+
+# [Most common elements in an iterable](#iterables)
 
 ```python
 # collections.Counter lets you find the most common
@@ -2159,7 +2175,9 @@ Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
 [('l', 3), ('o', 2), ('e', 1)]
 ```
 
-## Permutations
+---
+
+# [Permutations](#permutations)
 
 ```python
 # itertools.permutations() generates permutations
@@ -2195,7 +2213,9 @@ Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
 ('D', 'C', 'B', 'A')
 ```
 
-## Variable Unpacking
+---
+
+# [Variable Unpacking](#variable-unpacking)
 
 - A way to assign valuees to multiple variables at one time, say from a list
 
@@ -2322,7 +2342,9 @@ human.name
 'James'
 ```
 
-## Interesting way to handle exceptions
+---
+
+# [Exceptions](#expceptions)
 
 ```python
 import contextlib
@@ -2338,7 +2360,9 @@ except FileNotFoundError:
     pass
 ```
 
-## General Guidance
+---
+
+# [General Guidance](#general-guidance)
 
 - Use list comprehensions instead of maps and filters
 - Use `enumerate` over `range`
@@ -2346,9 +2370,11 @@ except FileNotFoundError:
 - Functions:
   - Prefer to return exceptions instead of `None`
 
-# Random
+---
 
-## Print emojis on the command line:
+# [Random](#random)
+
+## [Print Emojis from Terminal](#emojis)
 
 ```python
 # pip install emoji
@@ -2357,7 +2383,7 @@ print(emojize(":thumbs_up:"))
  👍
 ```
 
-## `sh` module
+## [`sh` module](#sh-module)
 
 - replacement for OS module
 - lets you call any program as ordinary function
@@ -2384,7 +2410,9 @@ sh.wc(sh.ls("-1"), "-l")
 sh.git.show("HEAD")
 ```
 
-# Pandas
+---
+
+# [Pandas](#pandas)
 
 - scrape any tables from a webpage
 
@@ -2466,8 +2494,7 @@ Output:
 5   Michael Palin  05/23/13  66000.0                    8
 ```
 
-
-# Command Line Arguments 
+## [Command Line Arguments] (#cli)
 
 ```python
 import sys
@@ -2475,8 +2502,7 @@ script_name   = sys.argv[0]
 arguments     = sys.argv[1:]    # list of arguments
 ```
 
-
-# Command Execution
+## [Command Execution](#command-execution)
 
 ```python
 import os
@@ -2494,8 +2520,7 @@ b'.\n..\nfile1.txt\nfile2.txt\n'
 0
 ``` 
 
-
-# Progress Bar
+## [Progress Bar](#progress-bar)
 
 ```python
 $ pip3 install tqdm
@@ -2507,8 +2532,9 @@ for i in tqdm(range(100)):
     sleep(0.02)
 ``` 
 
+---
 
-# Copy and Deepcopy objects
+# [Copy and Deepcopy](#copy-deepcopy)
 
 - copy a list and dict 
 
