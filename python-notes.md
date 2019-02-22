@@ -2355,6 +2355,7 @@ human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
 name, weight, age, sex = human.values()
 ```
 
+<a name="named-tuple"></a>
 - Named Tuple
 - Note: This isn't variable unpacking, but is still cool. 
 
@@ -2717,29 +2718,3 @@ finally:
 still_other_code()
 ```
 
-
-
-
-```python 
-
-```
-
-```python 
-
-```
-
-```python 
-
-```
-
-```python 
-
-```
-
-```python 
-
-```
-
-```python 
-
-```
