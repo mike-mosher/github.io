@@ -8,6 +8,8 @@
   - [Snake Case](https://mike-mosher.github.io/python-notes.html#naming-things)
   - [What's the recommended way (PEP8)](https://mike-mosher.github.io/python-notes.html#naming-things)
 
+---
+
 ## [Strings](https://mike-mosher.github.io/python-notes.html#strings)
 
   - [string spread over multiple lines -- without line breaks](https://mike-mosher.github.io/python-notes.html#strings)
@@ -36,6 +38,8 @@
     - [specifying a custom line separator with print command](https://mike-mosher.github.io/python-notes.html#strings-printing)
     - [printing to file instead of STDOUT](https://mike-mosher.github.io/python-notes.html#strings-printing)
     - [two ways to pretty print](https://mike-mosher.github.io/python-notes.html#strings-printing)
+
+---
 
 ## [Data Types](https://mike-mosher.github.io/python-notes.html#datatypes)
 
@@ -179,6 +183,8 @@
     - [how to deepcopy a dict](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
     - [why do you need to deepcopy vs copy?](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
 
+---
+
 ## [Alternate Data Types](https://mike-mosher.github.io/python-notes.html##datatypes-alternate-data-types)
 
   - [DefaultDict](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
@@ -188,6 +194,8 @@
   - [OrderedDict](https://mike-mosher.github.io/python-notes.html#datatypes)
     - [Purpose](https://mike-mosher.github.io/python-notes.html#datatypes)
     - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes)
+
+---
 
 ## [Logic](#)
 
