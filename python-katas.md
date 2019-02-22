@@ -1,16 +1,16 @@
-# Python Katas](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
-## [Naming Things](https://mike-mosher.github.io/python-notes.html#naming-things)](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+# Python Katas
+
+## [Naming Things](https://mike-mosher.github.io/python-notes.html#naming-things)
+
 - [Three ways to format variable names:](https://mike-mosher.github.io/python-notes.html#)
   - [Camel Case](https://mike-mosher.github.io/python-notes.html#)
   - [Pascal Case](https://mike-mosher.github.io/python-notes.html#)
   - [Snake Case](https://mike-mosher.github.io/python-notes.html#)
   - [What's the recommended way (PEP8)](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
-## [Strings](https://mike-mosher.github.io/python-notes.html#strings)](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
-- [Strings:](https://mike-mosher.github.io/python-notes.html#)
+
+## [Strings](https://mike-mosher.github.io/python-notes.html#strings)
+
+- Strings:
   - [string spread over multiple lines -- without line breaks](https://mike-mosher.github.io/python-notes.html#)
   - [string spread over multiple lines -- with line breaks](https://mike-mosher.github.io/python-notes.html#)
   - [string spread over multiple lines -- with line breaks -- with indentation](https://mike-mosher.github.io/python-notes.html#)
@@ -36,7 +36,7 @@
     - [specifying a custom line separator with print command](https://mike-mosher.github.io/python-notes.html#)
     - [printing to file instead of STDOUT](https://mike-mosher.github.io/python-notes.html#)
     - [two ways to pretty print](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Data types:](https://mike-mosher.github.io/python-notes.html#)
     - [Dicts:](https://mike-mosher.github.io/python-notes.html#)
       - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#)
@@ -83,7 +83,7 @@
       - [loop over dict keys](https://mike-mosher.github.io/python-notes.html#)
       - [loop over dict values](https://mike-mosher.github.io/python-notes.html#)
       - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [Lists:](https://mike-mosher.github.io/python-notes.html#)
       - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#)
       - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#)
@@ -144,7 +144,7 @@
         - [Can you use the methods above to sort a list of strings?](https://mike-mosher.github.io/python-notes.html#)
           - [How to sort a list of strings and have it be case insensitive?](https://mike-mosher.github.io/python-notes.html#)
       - [combining lists and de-duping  (hint: using sets)](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [Sets:](https://mike-mosher.github.io/python-notes.html#)
       - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#)
       - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#)
@@ -156,17 +156,17 @@
         - [remove](https://mike-mosher.github.io/python-notes.html#)
         - [discard](https://mike-mosher.github.io/python-notes.html#)
         - [difference?](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [Tuples:](https://mike-mosher.github.io/python-notes.html#)
       - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#)
       - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#)
       - [create](https://mike-mosher.github.io/python-notes.html#)
       - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#)
       - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [Named Tuples:](https://mike-mosher.github.io/python-notes.html#)
       - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Deepcopy:](https://mike-mosher.github.io/python-notes.html#)
     - [How to copy a list](https://mike-mosher.github.io/python-notes.html#)
       - [using build in method of List class](https://mike-mosher.github.io/python-notes.html#)
@@ -177,19 +177,19 @@
     - [how to deepcopy a list](https://mike-mosher.github.io/python-notes.html#)
     - [how to deepcopy a dict](https://mike-mosher.github.io/python-notes.html#)
     - [why do you need to deepcopy vs copy?](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Alternate Data Types:](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [DefaultDict](https://mike-mosher.github.io/python-notes.html#)
       - [purpose](https://mike-mosher.github.io/python-notes.html#)
       - [how to use](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
     - [OrderedDict](https://mike-mosher.github.io/python-notes.html#)
       - [Purpose](https://mike-mosher.github.io/python-notes.html#)
       - [how to use](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
+
+
   - [Logic:](https://mike-mosher.github.io/python-notes.html#)
     - [if statement](https://mike-mosher.github.io/python-notes.html#)
     - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#)
@@ -204,7 +204,7 @@
     - [while statement](https://mike-mosher.github.io/python-notes.html#)
     - [while else statement](https://mike-mosher.github.io/python-notes.html#)
     - [How to use enumrate with a for loop](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Operators:](https://mike-mosher.github.io/python-notes.html#)
     - [Relational:](https://mike-mosher.github.io/python-notes.html#)
       - [equal to](https://mike-mosher.github.io/python-notes.html#)
@@ -247,20 +247,20 @@
     - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
     - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
     - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Comprehensions:](https://mike-mosher.github.io/python-notes.html#)
     - [list](https://mike-mosher.github.io/python-notes.html#)
     - [set](https://mike-mosher.github.io/python-notes.html#)
     - [dict](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Built in functions:](https://mike-mosher.github.io/python-notes.html#)
     - [any()](https://mike-mosher.github.io/python-notes.html#)
     - [all()](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Random:](https://mike-mosher.github.io/python-notes.html#)
     - [how to swap values of variables.](https://mike-mosher.github.io/python-notes.html#)
         - [replace value of a with value of b, and vice versa](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Variable unpacking:](https://mike-mosher.github.io/python-notes.html#)
     - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#)
     - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#)
@@ -272,7 +272,7 @@
     - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#)
       - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#)
           - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Files:](https://mike-mosher.github.io/python-notes.html#)
     - [How to read from a file](https://mike-mosher.github.io/python-notes.html#)
       - [how to open a file and read and mess with each line, one at a time](https://mike-mosher.github.io/python-notes.html#)
@@ -282,7 +282,7 @@
       - [How to read a CSV file](https://mike-mosher.github.io/python-notes.html#)
         - [using csv module](https://mike-mosher.github.io/python-notes.html#)
         - [using pandas](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [HTTP Requests:](https://mike-mosher.github.io/python-notes.html#)
     - [How to check if a response is good or not (two ways)](https://mike-mosher.github.io/python-notes.html#)
     - [How to set query string params in a request](https://mike-mosher.github.io/python-notes.html#)
@@ -292,10 +292,10 @@
     - [How to check the properties of the HTTP request](https://mike-mosher.github.io/python-notes.html#)
         - [(method, url, body, headers, etc)](https://mike-mosher.github.io/python-notes.html#)
     - [What data can we see of the response, and how do we access it?](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [regex:](https://mike-mosher.github.io/python-notes.html#)
     - [how to search text with regex statement](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [json:](https://mike-mosher.github.io/python-notes.html#)
     - [how to write (serialize) data to a file](https://mike-mosher.github.io/python-notes.html#)
     - [how to write (serialize) data to a string](https://mike-mosher.github.io/python-notes.html#)
@@ -305,14 +305,13 @@
     - [How to get json data from a URL](https://mike-mosher.github.io/python-notes.html#)
       - [there is a long way](https://mike-mosher.github.io/python-notes.html#)
       - [and there is a short way (using the requests module)](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [logging:](https://mike-mosher.github.io/python-notes.html#)
     - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
+
   - [Zip:](https://mike-mosher.github.io/python-notes.html#)
     - [what does it do, why use it?](https://mike-mosher.github.io/python-notes.html#)
     - [How to zip](https://mike-mosher.github.io/python-notes.html#)
     - [how to unzip](https://mike-mosher.github.io/python-notes.html#)
   - [Command Line Arguments:](https://mike-mosher.github.io/python-notes.html#)
     - [How to parse command line arguments with sys module](https://mike-mosher.github.io/python-notes.html#)
-](https://mike-mosher.github.io/python-notes.html#)
