@@ -201,21 +201,20 @@ Deepcopy:
 ---
 
 ## Logic:
-  - [if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
-  - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#if-statements)
-  - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
-  - [Ternary if](https://mike-mosher.github.io/python-notes.html#if-statements)
-  - [Break Statement](https://mike-mosher.github.io/python-notes.html#break-statement)
-  - [Continue Statement](https://mike-mosher.github.io/python-notes.html#continute-statement)
-  - [Pass Statement](https://mike-mosher.github.io/python-notes.html#pass-statement)
-  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#)
-      - [What items evaluate to boolean False?](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var exists](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is true](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is false](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
-  - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
-  - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
+[Logic](https://mike-mosher.github.io/python-notes.html#logic)
+  - [if statement](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
+  - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
+  - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
+  - [Ternary if](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
+  - [Break Statement](https://mike-mosher.github.io/python-notes.html#logic-break-statement)
+  - [Continue Statement](https://mike-mosher.github.io/python-notes.html#logic-continute-statement)
+  - [Pass Statement](https://mike-mosher.github.io/python-notes.html#logic-pass-statement)
+  - [Difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#logic-and-and)
+  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#logic-truthiness)
+  - [check if var exists](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
+  - [check if var is true](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
+  - [check if var is false](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
+  - [check if var is empty](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
 
 ---
 
@@ -286,16 +285,17 @@ Deepcopy:
 ---
 
 ## Variable Unpacking:
-  - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#)
-  - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#)
-    - [if `v = 1, l = [2,3]`, how to unpack this so that `a = 1, b = 2, c = 3`](https://mike-mosher.github.io/python-notes.html#)
-  - [python3 extended unpacking](https://mike-mosher.github.io/python-notes.html#)
-    - [using `*` to unpack lists.](https://mike-mosher.github.io/python-notes.html#)
-        - [taking a list and setting most values](https://mike-mosher.github.io/python-notes.html#)
-            - [to one var and only on value to another var](https://mike-mosher.github.io/python-notes.html#)
-  - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#)
-    - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#)
-        - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#)
+- [Variable Unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+  - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+  - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+    - [if `v = 1, l = [2,3]`, how to unpack this so that `a = 1, b = 2, c = 3`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+  - [python3 extended unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+    - [using `*` to unpack lists.](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+        - [taking a list and setting most values](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+            - [to one var and only on value to another var](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+  - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+    - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
+        - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
 
 ---
 

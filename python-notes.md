@@ -1247,7 +1247,9 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 
 ---
 
-# [IF Statements](#if-statements)
+# [Logic](#logic)
+
+## [IF Statements](#logic-if-statements)
 
 ```python
 if condition_1:
@@ -1274,26 +1276,106 @@ print ('passed') if x else print('did not pass')
 
 ```
 
----
-
-# [BREAK Statement](#break-statement)
-
----
+## [BREAK Statement](#logic-break-statement)
 
 - used to break out of a `for` or `while` loop
 - Note: if you break out of a for or while loop, any corresponding loop else block is not executed.
 
----
-
-# [CONTINUE Statement](#continue-statment)
+## [CONTINUE Statement](#logic-continue-statment)
 
 - The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
 
----
-
-# [PASS Statement](#pass-statement)
+## [PASS Statement](#logic-pass-statement)
 
 - `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
+
+<a name="logic-and-and"></a>
+Difference between 'and' and '&':
+
+- 'and' is a logical operator (used to combine expressions and test truthyness)
+- '&' is a bitwise operator (used to do binary comparisons)
+
+<a name="logic-truthiness"></a>
+Knowing when something is True or False:
+
+- Items considered False:
+  - Boolean value 'False'
+  - Any value that is numerically zero (0, 0.0, 0.0j)
+  - An empty string
+  - An empty object ([], {}, etc)
+  - 'None' object
+
+- Items considered true:
+  - Virtually any other object built into Python is regarded as True.
+
+---
+
+##  [Testing Flags and Vars](#testing-flags-and-vars)
+
+Check if var exists:
+
+```python
+try:
+    x
+except NameError:
+    x_exists = False
+else:
+    x_exists = True
+```
+
+Check if var is true:
+
+- See previous section called 'Knowing when something is True or False'
+
+```python
+>>> a = 0
+>>> b = 1
+>>> c = 'exists'
+>>>
+>>> if a:
+...     print(a)
+>>> if b:
+...     print(b)
+1
+>>> if c:
+...     print(c)
+exists
+>>>
+```
+
+Check if a var is false:
+
+```python
+if not var:
+  print('var is false')
+```
+
+When a var is false:
+
+- See previous section 'Knowing when something is True or False'
+
+How not to check if a var is empty:
+
+```python
+# Good
+if not x:     # Works for strings, lists, dicts, sets, and tuples. Strings evaluate to False if they are empty.
+
+
+# Bad
+if foo == "":
+
+# "" is a magical value. You should never check against magical values (more commonly known as magical numbers)
+```
+
+Ternary if to check if something is true:
+
+```python
+# The first is a fairly standard ternary style;
+# <value if true> if <conditional> else <value if false>
+
+print ('passed') if x else print('did not pass')
+
+```
 
 ---
 
@@ -1390,91 +1472,6 @@ print ('passed') if x else print('did not pass')
   | *star*=     | a *star*= b       |
   | /=          | a /= b; a = a / b |
 
-Difference between 'and' and '&':
-
-- 'and' is a logical operator (used to combine expressions and test truthyness)
-- '&' is a bitwise operator (used to do binary comparisons)
-
-Knowing when something is True or False:
-
-- Items considered False:
-  - Boolean value 'False'
-  - Any value that is numerically zero (0, 0.0, 0.0j)
-  - An empty string
-  - An empty object ([], {}, etc)
-  - 'None' object
-
-- Items considered true:
-  - Virtually any other object built into Python is regarded as True.
-
----
-
-# [Testing Flags and Vars](#testing-flags-and-vars)
-
-Check if var exists:
-
-```python
-try:
-    x
-except NameError:
-    x_exists = False
-else:
-    x_exists = True
-```
-
-Check if var is true:
-
-- See previous section called 'Knowing when something is True or False'
-
-```python
->>> a = 0
->>> b = 1
->>> c = 'exists'
->>>
->>> if a:
-...     print(a)
->>> if b:
-...     print(b)
-1
->>> if c:
-...     print(c)
-exists
->>>
-```
-
-Check if a var is false:
-
-```python
-if not var:
-  print('var is false')
-```
-
-When a var is false:
-
-- See previous section 'Knowing when something is True or False'
-
-How not to check if a var is empty:
-
-```python
-# Good
-if not x:     # Works for strings, lists, dicts, sets, and tuples. Strings evaluate to False if they are empty.
-
-
-# Bad
-if foo == "":
-
-# "" is a magical value. You should never check against magical values (more commonly known as magical numbers)
-```
-
-Ternary if to check if something is true:
-
-```python
-# The first is a fairly standard ternary style;
-# <value if true> if <conditional> else <value if false>
-
-print ('passed') if x else print('did not pass')
-
-```
 
 <a name="operators-logical-or"></a>
 Using the 'OR' logical operator:
