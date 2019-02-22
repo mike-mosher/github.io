@@ -1,7 +1,7 @@
 # Python Katas
 ---
 
-## [Naming Things](https://mike-mosher.github.io/python-notes.html#naming-things)
+## Naming Things:
 
   - [Camel Case](https://mike-mosher.github.io/python-notes.html#naming-things)
   - [Pascal Case](https://mike-mosher.github.io/python-notes.html#naming-things)
@@ -10,7 +10,7 @@
 
 ---
 
-## [Strings](https://mike-mosher.github.io/python-notes.html#strings)
+## Strings:
 
   - [string spread over multiple lines -- without line breaks](https://mike-mosher.github.io/python-notes.html#strings)
   - [string spread over multiple lines -- with line breaks](https://mike-mosher.github.io/python-notes.html#strings)
@@ -41,7 +41,7 @@
 
 ---
 
-## [Data Types](https://mike-mosher.github.io/python-notes.html#datatypes)
+## Data Types:
 
 [Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
