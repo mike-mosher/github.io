@@ -932,6 +932,7 @@ del d["city"]
 dict.clear();         # remove all entries in dict
 ```
 
+<a name="dict-loop"></a>
 Loop over dicts:
 
 ```python
@@ -966,6 +967,52 @@ Methods:
 d.items()           # returns key, value tuples as a list
 d.keys()            # returns list of keys
 d.values()          # returns list of values
+```
+
+<a name="dict-key-exists"></a>
+Checking if dict key exists
+
+- How not to do it:
+
+```python
+d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
+
+if not d['key4']:
+  print('not in d')
+
+# This is will result in the following KeyError:
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    if not d['key4']:
+KeyError: 'key4'
+```
+
+- How to do it:
+
+```python
+d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
+
+if 'key4' not in d:
+  print('key4 not in d')
+```
+
+- Or:
+
+```python
+if d.has_key(key)
+```
+
+- Newer, cooler way of doing it with setdefault():
+
+```python
+d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
+
+# If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
+
+d.setdefault('key3', 'wrongVal3')   # Since 'key3' exists, it will not set the value passed
+d.setdefault('key4', 'val4')        # Since 'key4' doesn't exist, it will create and set value passed in second argument
+print(d)
+# {'key1': 'val1', 'key2': 'val2', 'key3': 'val3', 'key4': 'val4'}
 ```
 
 ## [Sets](#datatypes-sets)
@@ -1429,6 +1476,7 @@ print ('passed') if x else print('did not pass')
 
 ```
 
+<a name="operators-logical-or"></a>
 Using the 'OR' logical operator:
 
 - if the first value is 'truthy', then it returns the first value and moves on / doesn't analyze the second
@@ -1525,6 +1573,7 @@ Setting a default value for a variable using the 'OR' logical operand:
 >>>
 ```
 
+<a name="operators-logical-and"></a>
 Using the 'AND' logical operator:
 
 - if the first value is 'truthy', then it returns the second value and moves on / doesn't analyze the second
@@ -1609,6 +1658,7 @@ Any() and All() Functions:
 >>> False # At least one item was not Truthy
 ```
 
+<a name="identity"></a>
 Identity Operands:
 
 - Difference between Identity (`x is y`) and equality (`x == y`):
@@ -1683,67 +1733,6 @@ dict = { key:value for item in collection }
 >>> type(d)
 <class 'dict'>
 >>>
-```
-
-Checking if dict key exists
-
-- How not to do it:
-
-```python
-d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
-
-if not d['key4']:
-  print('not in d')
-
-# This is will result in the following KeyError:
-Traceback (most recent call last):
-  File "<input>", line 1, in <module>
-    if not d['key4']:
-KeyError: 'key4'
-```
-
-- How to do it:
-
-```python
-d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
-
-if 'key4' not in d:
-  print('key4 not in d')
-```
-
-- Or:
-
-```python
-if d.has_key(key)
-```
-
-- Newer, cooler way of doing it with setdefault():
-
-```python
-d = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
-
-# If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
-
-d.setdefault('key3', 'wrongVal3')   # Since 'key3' exists, it will not set the value passed
-d.setdefault('key4', 'val4')        # Since 'key4' doesn't exist, it will create and set value passed in second argument
-print(d)
-# {'key1': 'val1', 'key2': 'val2', 'key3': 'val3', 'key4': 'val4'}
-```
-
-# [Set Global Variables Programatically](#set-global-vars-programatically)
-
-```python
-d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
-globals().update(d)
-```
-
-# [Pytonic way of value swapping](#variable-value-swapping)
-
-```python
-"""pythonic way of value swapping"""
-a, b = 5, 10
-
-a, b = b, a
 ```
 
 ---
@@ -2402,6 +2391,22 @@ except FileNotFoundError:
 ---
 
 # [Random](#random)
+
+# [Set Global Variables Programatically](#set-global-vars-programatically)
+
+```python
+d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
+globals().update(d)
+```
+
+# [Pytonic way of value swapping](#random-variable-value-swapping)
+
+```python
+"""pythonic way of value swapping"""
+a, b = 5, 10
+
+a, b = b, a
+```
 
 ## [Print Emojis from Terminal](#emojis)
 

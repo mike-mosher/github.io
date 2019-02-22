@@ -80,14 +80,14 @@
   - [Sorting a dict](https://mike-mosher.github.io/python-notes.html#dict-sort)
     - [shallow sort](https://mike-mosher.github.io/python-notes.html#dict-sort)
   - [common methods](https://mike-mosher.github.io/python-notes.html#dict-methods)
-  - [accessing keys / values in for loops](https://mike-mosher.github.io/python-notes.html#)
-  - [Checking if a key exists](https://mike-mosher.github.io/python-notes.html#)
-    - [how not to do it](https://mike-mosher.github.io/python-notes.html#)
-    - [how to do it](https://mike-mosher.github.io/python-notes.html#)
-    - [newer, cooler way of doing it (something about defaults?)](https://mike-mosher.github.io/python-notes.html#)
-  - [loop over dict keys](https://mike-mosher.github.io/python-notes.html#)
-  - [loop over dict values](https://mike-mosher.github.io/python-notes.html#)
-  - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#)
+  - [accessing keys / values in for loops](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [Checking if a key exists](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [how not to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [how to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [newer, cooler way of doing it (something about defaults?)](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+  - [loop over dict keys](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [loop over dict values](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#dict-loop)
 
 [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -205,9 +205,17 @@ Deepcopy:
   - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#if-statements)
   - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#if-statements)
   - [Ternary if](https://mike-mosher.github.io/python-notes.html#if-statements)
-  - [Break](https://mike-mosher.github.io/python-notes.html#break-statement)
-  - [Continue](https://mike-mosher.github.io/python-notes.html#continute-statement)
-  - [Pass](https://mike-mosher.github.io/python-notes.html#pass-statement)
+  - [Break Statement](https://mike-mosher.github.io/python-notes.html#break-statement)
+  - [Continue Statement](https://mike-mosher.github.io/python-notes.html#continute-statement)
+  - [Pass Statement](https://mike-mosher.github.io/python-notes.html#pass-statement)
+  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#)
+      - [What items evaluate to boolean False?](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var exists](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is true](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is false](https://mike-mosher.github.io/python-notes.html#)
+  - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
+  - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
+  - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
 
 ---
 
@@ -231,16 +239,16 @@ Deepcopy:
   - [Logical:](https://mike-mosher.github.io/python-notes.html#operators-logical)
     - [NOT](https://mike-mosher.github.io/python-notes.html#operators-logical)
       - [how to write it](https://mike-mosher.github.io/python-notes.html#operators-logical)
-      - [how to use NOT operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-    - [OR](https://mike-mosher.github.io/python-notes.html#)
-      - [how to write it](https://mike-mosher.github.io/python-notes.html#)
-      - [how to use OR operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-      - [using or when setting a value to var, and want to set a default value](https://mike-mosher.github.io/python-notes.html#)
-      - [Compound OR expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
-    - [AND](https://mike-mosher.github.io/python-notes.html#)
-      - [how to write it](https://mike-mosher.github.io/python-notes.html#)
-      - [how to use AND operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#)
-      - [Compound AND expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#)
+      - [how to use NOT operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#operators-logical)
+    - [OR](https://mike-mosher.github.io/python-notes.html#operators-logical-or)
+      - [how to write it](https://mike-mosher.github.io/python-notes.html#operators-logical-or)
+      - [how to use OR operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#operators-logical-or)
+      - [using or when setting a value to var, and want to set a default value](https://mike-mosher.github.io/python-notes.html#operators-logical-or)
+      - [Compound OR expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#operators-logical-or)
+    - [AND](https://mike-mosher.github.io/python-notes.html#operators-logical-and)
+      - [how to write it](https://mike-mosher.github.io/python-notes.html#operators-logical-and)
+      - [how to use AND operator in an evaluation (like if statement)](https://mike-mosher.github.io/python-notes.html#operators-logical-and)
+      - [Compound AND expression, how does the logic work](https://mike-mosher.github.io/python-notes.html#operators-logical-and)
   - [Assignment:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
     - [short hand of the following:](https://mike-mosher.github.io/python-notes.html#operators-assignment)
       - [a = a + b](https://mike-mosher.github.io/python-notes.html#operators-assignment)
@@ -251,23 +259,11 @@ Deepcopy:
 ---
 
 ## Identity:
-  - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#)
-    - [what does each do](https://mike-mosher.github.io/python-notes.html#)
-    - [how are they different](https://mike-mosher.github.io/python-notes.html#)
-    - [when to use each](https://mike-mosher.github.io/python-notes.html#)
+  - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#identity)
+    - [what does each do](https://mike-mosher.github.io/python-notes.html#identity)
+    - [how are they different](https://mike-mosher.github.io/python-notes.html#identity)
+    - [when to use each](https://mike-mosher.github.io/python-notes.html#identity)
   - [difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-
----
-
-## Logic:
-  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#)
-      - [What items evaluate to boolean False?](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var exists](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is true](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is false](https://mike-mosher.github.io/python-notes.html#)
-  - [check if var is empty](https://mike-mosher.github.io/python-notes.html#)
-  - [How Python evaluates expressions using the OR statement](https://mike-mosher.github.io/python-notes.html#)
-  - [How Python evaluates expressions using the AND statement](https://mike-mosher.github.io/python-notes.html#)
 
 ---
 
@@ -285,8 +281,7 @@ Deepcopy:
 ---
 
 ## Random:
-  - [how to swap values of variables.](https://mike-mosher.github.io/python-notes.html#)
-      - [replace value of a with value of b, and vice versa](https://mike-mosher.github.io/python-notes.html#)
+  - [how to swap values of variables (replace value of a with value of b, and vice versa)](https://mike-mosher.github.io/python-notes.html#random-variable-value-swapping)
 
 ---
 
