@@ -43,52 +43,6 @@
 
 ## Data Types:
 
-[Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
-  - [accessing items](https://mike-mosher.github.io/python-notes.html#dict-access)
-    - [using slice notation](https://mike-mosher.github.io/python-notes.html#dict-access)
-    - [using method of Dict class](https://mike-mosher.github.io/python-notes.html#dict-access)
-      - [What's the difference between the two methods above?](https://mike-mosher.github.io/python-notes.html#dict-access)
-      - [What if you are accessing a key that doesn't exist? How do both react?](https://mike-mosher.github.io/python-notes.html#dict-access)
-    - [How to specify a default value when the key specified doesn't exist?](https://mike-mosher.github.io/python-notes.html#dict-access)
-    - [using if statement to check for a key in a dict](https://mike-mosher.github.io/python-notes.html#dict-access)
-      - [do this using a method in the Dict class](https://mike-mosher.github.io/python-notes.html#dict-access)
-      - [do this another way](https://mike-mosher.github.io/python-notes.html#dict-access)
-  - [check the intersectionality / commonality of two dicts](https://mike-mosher.github.io/python-notes.html#dict-intersectionality-diff)
-  - [check the differences of two dicts](https://mike-mosher.github.io/python-notes.html#dict-intersectionality-diff)
-  - [adding items](https://mike-mosher.github.io/python-notes.html#dict-add)
-  - [updating items](https://mike-mosher.github.io/python-notes.html#dict-update)
-    - [update a single key / value in a dict](https://mike-mosher.github.io/python-notes.html#dict-update)
-    - [update a dict with the values of a second dict,](https://mike-mosher.github.io/python-notes.html#dict-update)
-        - [overwriting if the item already exists](https://mike-mosher.github.io/python-notes.html#dict-update)
-  - [merge two dicts](https://mike-mosher.github.io/python-notes.html#dict-merge)
-    - [three ways of doing this (which are the same as updating](https://mike-mosher.github.io/python-notes.html#dict-merge)
-    - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
-        - [into another dict (d1), overwriting any values in d1?](https://mike-mosher.github.io/python-notes.html#dict-merge)
-    - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
-        - [into another dict (d1), leaving any values in d1 alone](https://mike-mosher.github.io/python-notes.html#dict-merge)
-            - [but updating d1 with any new values?](https://mike-mosher.github.io/python-notes.html#dict-merge)
-  - [deleting an item from dict, using built in reserved word](https://mike-mosher.github.io/python-notes.html#dict-delete)
-  - [delete all items from a dict, using build in method of Dict class](https://mike-mosher.github.io/python-notes.html#dict-delete)
-  - [removing items](https://mike-mosher.github.io/python-notes.html#dict-delete)
-    - [remove an item and return the key](https://mike-mosher.github.io/python-notes.html#dict-delete)
-    - [remove an item and return the item (key / value)](https://mike-mosher.github.io/python-notes.html#dict-delete)
-    - [remove an item,](https://mike-mosher.github.io/python-notes.html#dict-delete)
-      - [and specify a default value in case that item doesn't exist](https://mike-mosher.github.io/python-notes.html#dict-delete)
-  - [Sorting a dict](https://mike-mosher.github.io/python-notes.html#dict-sort)
-    - [shallow sort](https://mike-mosher.github.io/python-notes.html#dict-sort)
-  - [common methods](https://mike-mosher.github.io/python-notes.html#dict-methods)
-  - [accessing keys / values in for loops](https://mike-mosher.github.io/python-notes.html#dict-loop)
-  - [Checking if a key exists](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
-    - [how not to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
-    - [how to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
-    - [newer, cooler way of doing it (something about defaults?)](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
-  - [loop over dict keys](https://mike-mosher.github.io/python-notes.html#dict-loop)
-  - [loop over dict values](https://mike-mosher.github.io/python-notes.html#dict-loop)
-  - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#dict-loop)
-
 [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
   - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -134,7 +88,7 @@
       - [Do this using a method of the list class](https://mike-mosher.github.io/python-notes.html#lists-copy)
       - [Do this using slice notation](https://mike-mosher.github.io/python-notes.html#lists-copy)
       - [Do this by typecasting](https://mike-mosher.github.io/python-notes.html#lists-copy)
-    - [Deep Copy of a nested list](https://mike-mosher.github.io/python-notes.html#lists-copy)
+    - [Copy and Deep Copy of a nested list](https://mike-mosher.github.io/python-notes.html#lists-copy)
   - [reverse the order of a list](https://mike-mosher.github.io/python-notes.html#lists-reversing)
     - [Do this using slice notation](https://mike-mosher.github.io/python-notes.html#lists-reversing)
     - [Do this using a method of the List class](https://mike-mosher.github.io/python-notes.html#lists-reversing)
@@ -149,6 +103,59 @@
     - [Can you use the methods above to sort a list of strings?](https://mike-mosher.github.io/python-notes.html#lists-sorting)
       - [How to sort a list of strings and have it be case insensitive?](https://mike-mosher.github.io/python-notes.html#lists-sorting)
   - [combining lists and de-duping  (hint: using sets)](https://mike-mosher.github.io/python-notes.html#lists-sorting)
+
+
+[Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
+  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
+  - [accessing items](https://mike-mosher.github.io/python-notes.html#dict-access)
+    - [using slice notation](https://mike-mosher.github.io/python-notes.html#dict-access)
+    - [using method of Dict class](https://mike-mosher.github.io/python-notes.html#dict-access)
+      - [What's the difference between the two methods above?](https://mike-mosher.github.io/python-notes.html#dict-access)
+      - [What if you are accessing a key that doesn't exist? How do both react?](https://mike-mosher.github.io/python-notes.html#dict-access)
+    - [How to specify a default value when the key specified doesn't exist?](https://mike-mosher.github.io/python-notes.html#dict-access)
+    - [using if statement to check for a key in a dict](https://mike-mosher.github.io/python-notes.html#dict-access)
+      - [do this using a method in the Dict class](https://mike-mosher.github.io/python-notes.html#dict-access)
+      - [do this another way](https://mike-mosher.github.io/python-notes.html#dict-access)
+  - [check the intersectionality / commonality of two dicts](https://mike-mosher.github.io/python-notes.html#dict-intersectionality-diff)
+  - [check the differences of two dicts](https://mike-mosher.github.io/python-notes.html#dict-intersectionality-diff)
+  - [adding items](https://mike-mosher.github.io/python-notes.html#dict-add)
+  - [updating items](https://mike-mosher.github.io/python-notes.html#dict-update)
+    - [update a single key / value in a dict](https://mike-mosher.github.io/python-notes.html#dict-update)
+    - [update a dict with the values of a second dict,](https://mike-mosher.github.io/python-notes.html#dict-update)
+        - [overwriting if the item already exists](https://mike-mosher.github.io/python-notes.html#dict-update)
+  - [merge two dicts](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [three ways of doing this (which are the same as updating](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
+        - [into another dict (d1), overwriting any values in d1?](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
+        - [into another dict (d1), leaving any values in d1 alone](https://mike-mosher.github.io/python-notes.html#dict-merge)
+            - [but updating d1 with any new values?](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [copying dicts](https://mike-mosher.github.io/python-notes.html#dict-copy)
+    - [Copy a dict from one object into a new object](https://mike-mosher.github.io/python-notes.html#dict-copy)
+      - [Do this using a method of the dict class](https://mike-mosher.github.io/python-notes.html#dict-copy)
+      - [Do this by typecasting](https://mike-mosher.github.io/python-notes.html#dict-copy)
+    - [Copy and Deep Copy of a nested dict](https://mike-mosher.github.io/python-notes.html#dict-copy)
+  - [deleting an item from dict, using built in reserved word](https://mike-mosher.github.io/python-notes.html#dict-delete)
+  - [delete all items from a dict, using build in method of Dict class](https://mike-mosher.github.io/python-notes.html#dict-delete)
+  - [removing items](https://mike-mosher.github.io/python-notes.html#dict-delete)
+    - [remove an item and return the key](https://mike-mosher.github.io/python-notes.html#dict-delete)
+    - [remove an item and return the item (key / value)](https://mike-mosher.github.io/python-notes.html#dict-delete)
+    - [remove an item,](https://mike-mosher.github.io/python-notes.html#dict-delete)
+      - [and specify a default value in case that item doesn't exist](https://mike-mosher.github.io/python-notes.html#dict-delete)
+  - [Sorting a dict](https://mike-mosher.github.io/python-notes.html#dict-sort)
+    - [shallow sort](https://mike-mosher.github.io/python-notes.html#dict-sort)
+  - [common methods](https://mike-mosher.github.io/python-notes.html#dict-methods)
+  - [accessing keys / values in for loops](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [Checking if a key exists](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [how not to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [how to do it](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+    - [newer, cooler way of doing it (something about defaults?)](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
+  - [loop over dict keys](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [loop over dict values](https://mike-mosher.github.io/python-notes.html#dict-loop)
+  - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#dict-loop)
+
 
 [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
   - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
@@ -190,13 +197,13 @@ Deepcopy:
 
 ## Alternate Data Types:
 
-[DefaultDict](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
-  - [purpose](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
-  - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes-alternate-data-types)
+[DefaultDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
+  - [purpose](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
+  - [how to use](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
 
-[OrderedDict](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [Purpose](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [how to use](https://mike-mosher.github.io/python-notes.html#datatypes)
+[OrderedDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
+  - [Purpose](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
+  - [how to use](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
 
 ---
 
@@ -340,15 +347,15 @@ Deepcopy:
 
 ---
 
-## Logging:
-  - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#logging)
-
----
-
 ## Zip:
   - [what does it do, why use it?](https://mike-mosher.github.io/python-notes.html#zip)
   - [How to zip](https://mike-mosher.github.io/python-notes.html#zip)
   - [how to unzip](https://mike-mosher.github.io/python-notes.html#zip)
+
+---
+
+## Logging:
+  - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#logging)
 
 ---
 

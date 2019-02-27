@@ -32,18 +32,48 @@ Strings can be broken up over multiple lines without backspaces or anything
                 'needed!')
 >>> my_string
 'This is a super long string const spread out over multiple lines. And look, no backslash characters needed!'
+>>> print(my_string)
+This is a super long string const spread out over multiple lines. And look, no backslash characters needed!
+>>>
 ```
 
 Triple Quotes:
 
 ```python
 >>>my_string = """
-  did you know that you can use triple quotes for multi-line strings as well?
-  However, there is a difference in how they are represented.
-  See output.
+did you know that you can use triple quotes for multi-line strings as well?
+However, there is a difference in how they are represented.
+See output.
 """
+>>>
 >>> my_string
-'\n  did you know that you can use triple quotes for multi-line strings as well?\n  However, there is a difference in how they are represented.\n  See output.\n'
+'\ndid you know that you can use triple quotes for multi-line strings as well?\nHowever, there is a difference in how they are represented.\nSee output.
+\n'
+>>> print(my_string)
+
+did you know that you can use triple quotes for multi-line strings as well?
+However, there is a difference in how they are represented.
+See output.
+>>>
+```
+
+- The only downside here is that the first line doesn’t align nicely with the lines which follow. The way around this is to embed a \newline escape sequence, meaning both backslash and newline are ignored.
+
+```python 
+>>> my_string = """\
+... did you know that you can use triple quotes for multi-line strings as well?
+... However, there is a difference in how they are represented.
+... See output.
+... """
+>>>
+>>> my_string
+'did you know that you can use triple quotes for multi-line strings as well?\nHowever, there is a difference in how they are represented.\nSee output.\n
+'
+>>> print(my_string)
+did you know that you can use triple quotes for multi-line strings as well?
+However, there is a difference in how they are represented.
+See output.
+>>>
 ```
 
 Triple Quote, but keeping indentation
@@ -153,6 +183,16 @@ Right / Left / Center Justify:
 '                                      slightly shorter string.  medium'
 '                                                            very short'
 ```
+
+Another way to justify strings:
+
+```python 
+{<el>:<10}       # '<el>      '
+{<el>:>10}       # '      <el>'
+{<el>:^10}       # '   <el>   '
+{<el>:->10}      # '------<el>'
+{<el>:>0}        # '<el>'
+``` 
 
 <a name="strings-formatting"></a>
 String Formatting:
@@ -621,28 +661,49 @@ IndexError: pop index out of range
 <a name="lists-copy"></a>
 Copy items from a list:
 
+- shallow copy to new object:
+- 
 ```python
-a = [1, 2, 3, 4, 5]
-
-# b and a point to same object in memory, both will be updated if one is updated
-b = a 
-
-# shallow copy
 b = a[:]
-
-# copy by type casting
-b = list(a)
-
-#Python 3 only
-b = list.copy()
-
-# Deepcopy, just like with a dict
-from copy import deepcopy
-
-l = [[1, 2], [3, 4]]
-
-l2 = deepcopy(l)
 ```
+
+- copy by type casting:
+
+```python
+b = list(a)
+```
+
+
+- python 3 only:
+
+```python
+b = list.copy()
+```
+
+- Using built in methods `copy` and `deepcopy`:
+
+
+```python 
+from copy import copy 
+from copy import deepcopy 
+
+>>>l = ['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+>>>l2 = copy(l)
+>>>l2 
+['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+>>>
+>>>
+>>>l2 = deepcopy(l)
+>>>l2 
+['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
+``` 
+
+Difference between a shallow copy and deep copy:
+
+- a shallow copy will copy the objects of the list of dict with a depth of 1.  Any nested lists or dicts are just references to the original object in memory.  Modifying the nested list / dict in the original object will modify it in the shallow copied object 
+- a deep copy will create new objects and nested objects during the copy, not just references to the original object in memory
+
+
 
 Methods:
 
@@ -780,7 +841,7 @@ print(d.get('key4', 'default'))
 # Output: default
 ```
 
-How to check a dict for a key in an if statment:
+How to check a dict for a key in an if statement:
 
 ```python
 if d.get('test'):
@@ -923,6 +984,69 @@ dict(d1.items() | d2.items())
 # and result in this
 {'a': 1, 'b': 2}
 ```
+
+Taking two dicts (d1, d2), how can you update d1 with values from d2, overwriting any values?
+
+```python  
+d1 = {'x': 1, 'y': 2, 'z': 3}
+d2 = {'w': 10, 'x': 11, 'y': 2}
+d1.update(d2)
+d1
+>>>
+{'x': 11, 'y': 2, 'z': 3, 'w': 10}
+``` 
+
+Taking two dicts (d1, d2), how can you update d1 with values from d2, but not overwriting current values in d1?
+```python  
+d1 = {'x': 1, 'y': 2, 'z': 3}
+d2 = {'w': 10, 'x': 11, 'y': 2}
+
+# setdefault: If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
+for k,v in d2.items():
+    d1.setdefault(k,v)
+
+d1
+>>> {'x': 1, 'y': 2, 'z': 3, 'w': 10}
+``` 
+
+<a name="dict-copy"></a>
+Copying Dicts:
+
+- Shallow copy to new object:
+
+```python 
+d2 = d.copy()
+```
+
+- copy by typecasting:
+
+```python 
+d2 = dict(d)
+```
+
+- copy and deepcopy of a dict:
+
+
+```python 
+>>>from copy import copy 
+>>>from copy import deepcopy 
+>>>
+>>>d = {'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+>>>
+>>>d2 = copy(d)
+>>>d2
+{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+>>>
+>>>d2 = deepcopy(d)
+>>>d2
+{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+``` 
+
+Difference between a shallow copy and deep copy:
+
+- a shallow copy will copy the objects of the list of dict with a depth of 1.  Any nested lists or dicts are just references to the original object in memory.  Modifying the nested list / dict in the original object will modify it in the shallow copied object 
+- a deep copy will create new objects and nested objects during the copy, not just references to the original object in memory
+- 
 
 <a name="dict-delete"></a>
 Deleting items:
@@ -1141,10 +1265,11 @@ Methods:
 
 ---
 
-## [Alternate Data Types](#datatypes-alternate-data-types)
+# [Alternate Data Types](#alternate-datatypes)
 
-- Defaultdict:
-  - behaves like a normal Python dictionary, except when a key isn't present it'll substitute in a default value rather than raising a KeyError.
+## [Defaultdict](#alternate-datatypes-defaultdict)
+
+- behaves like a normal Python dictionary, except when a key isn't present it'll substitute in a default value rather than raising a KeyError.
 
 ```python
 # use defaultdict to count words in a list
@@ -1195,6 +1320,39 @@ print(json.dumps(users, indent=4))
 # }
 ```
 
+## [OrderedDict](#alternate-datatypes-ordereddict)
+
+- saves the order of key inserts into dictionary
+- NOTE: The interesting part here is that a regular dictionary also maintains the order of key inserts in python 3.6 and higher. But it’s an implementation detail, not a specification. So you should not rely upon this because it can be changed in future, which is unlikely. But anyway, if you want to save the order of key inserts you should do this explicitly through defining OrderedDict instance.
+
+```python 
+>>> from collections import OrderedDict
+>>> ordered_dict = OrderedDict()
+>>> ordered_dict[1] = 'one'
+>>> ordered_dict[2] = 'two'
+>>> ordered_dict[3] = 'three'
+>>> ordered_dict[4] = 'four'
+>>> ordered_dict[5] = 'five'
+>>> ordered_dict
+OrderedDict([(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four'), (5, 'five')])
+```
+
+## [Deque](#alternate-datatypes-deque)
+
+- Deque is a double-ended queue that supports adding and removing elements from either end in O(1) time.
+
+```python 
+>>> from collections import deque
+>>> de = deque([6, 6, 6])
+>>> de.appendleft(42)
+>>> de
+deque([42, 6, 6, 6])
+>>> de.popleft()
+42
+>>> de
+deque([6, 6, 6])
+``` 
+
 ---
 
 ## [Advanced Variables](#advanced-variables)
@@ -1244,6 +1402,164 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 23
 
 ```
+
+---
+
+# [Variable Unpacking](#variable-unpacking)
+
+- A way to assign valuees to multiple variables at one time, say from a list
+
+Enumerate:
+
+- enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop
+
+```python
+for index, item in enumerate(some_list):
+    # do something with index and item
+```
+
+    - enumerate also allows you to give the starting number for the index.  Default is 0, but this is useful when you need the index to start at 1
+
+```python
+>>> l = ['a', 'b', 'c']
+>>> for i, v in enumerate(l):
+...     print(i,v)
+0 a
+1 b
+2 c
+>>>
+>>>
+>>> for i, v in enumerate(l, 1):
+...     print(i,v)
+1 a
+2 b
+3 c
+>>> # You could also specify the start param like so
+>>> for i, v in enumerate(l, start=1):
+...     print(i,v)
+```
+
+Using enumerate to unpack tuples (in a cool way):
+
+```python
+>>> L = [('Matt', 20), ('Karim', 30), ('Maya', 40)]
+>>>
+>>> for idx, (name, age) in enumerate(L):
+...     print(f"Index is {idx}, name is {name}, and age is {age}")
+Index is 0, name is Matt, and age is 20
+Index is 1, name is Karim, and age is 30
+Index is 2, name is Maya, and age is 40
+```
+
+Variable swap can be an example of unpacking:
+
+```python
+a, b = b, a
+```
+
+Nested unpacking works as well:
+
+```python
+>>> v = 1
+>>> l = [2,3]
+>>>
+>>> a, (b, c) = v, l
+>>> a
+1
+>>> b
+2
+>>> c
+3
+>>>
+```
+
+Python 3 has an new form of extended unpacking:
+
+```python
+a, *rest = [1, 2, 3]
+# a = 1, rest = [2, 3]
+
+a, *middle, c = [1, 2, 3, 4]
+# a = 1, middle = [2, 3], c = 4
+```
+
+Use a throwaway variable when unpacking:
+
+```python
+>>> filename = 'foobar.txt'
+>>> basename, __, ext = filename.rpartition('.')
+>>> basename
+'foobar'
+>>> __
+'.'
+>>> ext
+'txt'
+>>>
+```
+
+Different ways to do variable unpacking:
+
+- list
+
+```python
+human = ['James', 180, 32, 'm']
+
+name, weight, age, sex = human
+# This is better than:
+# name = human[0]
+```
+
+- Dict:
+
+```python
+human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
+
+name, weight, age, sex = human.values()
+```
+
+<a name="named-tuple"></a>
+- Named Tuple
+- Note: This isn't variable unpacking, but is still cool. 
+
+```python
+from collections import namedtuple
+humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
+human = humans('James', 180, 32, 'm')
+
+human
+human(name='James', height=180, age=32, sex='m')
+
+human.name
+'James'
+```
+
+---
+
+# [Iterables](#iterables)
+
+Most common elements in an iterable
+
+```python
+# collections.Counter lets you find the most common
+# elements in an iterable:
+
+>>> import collections
+>>> c = collections.Counter('helloworld')
+
+>>> c
+Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
+
+>>> c.most_common(3)
+[('l', 3), ('o', 2), ('e', 1)]
+```
+
+How to skip the first item of an iterable:
+
+```python 
+next(<iter>)
+for element in <iter>:
+    ...
+``` 
 
 ---
 
@@ -1310,7 +1626,91 @@ Knowing when something is True or False:
 
 ---
 
-##  [Testing Flags and Vars](#testing-flags-and-vars)
+## [Try / Except](#try-except)
+
+Most common: 
+
+```python 
+try:
+    something()
+except IOError as e:    # catch a specific exception
+    print(e)
+except KeyError:        # you can have multiple exceptions being caught
+    print(KeyError)
+```
+
+Else clause:
+
+- Use the else clause in case you want to run code in the absense of any errors in the `try` block:
+- obviously, if there is an exception in the `try` clause, the `else` clause will not run
+
+```python 
+test = [1,2,3]
+
+try:
+    a = test[3]
+except IndexError as e:
+    print(e)
+else:
+    print('made it here')   # This doesn't display
+
+```
+
+Try with Finally:
+
+- In the block below, `other_code()` will run before any return in the `except` block
+- `other_code()` in the `finally` block will run if there is a TypeError exception and `still_other_code()` will not 
+- `other_code()` will run even if an exception is raised that is not TypeError 
+- `other_code()` will run even if there are `break` or `continue` statements 
+
+```python 
+try:
+    run_code1()
+except TypeError:
+    run_code2()
+    return None   # The finally block is run before the method returns
+finally:
+    other_code()
+    
+still_other_code()
+```
+
+Exceptions:
+
+```python 
+try:
+    x = int(input('Please enter a number: '))
+except ValueError:
+    print('Oops!  That was no valid number.  Try again...')
+else:
+    print('Thank you.')
+```
+
+- Raise an error:
+
+```python 
+raise ValueError('A very specific message!')
+```
+
+Another less common way of handling exceptions:
+
+```python
+import contextlib
+
+with contextlib.suppress(FileNotFoundError):
+    os.remove('somefile.tmp')
+
+# This is equivalent to:
+
+try:
+    os.remove('somefile.tmp')
+except FileNotFoundError:
+    pass
+```
+
+---
+
+## [Testing Flags and Vars](#testing-flags-and-vars)
 
 Check if var exists:
 
@@ -1378,6 +1778,23 @@ print ('passed') if x else print('did not pass')
 ```
 
 ---
+
+## [Args and Kwargs](#args-kwargs)
+
+- This:
+
+```python 
+args   = (1, 2)
+kwargs = {'x': 3, 'y': 4, 'z': 5}
+func(*args, **kwargs)  
+``` 
+
+- Is the same as:
+
+```pyton 
+func(1, 2, x=3, y=4, z=5)
+``` 
+
 
 # [Loops](#loops)
 
@@ -2173,272 +2590,12 @@ logging.info('This is a log message')
 
 ---
 
-# [Most common elements in an iterable](#iterables)
+## [Command Line Arguments] (#cli)
 
 ```python
-# collections.Counter lets you find the most common
-# elements in an iterable:
-
->>> import collections
->>> c = collections.Counter('helloworld')
-
->>> c
-Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
-
->>> c.most_common(3)
-[('l', 3), ('o', 2), ('e', 1)]
-```
-
----
-
-# [Permutations](#permutations)
-
-```python
-# itertools.permutations() generates permutations
-# for an iterable. Time to brute-force those passwords ;-)
-
->>> import itertools
->>> for p in itertools.permutations('ABCD'):
-...     print(p)
-
-('A', 'B', 'C', 'D')
-('A', 'B', 'D', 'C')
-('A', 'C', 'B', 'D')
-('A', 'C', 'D', 'B')
-('A', 'D', 'B', 'C')
-('A', 'D', 'C', 'B')
-('B', 'A', 'C', 'D')
-('B', 'A', 'D', 'C')
-('B', 'C', 'A', 'D')
-('B', 'C', 'D', 'A')
-('B', 'D', 'A', 'C')
-('B', 'D', 'C', 'A')
-('C', 'A', 'B', 'D')
-('C', 'A', 'D', 'B')
-('C', 'B', 'A', 'D')
-('C', 'B', 'D', 'A')
-('C', 'D', 'A', 'B')
-('C', 'D', 'B', 'A')
-('D', 'A', 'B', 'C')
-('D', 'A', 'C', 'B')
-('D', 'B', 'A', 'C')
-('D', 'B', 'C', 'A')
-('D', 'C', 'A', 'B')
-('D', 'C', 'B', 'A')
-```
-
----
-
-# [Variable Unpacking](#variable-unpacking)
-
-- A way to assign valuees to multiple variables at one time, say from a list
-
-Enumerate:
-
-- enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop
-
-```python
-for index, item in enumerate(some_list):
-    # do something with index and item
-```
-
-    - enumerate also allows you to give the starting number for the index.  Default is 0, but this is useful when you need the index to start at 1
-
-```python
->>> l = ['a', 'b', 'c']
->>> for i, v in enumerate(l):
-...     print(i,v)
-0 a
-1 b
-2 c
->>>
->>>
->>> for i, v in enumerate(l, 1):
-...     print(i,v)
-1 a
-2 b
-3 c
->>> # You could also specify the start param like so
->>> for i, v in enumerate(l, start=1):
-...     print(i,v)
-```
-
-Using enumerate to unpack tuples (in a cool way):
-
-```python
->>> L = [('Matt', 20), ('Karim', 30), ('Maya', 40)]
->>>
->>> for idx, (name, age) in enumerate(L):
-...     print(f"Index is {idx}, name is {name}, and age is {age}")
-Index is 0, name is Matt, and age is 20
-Index is 1, name is Karim, and age is 30
-Index is 2, name is Maya, and age is 40
-```
-
-Variable swap can be an example of unpacking:
-
-```python
-a, b = b, a
-```
-
-Nested unpacking works as well:
-
-```python
->>> v = 1
->>> l = [2,3]
->>>
->>> a, (b, c) = v, l
->>> a
-1
->>> b
-2
->>> c
-3
->>>
-```
-
-Python 3 has an new form of extended unpacking:
-
-```python
-a, *rest = [1, 2, 3]
-# a = 1, rest = [2, 3]
-
-a, *middle, c = [1, 2, 3, 4]
-# a = 1, middle = [2, 3], c = 4
-```
-
-Use a throwaway variable when unpacking:
-
-```python
->>> filename = 'foobar.txt'
->>> basename, __, ext = filename.rpartition('.')
->>> basename
-'foobar'
->>> __
-'.'
->>> ext
-'txt'
->>>
-```
-
-Different ways to do variable unpacking:
-
-- list
-
-```python
-human = ['James', 180, 32, 'm']
-
-name, weight, age, sex = human
-# This is better than:
-# name = human[0]
-```
-
-- Dict:
-
-```python
-human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
-
-name, weight, age, sex = human.values()
-```
-
-<a name="named-tuple"></a>
-- Named Tuple
-- Note: This isn't variable unpacking, but is still cool. 
-
-```python
-from collections import namedtuple
-humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
-human = humans('James', 180, 32, 'm')
-
-human
-human(name='James', height=180, age=32, sex='m')
-
-human.name
-'James'
-```
-
----
-
-# [Exceptions](#expceptions)
-
-```python
-import contextlib
-
-with contextlib.suppress(FileNotFoundError):
-    os.remove('somefile.tmp')
-
-# This is equivalent to:
-
-try:
-    os.remove('somefile.tmp')
-except FileNotFoundError:
-    pass
-```
-
----
-
-# [General Guidance](#general-guidance)
-
-- Use list comprehensions instead of maps and filters
-- Use `enumerate` over `range`
-- Avoid `else` blocks after `for` and `while` loops
-- Functions:
-  - Prefer to return exceptions instead of `None`
-
----
-
-# [Random](#random)
-
-# [Set Global Variables Programatically](#set-global-vars-programatically)
-
-```python
-d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
-globals().update(d)
-```
-
-# [Pytonic way of value swapping](#random-variable-value-swapping)
-
-```python
-"""pythonic way of value swapping"""
-a, b = 5, 10
-
-a, b = b, a
-```
-
-## [Print Emojis from Terminal](#emojis)
-
-```python
-# pip install emoji
-from emoji import emojize
-print(emojize(":thumbs_up:"))
- 👍
-```
-
-## [`sh` module](#sh-module)
-
-- replacement for OS module
-- lets you call any program as ordinary function
-
-```python
-from sh import ifconfig
-print(ifconfig("wlan0"))
-
-
-from sh import *
-sh.pwd()
-sh.mkdir('new_folder')
-sh.touch('new_file.txt')
-sh.whoami()
-sh.echo('This is great!')
-
-# ls command
-sh.ls("-l", "/tmp", color="never")
-
-# piping ls -l to wc -l
-sh.wc(sh.ls("-1"), "-l")
-
-# git
-sh.git.show("HEAD")
+import sys
+script_name   = sys.argv[0]
+arguments     = sys.argv[1:]    # list of arguments
 ```
 
 ---
@@ -2525,13 +2682,63 @@ Output:
 5   Michael Palin  05/23/13  66000.0                    8
 ```
 
-## [Command Line Arguments] (#cli)
+---
+
+# [Random](#random)
+
+## [Set Global Variables Programatically](#set-global-vars-programatically)
 
 ```python
-import sys
-script_name   = sys.argv[0]
-arguments     = sys.argv[1:]    # list of arguments
+d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
+globals().update(d)
 ```
+
+## [Pytonic way of value swapping](#random-variable-value-swapping)
+
+```python
+"""pythonic way of value swapping"""
+a, b = 5, 10
+
+a, b = b, a
+```
+
+## [Print Emojis from Terminal](#emojis)
+
+```python
+# pip install emoji
+from emoji import emojize
+print(emojize(":thumbs_up:"))
+ 👍
+```
+
+## [`sh` module](#sh-module)
+
+- replacement for OS module
+- lets you call any program as ordinary function
+
+```python
+from sh import ifconfig
+print(ifconfig("wlan0"))
+
+
+from sh import *
+sh.pwd()
+sh.mkdir('new_folder')
+sh.touch('new_file.txt')
+sh.whoami()
+sh.echo('This is great!')
+
+# ls command
+sh.ls("-l", "/tmp", color="never")
+
+# piping ls -l to wc -l
+sh.wc(sh.ls("-1"), "-l")
+
+# git
+sh.git.show("HEAD")
+```
+
+---
 
 ## [Command Execution](#command-execution)
 
@@ -2565,158 +2772,21 @@ for i in tqdm(range(100)):
 
 ---
 
-# [Copy and Deepcopy](#copy-deepcopy)
+## [CLI Prompts](#cli-prompts)
 
-- copy a list and dict 
+- `bullet` is an awesome module to do many different interactive CLI features 
+- https://github.com/Mckinsey666/bullet/blob/master/DOCUMENTATION.md 
 
 ```python 
-l = ['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
-d = {'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
-l2 = l.copy() 
-d2 = d.copy() 
+from bullet import Bullet
 
-from copy import copy 
-from copy import deepcopy 
+cli = Bullet(prompt = "Make a Choice: ", bullet = "★", choices = ["first item", "second item", "third item"])
+result = cli.launch()
 
-l2 = copy(l)
-d2 = copy(d)
-
-l2 
->>>['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
-d2
->>>{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
-
-l2 = deepcopy(l)
-d2 = deepcopy(d)
-
-l2 
->>>['a', 'b', ['new', 'mpilgrim'], 'z', ['example', 'new'], 'two', ['elements']]
-d2
->>>{'1': {"1.1": 1.1}, '2': {"2.2": {"2.2.2": "2.2.2"}}}
+print(result)
 ``` 
 
-- Difference between a shallow copy and deep copy:
-  - a shallow copy will copy the objects of the list of dict with a depth of 1.  Any nested lists or dicts are just references to the original object in memory.  Modifying the nested list / dict in the original object will modify it in the shallow copied object 
-  - a deep copy will create new objects and nested objects during the copy, not just references to the original object in memory
+- `bullet` module can also be used for user input, passwords, Yes/No, numbers, prompt, etc 
 
-
-## Updating / merging Dictionaries:
-
-Taking two dicts (d1, d2), how can you update d1 with values from d2, overwriting any values?
-
-```python  
-d1 = {'x': 1, 'y': 2, 'z': 3}
-d2 = {'w': 10, 'x': 11, 'y': 2}
-d1.update(d2)
-d1
->>>
-{'x': 11, 'y': 2, 'z': 3, 'w': 10}
-``` 
-
-Taking two dicts (d1, d2), how can you update d1 with values from d2, but not overwriting current values in d1?
-```python  
-d1 = {'x': 1, 'y': 2, 'z': 3}
-d2 = {'w': 10, 'x': 11, 'y': 2}
-
-# setdefault: If the key does not exist, then setdefault() creates it and sets it to the value specified in the second argument.
-for k,v in d2.items():
-    d1.setdefault(k,v)
-
-d1
->>> {'x': 1, 'y': 2, 'z': 3, 'w': 10}
-``` 
-
-
-# Triple Quotes
-
-- you can write:
-
-```python 
-song = """Happy birthday to you
-Happy birthday to you
-Happy birthday dear Gail
-Happy birthday to you
-"""
-```
-
-- The only downside here is that the first line doesn’t align nicely with the lines which follow. The way around this is to embed a \newline escape sequence, meaning both backslash and newline are ignored.
-
-```python 
-song = """\
-Happy birthday to you
-Happy birthday to you
-Happy birthday dear Gail
-Happy birthday to you
-"""
-```
-
-# How to skip the first item of an iterable:
-
-```python 
-next(<iter>)
-for element in <iter>:
-    ...
-``` 
-
-# Justifying Strings:
-
-```python 
-{<el>:<10}       # '<el>      '
-{<el>:>10}       # '      <el>'
-{<el>:^10}       # '   <el>   '
-{<el>:->10}      # '------<el>'
-{<el>:>0}        # '<el>'
-``` 
-
-# Args and Kwargs
-
-- This:
-
-```python 
-args   = (1, 2)
-kwargs = {'x': 3, 'y': 4, 'z': 5}
-func(*args, **kwargs)  
-``` 
-
-- Is the same as:
-
-```pyton 
-func(1, 2, x=3, y=4, z=5)
-``` 
-
-# Exceptions
-
-```python 
-try:
-    x = int(input('Please enter a number: '))
-except ValueError:
-    print('Oops!  That was no valid number.  Try again...')
-else:
-    print('Thank you.')
-```
-
-- Raise an error:
-
-```python 
-raise ValueError('A very specific message!')
-```
-
-# Try with Finally:
-
-- In the block below, `other_code()` will run before any return in the `except` block
-- `other_code()` in the `finally` block will run if there is a TypeError exception and `still_other_code()` will not 
-- `other_code()` will run even if an exception is raised that is not TypeError 
-- `other_code()` will run even if there are `break` or `continue` statements 
-
-```python 
-try:
-    run_code1()
-except TypeError:
-    run_code2()
-    return None   # The finally block is run before the method returns
-finally:
-    other_code()
-    
-still_other_code()
-```
+---
 
