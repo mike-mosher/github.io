@@ -44,8 +44,8 @@
 ## Data Types:
 
 [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
+  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#lists-create)
   - [add one item](https://mike-mosher.github.io/python-notes.html#lists-add)
     - [add to end of list](https://mike-mosher.github.io/python-notes.html#lists-add)
@@ -106,8 +106,8 @@
 
 
 [Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
+  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
   - [accessing items](https://mike-mosher.github.io/python-notes.html#dict-access)
     - [using slice notation](https://mike-mosher.github.io/python-notes.html#dict-access)
@@ -158,8 +158,8 @@
 
 
 [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
+  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#sets-create)
   - [Create set from a list](https://mike-mosher.github.io/python-notes.html#sets-create)
   - [add single item](https://mike-mosher.github.io/python-notes.html#sets-add)
@@ -171,8 +171,8 @@
 
 
 [Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes)
+  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
+  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#tuple-create)
   - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
   - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)

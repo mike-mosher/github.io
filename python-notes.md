@@ -396,7 +396,9 @@ Note: It's important to remember to use 'from pprint import pprint'. If you just
 
 ---
 
-# [The Low-Down on Datatypes](#datatypes)
+# [DataTypes](#datatypes)
+
+## [Datatypes Cheatsheet](#datatypes-cheatsheet)
 
 List:
 
@@ -1340,6 +1342,7 @@ OrderedDict([(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four'), (5, 'five')])
 ## [Deque](#alternate-datatypes-deque)
 
 - Deque is a double-ended queue that supports adding and removing elements from either end in O(1) time.
+- Pronounced “deck”
 
 ```python 
 >>> from collections import deque
@@ -1791,7 +1794,7 @@ func(*args, **kwargs)
 
 - Is the same as:
 
-```pyton 
+```python 
 func(1, 2, x=3, y=4, z=5)
 ``` 
 
@@ -2075,9 +2078,11 @@ Any() and All() Functions:
 <a name="identity"></a>
 Identity Operands:
 
-- Difference between Identity (`x is y`) and equality (`x == y`):
+- Difference between Identity (`x is y`) and equality (`x == y`), or 'is' vs '==':
   - identity (`is`) checks if two items refer to the same underlying object
   - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
+  - You should almost ALWAYS use `==`
+  - The only time you should use `is`, is when checking to see if something is `None`
 
 ```python
 # Example
@@ -2110,6 +2115,42 @@ values = [expression
 values = [ expression
           for item in collection ]
 ```
+- list comprehensions can support multiple levels of looping
+```python 
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flat = [x for row in matrix for x in row]
+print(flat)
+
+>>>
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+squared = [[x**2 for x in row] for row in matrix]
+print(squared)
+
+>>>
+[[1, 4, 9], [16, 25, 36], [49, 64, 81]]
+
+
+my_lists = [
+    [[1, 2, 3], [4, 5, 6]],
+    # ...
+]
+
+flat = [x for sublist1 in my_lists
+        for sublist2 in sublist1
+        for x in sublist2]      # This is getting crazy
+``` 
+
+- list comprehensions also support multiple if statements 
+- multiple conditions at the same loop level are an implicit `and` expression 
+
+```python 
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+b = [x for x in a if x > 4 if x % 2 == 0]
+c = [x for x in a if x > 4 and x % 2 == 0]
+``` 
+
 
 ## [Set Comprehension](#comprehensions-set)
 
@@ -2148,6 +2189,91 @@ dict = { key:value for item in collection }
 <class 'dict'>
 >>>
 ```
+
+## [Generator Expressions](#generator-espressions)
+
+- this is a generalization of list comprehensions and generators 
+- they are made by the same syntax as a list comprehension expression between `()` characters instead of `[]`
+- generator expressions evaluate to an iterator that yields results 
+
+```python 
+it = (len(x) for x in open('/tmp/my_file.txt'))
+print(it)
+
+>>>
+<generator object <genexpr> at 0x101b81480>
+
+print(next(it))
+``` 
+
+---
+
+# [Functions](#functions)
+
+## [Variable Conditional Arguments](#functions-variable-conditional-arguments)
+
+- Also known as star args or `*args` (which takes a list)
+- In the following function, both inputs are required:
+
+```python 
+def function(argument1, argument2):
+    ...
+``` 
+
+- In this one, the second argument is conditional:
+
+```python 
+def function(argument1, *argument2):
+    ...
+``` 
+
+## [Keyword Arguments](#functions-keyword-arguments)
+
+- You can call a function and provide positional arguments, or keyword arguments
+
+```python 
+def remainder(number, divisor):
+    return number % divisor
+
+assert remainder(20, 7) == 6   # Using positional arguments
+assert remainder(number=20, divisor=7) == 6   # Using keyword arguments
+``` 
+
+- you can mix and match positional and keyword arguments.  
+- Keyword arguments can be passed in any order, as long as the positional arguments are specified before keyword args 
+
+
+```python 
+# Works 
+remainder(20, 7)
+remainder(20, divisor=7)
+remainder(number=20, divisor=7)
+remainder(divisor=7, number=20)
+
+# Doesn't work 
+remainder(number=20, 7)
+
+>>>
+SyntaxError: non-keyword arg after keyword arg
+
+remainder(20, number=7)
+
+>>>
+TypeError: remainder() got multiple values for argument 'number'
+``` 
+
+Benefits of using Keyword Arguments:
+
+- Code is clearer and easier to read 
+- Allows the function to provide default values, and these values don't need to be passed unless you desire to change the defaults 
+
+```python 
+def flow_rate(weight_diff, time_diff, period=1):
+    return (weight_diff / time_diff) * period
+    
+flow_per_second = flow_rate(weight_diff, time_diff)
+flow_per_hour = flow_rate(weight_diff, time_diff, period=3600)
+``` 
 
 ---
 
@@ -2590,12 +2716,36 @@ logging.info('This is a log message')
 
 ---
 
-## [Command Line Arguments] (#cli)
+## [Command Line Arguments] (#command-line-arguments)
+
+sys.argv:
 
 ```python
 import sys
 script_name   = sys.argv[0]
 arguments     = sys.argv[1:]    # list of arguments
+```
+
+Argparse:
+
+```python 
+from argparse import ArgumentParser
+desc   = 'calculate X to the power of Y'
+parser = ArgumentParser(description=desc)
+group  = parser.add_mutually_exclusive_group()
+group.add_argument('-v', '--verbose', action='store_true')
+group.add_argument('-q', '--quiet',   action='store_true')
+parser.add_argument('x', type=int, help='the base')
+parser.add_argument('y', type=int, help='the exponent')
+args   = parser.parse_args()
+answer = args.x ** args.y
+
+if args.quiet:
+    print(answer)
+elif args.verbose:
+    print(f'{args.x} to the power {args.y} equals {answer}')
+else:
+    print(f'{args.x}^{args.y} == {answer}')
 ```
 
 ---
