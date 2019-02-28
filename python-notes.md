@@ -2275,6 +2275,93 @@ flow_per_second = flow_rate(weight_diff, time_diff)
 flow_per_hour = flow_rate(weight_diff, time_diff, period=3600)
 ``` 
 
+## [Function Arguments with Default Values](#functions-arguments-default-values)
+
+- When you set default values for arguments in a function, they are evaluated only once: when the function is defined  
+- Best practices is to set default values to `None`, then you evaluate the argument inside the function, and if the argument is set to `None`, then you set the default value accordingly 
+
+```python 
+def log(message, when=datetime.now()):
+    print('%s: %s' % (when, message))
+
+log('Hi there!')
+sleep(0.1)
+log('Hi again!')
+
+>>>
+2014-11-15 21:10:10.371432: Hi there!
+2014-11-15 21:10:10.371432: Hi again!   # The timestamps are exactly the same because `datetime.now()` is only evaluated when the function is defined
+
+
+## Another example of default arguments
+# problems with setting an empty list as the default argument
+def append_to(element, to=[]):
+    to.append(element)
+    return to 
+    
+    
+my_list = append_to(12)
+print(my_list)
+
+my_other_list = append_to(42)
+print(my_other_list)
+
+
+# What you expect the outcome to be
+[12]
+[42]
+
+# What the outcome actually is
+[12]
+[12, 42]    # A new list is created once when the function is defined, and the same list is used in each successive call.
+
+
+# What you should do to correct this
+def append_to(element, to=None):
+    if to is None:
+        to = []
+    to.append(element)
+    return to
+``` 
+
+## [Force function calls to specify keyword arguments](#functions-force-keyword-arguments)
+
+- You can force function calls to specify the arguments as keyword arguments using the `*` argument before required keyword args:
+
+```python 
+# Without
+>>> def divide(number, divisor):
+        return number / divisor
+
+>>>divide(1,1)
+1.0 
+
+# With 
+>>> def divide(*, number, divisor):
+        return number / divisor
+
+>>> divide(1, 1)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    divide(1, 1)
+TypeError: divide() takes 0 positional arguments but 2 were given
+>>>
+>>>
+>>> divide(number=1, divisor=1)
+1.0
+>>>
+
+# `*` Doesn't have to be the first arg
+>>> def divide(something, *, number, divisor):
+        # `something can be a positional argument 
+        some_useful_var = something
+        return number / divisor
+
+>>> divide(1, number=1, divisor=1)
+1.0
+>>>
+``` 
+
 ---
 
 # [Files](#files)
