@@ -1689,28 +1689,7 @@ print ('passed') if x else print('did not pass')
 
 - `pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
 
-<a name="logic-and-and"></a>
-Difference between 'and' and '&':
-
-- 'and' is a logical operator (used to combine expressions and test truthyness)
-- '&' is a bitwise operator (used to do binary comparisons)
-
-<a name="logic-truthiness"></a>
-Knowing when something is True or False:
-
-- Items considered False:
-  - Boolean value 'False'
-  - Any value that is numerically zero (0, 0.0, 0.0j)
-  - An empty string
-  - An empty object ([], {}, etc)
-  - 'None' object
-
-- Items considered true:
-  - Virtually any other object built into Python is regarded as True.
-
----
-
-## [Try / Except](#try-except)
+## [Try/Except](#try-except)
 
 Most common: 
 
@@ -1879,6 +1858,71 @@ func(*args, **kwargs)
 func(1, 2, x=3, y=4, z=5)
 ``` 
 
+--- 
+
+## [Random Other Logic](#logic-other)
+
+<a name="logic-and-and"></a>
+Difference between 'and' and '&':
+
+- 'and' is a logical operator (used to combine expressions and test truthyness)
+- '&' is a bitwise operator (used to do binary comparisons)
+
+<a name="identity"></a>
+Identity Operands:
+
+- Difference between Identity (`x is y`) and equality (`x == y`), or 'is' vs '==':
+  - identity (`is`) checks if two items refer to the same underlying object
+  - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
+  - You should almost ALWAYS use `==`
+  - The only time you should use `is`, is when checking to see if something is `None`
+
+```python
+# Example
+>>> x = 1001
+>>> y = 1000 + 1
+>>> print(x, y)
+1001 1001
+
+>>> x == y
+True
+>>> x is y
+False
+```
+
+<a name="logic-truthiness"></a>
+Knowing when something is True or False:
+
+- Items considered False:
+  - Boolean value 'False'
+  - Any value that is numerically zero (0, 0.0, 0.0j)
+  - An empty string
+  - An empty object ([], {}, etc)
+  - 'None' object
+
+- Items considered true:
+  - Virtually any other object built into Python is regarded as True.
+
+<a name="and-all"></a>
+Any() and All() Functions:
+
+- Any() function:
+  - takes a iterable as input
+  - Will return True if any of the items are truthy.  False if all are Falsy (or input is empty)
+  - You can think of it like a series of `OR` comparisons between the items
+- All() function:
+  - returns True when all items are Truthy
+  - You can think of it like a seres of `AND` comparisons between the items
+
+```python
+>>> any([False, True, False])
+>>> True  # At least one item is Truthy
+>>>
+>>> all([False, True, False])
+>>> False # At least one item was not Truthy
+```
+
+---
 
 # [Loops](#loops)
 
@@ -2136,47 +2180,6 @@ Compound 'AND' expressions:
 - code example: `(expr1) and (expr 2) and (expr 3) and (expr 4) and ... (expr n)`
 - python stops evaluating as soon as any operand is found to be false, because at that point the entire expression is known to be false
 - the value of the last expression, which was found to be false, is returned
-
-<a name="and-all"></a>
-Any() and All() Functions:
-
-- Any() function:
-  - takes a iterable as input
-  - Will return True if any of the items are truthy.  False if all are Falsy (or input is empty)
-  - You can think of it like a series of `OR` comparisons between the items
-- All() function:
-  - returns True when all items are Truthy
-  - You can think of it like a seres of `AND` comparisons between the items
-
-```python
->>> any([False, True, False])
->>> True  # At least one item is Truthy
->>>
->>> all([False, True, False])
->>> False # At least one item was not Truthy
-```
-
-<a name="identity"></a>
-Identity Operands:
-
-- Difference between Identity (`x is y`) and equality (`x == y`), or 'is' vs '==':
-  - identity (`is`) checks if two items refer to the same underlying object
-  - equality (`==`) checks if two objects contain the same data (but can be two distinct objects)
-  - You should almost ALWAYS use `==`
-  - The only time you should use `is`, is when checking to see if something is `None`
-
-```python
-# Example
->>> x = 1001
->>> y = 1000 + 1
->>> print(x, y)
-1001 1001
-
->>> x == y
-True
->>> x is y
-False
-```
 
 ---
 
@@ -3102,15 +3105,6 @@ def dispatch_if(operator, x, y):
 ```python
 d = {'a': 1, 'b': 'var2', 'c': [1, 2, 3]}
 globals().update(d)
-```
-
-## [Pytonic way of value swapping](#random-variable-value-swapping)
-
-```python
-"""pythonic way of value swapping"""
-a, b = 5, 10
-
-a, b = b, a
 ```
 
 ## [Print Emojis from Terminal](#emojis)

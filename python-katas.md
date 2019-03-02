@@ -183,7 +183,7 @@
 
 ---
 
-## [Variable Unpacking](#variable-unpacking)
+## Variable Unpacking
 
 - [Using `enumerate`](https://mike-mosher.github.io/python-notes.html#variable-unpacking-enumerate)
   - [Use `enumerate` and set the first index to `1`](https://mike-mosher.github.io/python-notes.html#variable-unpacking-enumerate)
@@ -195,7 +195,7 @@
 
 ---
 
-## [Iterators and Generators](https://mike-mosher.github.io/python-notes.html#iterators-generators)
+## Iterators and Generators
 
 - [Iterators](https://mike-mosher.github.io/python-notes.html#iterators)
 - [Generators](https://mike-mosher.github.io/python-notes.html#generators)
@@ -212,12 +212,28 @@
   - [Break Statement](https://mike-mosher.github.io/python-notes.html#logic-break-statement)
   - [Continue Statement](https://mike-mosher.github.io/python-notes.html#logic-continute-statement)
   - [Pass Statement](https://mike-mosher.github.io/python-notes.html#logic-pass-statement)
-  - [Difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#logic-and-and)
-  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#logic-truthiness)
+  - [Try/Except clause](https://mike-mosher.github.io/python-notes.html#try-except)
+    - [How to use `else` clause](https://mike-mosher.github.io/python-notes.html#try-except)
+    - [How to use the `finally` clause](https://mike-mosher.github.io/python-notes.html#try-except)
+    - [How to raise an exception](https://mike-mosher.github.io/python-notes.html#try-except)
   - [check if var exists](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
   - [check if var is true](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
   - [check if var is false](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
   - [check if var is empty](https://mike-mosher.github.io/python-notes.html#testing-flags-and-vars)
+
+  - [How to use *args and **kwargs](https://mike-mosher.github.io/python-notes.html#args-kwargs)
+
+  - [Difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#logic-and-and)
+
+  - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#identity)
+    - [what does each do](https://mike-mosher.github.io/python-notes.html#identity)
+    - [how are they different](https://mike-mosher.github.io/python-notes.html#identity)
+    - [when to use each](https://mike-mosher.github.io/python-notes.html#identity)
+
+  - [When something evaluates to boolean true and boolean false ('Truthiness')](https://mike-mosher.github.io/python-notes.html#logic-truthiness)
+
+  - [any()](https://mike-mosher.github.io/python-notes.html#and-all)
+  - [all()](https://mike-mosher.github.io/python-notes.html#and-all)
 
 ---
 
@@ -260,15 +276,6 @@
 
 ---
 
-## Identity:
-  - ['is' vs '=='](https://mike-mosher.github.io/python-notes.html#identity)
-    - [what does each do](https://mike-mosher.github.io/python-notes.html#identity)
-    - [how are they different](https://mike-mosher.github.io/python-notes.html#identity)
-    - [when to use each](https://mike-mosher.github.io/python-notes.html#identity)
-  - [difference between 'and' and '&'](https://mike-mosher.github.io/python-notes.html#operators-assignment)
-
----
-
 ## Comprehensions:
   - [list](https://mike-mosher.github.io/python-notes.html#comprehensions-list)
   - [set](https://mike-mosher.github.io/python-notes.html#comprehensions-set)
@@ -276,29 +283,9 @@
 
 ---
 
-## Built in functions:
-  - [any()](https://mike-mosher.github.io/python-notes.html#and-all)
-  - [all()](https://mike-mosher.github.io/python-notes.html#and-all)
+## Functions:
 
----
 
-## Random:
-  - [how to swap values of variables (replace value of a with value of b, and vice versa)](https://mike-mosher.github.io/python-notes.html#random-variable-value-swapping)
-
----
-
-## Variable Unpacking:
-- [Variable Unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-  - [enumerate is an example of unpacking, so is `a, b = b, a`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-  - [how to do nested unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-    - [if `v = 1, l = [2,3]`, how to unpack this so that `a = 1, b = 2, c = 3`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-  - [python3 extended unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-    - [using `*` to unpack lists.](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-        - [taking a list and setting most values](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-            - [to one var and only on value to another var](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-  - [how to use a throw away variable when unpacking vars](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-    - [break a filename up into sections (or use partition),](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
-        - [and use a throwaway var for the `.`](https://mike-mosher.github.io/python-notes.html#variable-unpacking)
 
 ---
 
@@ -355,7 +342,8 @@
 
 ---
 
-## CLI:
+## Random:
+  - [How to emulate `Switch/Case` in Python](https://mike-mosher.github.io/python-notes.html#emulate-switch-case)
   - [How to parse command line arguments with sys module](https://mike-mosher.github.io/python-notes.html#cli)
 
 ---
