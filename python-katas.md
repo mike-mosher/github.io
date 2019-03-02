@@ -285,7 +285,11 @@
 
 ## Functions:
 
-
+- [How to correctly return `None` from a function](https://mike-mosher.github.io/python-notes.html#functions-returns)
+- [Variable Conditional Arguments (What are they, how to use them?)](https://mike-mosher.github.io/python-notes.html#functions-variable-conditional-arguments)
+- [How to use keyword arguments when calling functions (and any gotchas)](https://mike-mosher.github.io/python-notes.html#functions-keyword-arguments)
+- [Function Arguments with Default Values](https://mike-mosher.github.io/python-notes.html#functions-arguments-default-values)
+- [How to force functions to use keyword arguments](#functions-force-keyword-arguments)
 
 ---
 
