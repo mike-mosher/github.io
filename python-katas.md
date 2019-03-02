@@ -43,9 +43,11 @@
 
 ## Data Types:
 
+[Data Types Cheatsheet:](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
+  - Which are mutable and which are immutable? 
+  - Which are ordered and which are unordered?
+
 [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#lists-create)
   - [add one item](https://mike-mosher.github.io/python-notes.html#lists-add)
     - [add to end of list](https://mike-mosher.github.io/python-notes.html#lists-add)
@@ -106,8 +108,6 @@
 
 
 [Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
   - [accessing items](https://mike-mosher.github.io/python-notes.html#dict-access)
     - [using slice notation](https://mike-mosher.github.io/python-notes.html#dict-access)
@@ -158,8 +158,6 @@
 
 
 [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#sets-create)
   - [Create set from a list](https://mike-mosher.github.io/python-notes.html#sets-create)
   - [add single item](https://mike-mosher.github.io/python-notes.html#sets-add)
@@ -171,39 +169,22 @@
 
 
 [Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
-  - [mutable / immutable?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
-  - [ordered / unordered?](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
   - [create](https://mike-mosher.github.io/python-notes.html#tuple-create)
   - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
   - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)
 
 
 Named Tuples:
-  - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#named-tuple)
+  - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-namedtuple)
 
-
-Deepcopy:
-  - [How to copy a list](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-    - [using build in method of List class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-    - [using built in python class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-  - [how to copy a dict](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-    - [using build in method of Dict class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-    - [using built in python class](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-  - [how to deepcopy a list](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-  - [how to deepcopy a dict](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
-  - [why do you need to deepcopy vs copy?](https://mike-mosher.github.io/python-notes.html#copy-deepcopy)
 
 ---
 
 ## Alternate Data Types:
 
 [DefaultDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
-  - [purpose](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
-  - [how to use](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
-
 [OrderedDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
-  - [Purpose](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
-  - [how to use](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
+[NamedTuple](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-namedtuple)
 
 ---
 

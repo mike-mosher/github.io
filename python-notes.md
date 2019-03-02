@@ -1365,6 +1365,20 @@ print(json.dumps(users, indent=4))
 OrderedDict([(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four'), (5, 'five')])
 ```
 
+## [NamedTuple](#alternate-datatypes-namedtuple)
+
+```python
+from collections import namedtuple
+humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
+human = humans('James', 180, 32, 'm')
+
+human
+human(name='James', height=180, age=32, sex='m')
+
+human.name
+'James'
+```
+
 ## [Deque](#alternate-datatypes-deque)
 
 - Deque is a double-ended queue that supports adding and removing elements from either end in O(1) time.
@@ -1555,22 +1569,6 @@ name, weight, age, sex = human
 human = {'name': 'James', 'weight': 182, 'age': 18, 'sex: 'm'}
 
 name, weight, age, sex = human.values()
-```
-
-<a name="named-tuple"></a>
-- Named Tuple
-- Note: This isn't variable unpacking, but is still cool. 
-
-```python
-from collections import namedtuple
-humans = namedtuple('human', ['name', 'height', 'age', 'sex'])
-human = humans('James', 180, 32, 'm')
-
-human
-human(name='James', height=180, age=32, sex='m')
-
-human.name
-'James'
 ```
 
 ---
