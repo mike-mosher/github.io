@@ -1463,6 +1463,7 @@ _ = ('This is also used in most REPLs (interpreters) as the result of the last '
 
 - A way to assign valuees to multiple variables at one time, say from a list
 
+<a name="variable-unpacking-enumerate"></a>
 Enumerate:
 
 - enumerate unpacks two items (index and item), and the following example is how to unpack in a for loop
@@ -1505,12 +1506,14 @@ Index is 1, name is Karim, and age is 30
 Index is 2, name is Maya, and age is 40
 ```
 
+<a name="variable-unpacking-variable-swap"></a>
 Variable swap can be an example of unpacking:
 
 ```python
 a, b = b, a
 ```
 
+<a name="variable-unpacking-nested"></a>
 Nested unpacking works as well:
 
 ```python
@@ -1527,6 +1530,7 @@ Nested unpacking works as well:
 >>>
 ```
 
+<a name="variable-unpacking-extended"></a>
 Python 3 has an new form of extended unpacking:
 
 ```python
@@ -1537,6 +1541,7 @@ a, *middle, c = [1, 2, 3, 4]
 # a = 1, middle = [2, 3], c = 4
 ```
 
+<a name="variable-unpacking-throwaway-var"></a>
 Use a throwaway variable when unpacking:
 
 ```python

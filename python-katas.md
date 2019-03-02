@@ -173,18 +173,33 @@
   - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
   - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)
 
-
-Named Tuples:
-  - [How to use Named Tuples as a simple form of object-oriented programming](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-namedtuple)
-
-
 ---
 
 ## Alternate Data Types:
 
-[DefaultDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
-[OrderedDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
-[NamedTuple](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-namedtuple)
+- [DefaultDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-defaultdict)
+- [OrderedDict](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-ordereddict)
+- [NamedTuple](https://mike-mosher.github.io/python-notes.html#alternate-datatypes-namedtuple)
+
+---
+
+## [Variable Unpacking](#variable-unpacking)
+
+- [Using `enumerate`](https://mike-mosher.github.io/python-notes.html#variable-unpacking-enumerate)
+  - [Use `enumerate` and set the first index to `1`](https://mike-mosher.github.io/python-notes.html#variable-unpacking-enumerate)
+  - [Use `enumerate` to unpack a tuple](https://mike-mosher.github.io/python-notes.html#variable-unpacking-enumerate)
+- [How to swap variables](https://mike-mosher.github.io/python-notes.html#variable-unpacking-swap-variables)
+- [Nested unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking-nested)
+- [Extended unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking-extended)
+- [Using a throwaway var when unpacking](https://mike-mosher.github.io/python-notes.html#variable-unpacking-throwaway-var)
+
+---
+
+## [Iterators and Generators](https://mike-mosher.github.io/python-notes.html#iterators-generators)
+
+- [Iterators](https://mike-mosher.github.io/python-notes.html#iterators)
+- [Generators](https://mike-mosher.github.io/python-notes.html#generators)
+- [Generator Expressions](https://mike-mosher.github.io/python-notes.html#generator-expressions)
 
 ---
 
