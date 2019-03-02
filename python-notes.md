@@ -364,6 +364,32 @@ import json
     }
 }
 >>>
+
+# an example of dumping the dict and sorting the keys
+>>> print(json.dumps(d, indent=4, sort_keys=True))
+{
+    "address": {
+        "city": "Gwenborough",
+        "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+        },
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "zipcode": "92998-3874"
+    },
+    "company": {
+        "bs": "harness real-time e-markets",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "name": "Romaguera-Crona"
+    },
+    "email": "Sincere@april.biz",
+    "id": 1,
+    "name": "Leanne Graham",
+    "phone": "1-770-736-8031 x56442",
+    "username": "Bret",
+    "website": "hildegard.org"
+}
 ```
 
 Or better yet, use pprint!:
@@ -1358,6 +1384,17 @@ deque([6, 6, 6])
 
 ---
 
+## [Other Alternate Data Types](#alternate-datatypes-other)
+
+Queue:
+
+- First In First Out (FIFO) 
+
+Stack:
+
+- Last In First Out (LIFO)
+
+
 ## [Advanced Variables](#advanced-variables)
 
 Underscores and Double Underscores (Dunders):
@@ -1538,31 +1575,72 @@ human.name
 
 ---
 
-# [Iterables](#iterables)
+# [Iterators and Generators](#iterators-generators)
 
-Most common elements in an iterable
+## [Iterators](#iterators)
 
-```python
-# collections.Counter lets you find the most common
-# elements in an iterable:
+- Any object with a __iter__ and __next__ method
+- To create an iterator, you need to define a class with the above methods 
+- The __next__ class will keep track of the current object and return the ext item.  You need to define this logic in the function (like: `count += 1`, or maybe popping an item off of a list or dict)
 
->>> import collections
->>> c = collections.Counter('helloworld')
+## [Generators](#generators)
 
->>> c
-Counter({'l': 3, 'o': 2, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
+- Uses `yield` to return items at the time it is called 
+- You do not need to make a class with __iter__ and __next__ methods, just need to use `yield` to return results 
+- every generator is an iterator, but not vice versa 
 
->>> c.most_common(3)
-[('l', 3), ('o', 2), ('e', 1)]
-```
 
-How to skip the first item of an iterable:
+## [Generator Expressions](#generator-espressions)
+
+- this is a generalization of list comprehensions and generators 
+- they are made by the same syntax as a list comprehension expression between `()` characters instead of `[]`
+- Difference between list comprehension and generator expression:
+  - list comprehension returns a list, whereas a generator expression returns a generator object, which is an iterator that yields results 
+  - You will need to loop over the generator obejct that is retured, or call `next()` to get the values from a generator expression  
 
 ```python 
-next(<iter>)
-for element in <iter>:
-    ...
+it = (len(x) for x in open('/tmp/my_file.txt'))
+print(it)
+
+>>>
+<generator object <genexpr> at 0x101b81480>
+
+print(next(it))
 ``` 
+
+## Examples(#iterator-generator-generator-expression-examples)
+
+- Differences in code:
+
+```python 
+# Iterator
+class Squares(object):
+    def __init__(self, start, stop):
+       self.start = start
+       self.stop = stop
+    def __iter__(self): return self
+    def next(self):
+       if self.start >= self.stop:
+           raise StopIteration
+       current = self.start * self.start
+       self.start += 1
+       return current
+
+iterator = Squares(a, b)
+
+
+# Generator 
+def squares(start, stop):
+    for i in range(start, stop):
+        yield i * i
+
+generator = squares(a, b)
+
+
+# Generator Expression 
+generator = (i*i for i in range(a, b))
+
+```
 
 ---
 
@@ -2190,25 +2268,35 @@ dict = { key:value for item in collection }
 >>>
 ```
 
-## [Generator Expressions](#generator-espressions)
-
-- this is a generalization of list comprehensions and generators 
-- they are made by the same syntax as a list comprehension expression between `()` characters instead of `[]`
-- generator expressions evaluate to an iterator that yields results 
-
-```python 
-it = (len(x) for x in open('/tmp/my_file.txt'))
-print(it)
-
->>>
-<generator object <genexpr> at 0x101b81480>
-
-print(next(it))
-``` 
-
 ---
 
 # [Functions](#functions)
+
+## [Returns](#functions-returns)
+
+- all functions have an implicit `return None` at the end 
+- Because of this, you can replace any `return None` statements with just `return`, or leave them out all together 
+
+```python 
+def foo1(value): 
+    if value:
+        return value 
+    else:
+        return None 
+        
+def foo2(value): 
+    """ Bare `return` statement implies `return None` """
+    if value:
+        return value 
+    else:
+        return 
+        
+def foo2(value): 
+    """ missing `return` statement implies `return None` """
+    if value:
+        return value 
+``` 
+
 
 ## [Variable Conditional Arguments](#functions-variable-conditional-arguments)
 
@@ -2662,6 +2750,36 @@ dump:
 dumps:
 
 - Used to deserialize data to a string
+- example:
+
+```python
+d = {'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, 'phone': '1-770-736-8031 x56442', 'website': 'hildegard.org', 'company': {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}}
+
+print(json.dumps(d, indent=4, sort_keys=True))
+{
+    "address": {
+        "city": "Gwenborough",
+        "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+        },
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "zipcode": "92998-3874"
+    },
+    "company": {
+        "bs": "harness real-time e-markets",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "name": "Romaguera-Crona"
+    },
+    "email": "Sincere@april.biz",
+    "id": 1,
+    "name": "Leanne Graham",
+    "phone": "1-770-736-8031 x56442",
+    "username": "Bret",
+    "website": "hildegard.org"
+}
+```
 
 load:
 
@@ -2922,6 +3040,59 @@ Output:
 ---
 
 # [Random](#random)
+
+## [Emulating Switch/Case in Python](#emulate-switch-case)
+
+- Python doesn't have a `switch / case / else` syntax like other languages 
+- We can build very long `if / elif / else` statements to get around this 
+- We can also build a list of functions as a workaround 
+
+```python 
+
+def handl_a():
+    ... 
+ 
+def handl_b():
+    ... 
+ 
+def handl_default():
+    ... 
+ 
+funct_dict = {
+    'cond_a': handle_a,
+    'cond_b': handle_b
+}
+
+cond = 'cond_a'
+funct_dict[cond]()
+
+# you can use the .get() method to handle KeyErrors and provide default functions
+funct_dict.get(cond, handl_default)()
+```
+
+- another example:
+
+```python
+def dispatch_if(operator, x, y):
+    if operator == 'add':
+        return x + y
+    if operator == 'sub':
+        return x - y
+    if operator == 'mul':
+        return x * y
+    if operator == 'div':
+        return x / y
+
+ 
+# can be refactored into 
+def dispatch_if(operator, x, y):
+    return {
+        'add': lambda: x + y,
+        'sub': lambda: x - y,
+        'mul': lambda: x * y,
+        'div': lambda: x / y
+    }.get(operator, lambda: None)()
+```
 
 ## [Set Global Variables Programatically](#set-global-vars-programatically)
 
