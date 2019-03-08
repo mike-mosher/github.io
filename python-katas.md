@@ -10,6 +10,9 @@
 
 ---
 
+## Line Indentation:
+  - [How to properly indent lines](https://mike-mosher.github.io/python-notes.html#line-indentation)
+
 ## Strings:
 
   - [string spread over multiple lines -- without line breaks](https://mike-mosher.github.io/python-notes.html#strings)

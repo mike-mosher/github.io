@@ -21,6 +21,46 @@ Which way is the best?
 
 ---
 
+## [Line Indentation](#line-indentation)
+
+How to split a long line in to multiple indented lines:
+
+```python
+a = 5
+b = 1
+
+test = a - b
+
+test = a - \
+    b
+
+test = \
+    a - b
+
+def testfunc(a, b):
+    return a - b
+
+testfunc(a, b)
+
+testfunc(a,
+    b)
+
+testfunc(
+    a, b)
+
+testfunc(
+    a,
+    b)
+
+testfunc(
+    a,
+    b
+)
+
+```
+
+---
+
 ## [Strings](#strings)
 
 Strings can be broken up over multiple lines without backspaces or anything
