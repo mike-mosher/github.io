@@ -21,7 +21,7 @@ Which way is the best?
 
 ---
 
-## [Line Indentation](#line-indentation)
+## [Line Contiuation](#line-continuation)
 
 How to split a long line in to multiple indented lines:
 
@@ -38,6 +38,10 @@ test = \
     a - b
 
 def testfunc(a, b):
+    return a - b
+    
+def testfunc(a,
+             b):
     return a - b
 
 testfunc(a, b)
@@ -698,7 +702,7 @@ L.remove(item)
 [3, 2, 1]
 ```
 
-- and op removes the item at a specific index and returns it.
+- and `pop` removes the item at a specific index and returns it.
 
 ```python
 >>> a = [4, 3, 5]
