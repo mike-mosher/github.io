@@ -1515,27 +1515,31 @@ Enumerate:
 ```python
 for index, item in enumerate(some_list):
     # do something with index and item
+    
+
+for index, item in enumerate(some_list, start=1):
+    # enumerating where the index starts at 1
 ```
 
     - enumerate also allows you to give the starting number for the index.  Default is 0, but this is useful when you need the index to start at 1
 
 ```python
 >>> l = ['a', 'b', 'c']
->>> for i, v in enumerate(l):
-...     print(i,v)
+>>> for index, value in enumerate(l):
+...     print(index, value)
 0 a
 1 b
 2 c
 >>>
 >>>
->>> for i, v in enumerate(l, 1):
-...     print(i,v)
+>>> for index, value in enumerate(l, 1):
+...     print(index, value)
 1 a
 2 b
 3 c
 >>> # You could also specify the start param like so
->>> for i, v in enumerate(l, start=1):
-...     print(i,v)
+>>> for index, value in enumerate(l, start=1):
+...     print(index, value)
 ```
 
 Using enumerate to unpack tuples (in a cool way):
