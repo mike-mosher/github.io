@@ -2885,7 +2885,7 @@ b = r.json()
 
 # [Zip() Function](#zip)
 
-- takes any number of iterables as arguments and returns an iterator over tuples of their corresponding elements
+- takes any number of iterables as arguments and returns an iterator of tuples of their corresponding elements
 
 ```python
 list_a = [1, 2, 3, 4, 5]
@@ -2897,6 +2897,7 @@ print zipped_list # [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]
 ```
 
 - If the length of the iterables are not equal, zip creates the list of tuples of length equal to the smallest iterable.
+- If you want zip to use the length off the longest iterable, you'll need to use `from itertools import zip_longest`
 
 ```python
 list_a = [1, 2, 3]
@@ -2937,6 +2938,22 @@ zipped[0] # TypeError: 'zip' object is not subscriptable
 list_c = list(zipped) #Output: [(1, 4), (2, 5), (3, 6)]
 
 list_d = list(zipped) # Output []... Output is empty list becuase by the above statement zip got exhausted.
+```
+
+Useful example of using zip would be to iterate over two lists that correlate to each other
+
+```python
+names = ['Peter Parker', 'Clark Kent', 'Wade Wilson', 'Bruce Wayne']
+heros = ['Spiderman', 'Superman', 'Deadpool', 'Batman']
+
+for name, hero in zip(names, heroes):
+    print(f'{name} is actually {hero}')
+
+# Output
+Peter Parker is actually Spiderman
+Clark Kent is actually Superman
+Wade Wilson is actually Deadpool
+Bruce Wayne is actually Batman
 ```
 
 ---
