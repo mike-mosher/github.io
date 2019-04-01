@@ -2960,6 +2960,25 @@ Bruce Wayne is actually Batman
 
 # [Logging](#logging)
 
+Basic logging example:
+
+```python
+import logging
+logging.basicConfig(level=logging.INFO)
+
+logging.info('test')
+#>INFO:root:test
+```
+
+Basic arguments for the `logging.basicConfig()` method:
+
+- level: log level
+- format: format of the log message
+- datefmt: format of the timestamp
+- filename: filename to log to 
+- filemode: read / write mode of file
+
+
 Below is code that lets you log to a specified log file (change 'logfile.log') and to the console
 
 ```python
