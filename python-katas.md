@@ -149,6 +149,8 @@
       - [and specify a default value in case that item doesn't exist](https://mike-mosher.github.io/python-notes.html#dict-delete)
   - [Sorting a dict](https://mike-mosher.github.io/python-notes.html#dict-sort)
     - [shallow sort](https://mike-mosher.github.io/python-notes.html#dict-sort)
+    - sort a dictionary based on the values:
+        sort this dict based on values: `{'a': 24, 'g': 52, 'i': 12, 'k': 33}`
   - [common methods](https://mike-mosher.github.io/python-notes.html#dict-methods)
   - [accessing keys / values in for loops](https://mike-mosher.github.io/python-notes.html#dict-loop)
   - [Checking if a key exists](https://mike-mosher.github.io/python-notes.html#dict-key-exists)
