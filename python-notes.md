@@ -1750,6 +1750,18 @@ except KeyError:        # you can have multiple exceptions being caught
     print(KeyError)
 ```
 
+Can also group exceptions:
+
+```python
+>>> try:
+...     l = ["a", "b"]
+...     int(l[2])
+... except (ValueError, IndexError) as e:
+...     pass
+...
+>>>
+```
+
 Else clause:
 
 - Use the else clause in case you want to run code in the absense of any errors in the `try` block:
@@ -3257,7 +3269,7 @@ for i in tqdm([1, 2, 3]):
     sleep(0.2)
 for i in tqdm(range(100)):
     sleep(0.02)
-``` 
+```
 
 ---
 
@@ -3266,16 +3278,132 @@ for i in tqdm(range(100)):
 - `bullet` is an awesome module to do many different interactive CLI features 
 - https://github.com/Mckinsey666/bullet/blob/master/DOCUMENTATION.md 
 
-```python 
+```python
 from bullet import Bullet
 
 cli = Bullet(prompt = "Make a Choice: ", bullet = "★", choices = ["first item", "second item", "third item"])
 result = cli.launch()
 
 print(result)
-``` 
+```
 
 - `bullet` module can also be used for user input, passwords, Yes/No, numbers, prompt, etc 
 
 ---
 
+# [Common Python Mistakes](#common-python-mistakes)
+
+## 1) Setting mutable default values for function arguments
+
+```python
+# This is bad
+def foo(bar=[]):        # bar is optional and defaults to [] if not specified
+    bar.append("baz")    # but this line could be problematic, as we'll see...
+    return bar
+
+>>> foo()
+["baz"]
+>>> foo()
+["baz", "baz"]
+>>> foo()
+["baz", "baz", "baz"]
+```
+
+- Defaults should be `None`, and initialized at the begining of function
+
+```python
+# This is good
+def foo(bar=None):
+    if bar is None: # can also use:  if not bar:
+        bar = []
+    bar.append("baz")
+    return bar
+
+>>> foo()
+["baz"]
+>>> foo()
+["baz"]
+>>> foo()
+["baz"]
+```
+
+## 2) Modifying a list while iterating over it
+
+- Note: This pertains specifically to adding / removing items in the list; updating or mutating the list is fine.
+
+```python
+>>> odd = lambda x : bool(x % 2)
+>>> numbers = [n for n in range(10)]
+>>> for i in range(len(numbers)):
+...     if odd(numbers[i]):
+...         del numbers[i]  # BAD: Deleting item from a list while iterating over it
+...
+Traceback (most recent call last):
+  	  File "<stdin>", line 2, in <module>
+IndexError: list index out of range
+```
+
+- In the above example, you get an IndexError because the for loop is iterating a specified number of times (based on the number of items in the list), however, you are shortening the length of the list during the loop
+- Solution: 
+    - construct a new list, and work with this in the for loop
+    - use comprehensions, such as below:
+
+```python
+>>> odd = lambda x : bool(x % 2)
+>>> numbers = [n for n in range(10)]
+>>> numbers[:] = [n for n in numbers if not odd(n)]  # ahh, the beauty of it all
+>>> numbers
+[0, 2, 4, 6, 8]
+```
+
+## 3) Late Bindings
+
+```python
+>>> def create_multipliers():
+...     return [lambda x : i * x for i in range(5)]
+>>> for multiplier in create_multipliers():
+...     print multiplier(2)
+...
+```
+
+- Expected Output:
+
+```python
+0
+2
+4
+6
+8
+```
+
+- Actual Output:
+
+```python
+8
+8
+8
+8
+8
+```
+
+- Defining Late Binding:
+    - "the values of variables used in closures are looked up at the time the inner function is called."
+    - So in the above code, whenever any of the returned functions are called, the value of i is looked up in the surrounding scope at the time it is called (and by then, the loop has completed, so i has already been assigned its final value of 4).
+
+Solution:
+
+```python
+>>> def create_multipliers():
+...     return [lambda x, i=i : i * x for i in range(5)]
+...
+>>> for multiplier in create_multipliers():
+...     print multiplier(2)
+...
+0
+2
+4
+6
+8
+```
+
+___
