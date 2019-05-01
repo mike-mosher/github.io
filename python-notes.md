@@ -481,6 +481,10 @@ Dict:
   - Keys are unique and immutable
 - unordered
   - if an ordered dict is needed, then "from collections import OrderedDict"
+  - [Changes to this in Python 3.7](https://blog.heroku.com/python37-dataclasses-async-await#order-of-dictionaries-preserved)
+    - In Python 3.6 dictionaries were re-implemented to be ordered dictionaries, and now in Python 3.7 it is officially part of the language specification. This means that dictionary order can now be relied on but also must be accounted for when considering backwards compatibility.
+    - Don't expect usage of `OrderedDict` to go away anytime though; it is still in Python 3.7, and has more advanced operations and different equality comparisons than the standard `dict`.
+    - Also, this update has proven to be one of the more unpopular updates to Python 3.7. It allows for a developer to ambiguously define an ordered `dict` when he/she didn't mean to.
 
 Set:
 
