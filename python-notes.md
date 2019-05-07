@@ -1295,6 +1295,22 @@ Example:
 >>>
 ```
 
+- However, a set will sort the original list 
+- How to remove duplicates from a list and keep the original order:
+
+```python
+>>> from collections import OrderedDict
+>>> nums = [1, 2, 4, 3, 0, 4, 1, 2, 5]
+
+# Python 3.6 and lower
+>>> list(OrderedDict.fromkeys(nums))
+[1, 2, 4, 3, 0, 5]
+
+# Python 3.7 (dicts now retain order)
+>>> list(dict.fromkeys(nums))
+[1, 2, 4, 3, 0, 5]
+```
+
 ## [Tuples](#datatypes-tuples)
 
 - Tuples are identical to lists in all respects, except for the following properties:
@@ -1394,6 +1410,25 @@ print(json.dumps(users, indent=4))
 #         "username": "matthandlersux"
 #     }
 # }
+```
+
+Another way of doing the same thing:
+
+```python
+from collections import defaultdict
+def multi_level_dict():
+    """ Constructor for creating multi-level nested dictionary. """
+
+    return defaultdict(multi_level_dict)
+
+d = multi_level_dict()
+d['a']['a']['y'] = 2
+d['b']['c']['a'] = 5
+d['x']['a'] = 6
+
+>>> d
+{'a': {'a': {'y': 2}}, 'b': {'c': {'a': 5}}, 'x': {'a': 6}}
+
 ```
 
 ## [OrderedDict](#alternate-datatypes-ordereddict)
@@ -3411,3 +3446,41 @@ Solution:
 ```
 
 ___
+
+# [Random Snipets](#random-snippets)
+
+
+## 1) Find the first element, if any, from an iterable that matches a condition:
+
+```python
+first_match = next(i for i in iterable if check_condition(i))
+
+# Example:
+>>> nums = [1, 2, 4, 0, 5]
+>>> next(i for i in nums if i > 3)
+4
+```
+
+- The above implementation throws a StopIteration exception if no match is found. We can fix that by returning a default value. Since we are here, let’s make it a function:
+
+```python
+def first_match(iterable, check_condition, default_value=None):
+    return next((i for i in iterable if check_condition(i)), default_value)
+```
+
+- Example:
+
+```python
+>>> nums = [1, 2, 4, 0, 5]
+>>> first_match(nums, lambda x: x > 3)
+4
+>>> first_match(nums, lambda x: x > 9) # returns nothing
+>>> first_match(nums, lambda x: x > 9, 'no_match')
+'no_match'
+```
+
+## 1) Find the first element, if any, from an iterable that matches a condition:
+
+```python
+
+```
