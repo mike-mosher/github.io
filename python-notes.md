@@ -3524,8 +3524,12 @@ def first_match(iterable, check_condition, default_value=None):
 'no_match'
 ```
 
-## 1) Find the first element, if any, from an iterable that matches a condition:
+---
 
-```python
+## [Debugging](#debugging)
 
-```
+Other Resources:
+
+- [Python Anti-Patterns](https://docs.quantifiedcode.com/python-anti-patterns/maintainability/using_the_global_statement.html)
+
+---
