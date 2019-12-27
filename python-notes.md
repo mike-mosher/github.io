@@ -3526,9 +3526,7 @@ def first_match(iterable, check_condition, default_value=None):
 
 ---
 
-## [Debugging](#debugging)
-
-Other Resources:
+## [Other Resoures](#other-resources)
 
 - [Python Anti-Patterns](https://docs.quantifiedcode.com/python-anti-patterns/maintainability/using_the_global_statement.html)
 
