@@ -50,7 +50,7 @@
 
 [Data Types Cheatsheet:](https://mike-mosher.github.io/python-notes.html#datatypes-cheatsheet)
 
-- Which are mutable and which are immutable? 
+- Which are mutable and which are immutable?
 - Which are ordered and which are unordered?
 
 [Lists:](https://mike-mosher.github.io/python-notes.html#datatypes-lists)
@@ -113,8 +113,8 @@
     - [How to sort a list of strings and have it be case insensitive?](https://mike-mosher.github.io/python-notes.html#lists-sorting)
 - [combining lists and de-duping  (hint: using sets)](https://mike-mosher.github.io/python-notes.html#lists-sorting)
 
-
 [Dicts:](https://mike-mosher.github.io/python-notes.html#datatypes-dict)
+
 - [create](https://mike-mosher.github.io/python-notes.html#dict-create)
 - [accessing items](https://mike-mosher.github.io/python-notes.html#dict-access)
   - [using slice notation](https://mike-mosher.github.io/python-notes.html#dict-access)
@@ -131,14 +131,14 @@
 - [updating items](https://mike-mosher.github.io/python-notes.html#dict-update)
   - [update a single key / value in a dict](https://mike-mosher.github.io/python-notes.html#dict-update)
   - [update a dict with the values of a second dict,](https://mike-mosher.github.io/python-notes.html#dict-update)
-      - [overwriting if the item already exists](https://mike-mosher.github.io/python-notes.html#dict-update)
+    - [overwriting if the item already exists](https://mike-mosher.github.io/python-notes.html#dict-update)
 - [merge two dicts](https://mike-mosher.github.io/python-notes.html#dict-merge)
   - [three ways of doing this (which are the same as updating](https://mike-mosher.github.io/python-notes.html#dict-merge)
   - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
-      - [into another dict (d1), overwriting any values in d1?](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [into another dict (d1), overwriting any values in d1?](https://mike-mosher.github.io/python-notes.html#dict-merge)
   - [How would you take all values in one dict (d2) and merge them](https://mike-mosher.github.io/python-notes.html#dict-merge)
-      - [into another dict (d1), leaving any values in d1 alone](https://mike-mosher.github.io/python-notes.html#dict-merge)
-          - [but updating d1 with any new values?](https://mike-mosher.github.io/python-notes.html#dict-merge)
+    - [into another dict (d1), leaving any values in d1 alone](https://mike-mosher.github.io/python-notes.html#dict-merge)
+      - [but updating d1 with any new values?](https://mike-mosher.github.io/python-notes.html#dict-merge)
   - [copying dicts](https://mike-mosher.github.io/python-notes.html#dict-copy)
   - [Copy a dict from one object into a new object](https://mike-mosher.github.io/python-notes.html#dict-copy)
     - [Do this using a method of the dict class](https://mike-mosher.github.io/python-notes.html#dict-copy)
@@ -163,8 +163,8 @@
 - [loop over dict values](https://mike-mosher.github.io/python-notes.html#dict-loop)
 - [loop over dict key/value pairs](https://mike-mosher.github.io/python-notes.html#dict-loop)
 
-
 [Sets:](https://mike-mosher.github.io/python-notes.html#datatypes-sets)
+
 - [create](https://mike-mosher.github.io/python-notes.html#sets-create)
 - [Create set from a list](https://mike-mosher.github.io/python-notes.html#sets-create)
 - [add single item](https://mike-mosher.github.io/python-notes.html#sets-add)
@@ -174,8 +174,8 @@
   - [discard](https://mike-mosher.github.io/python-notes.html#sets-delete)
   - [difference?](https://mike-mosher.github.io/python-notes.html#sets-delete)
 
-
 [Tuples:](https://mike-mosher.github.io/python-notes.html#datatypes-tuples)
+
 - [create](https://mike-mosher.github.io/python-notes.html#tuple-create)
 - [Get item from Tuple](https://mike-mosher.github.io/python-notes.html#tuple-access)
 - [get tuple in reverse order](https://mike-mosher.github.io/python-notes.html#tuple-access)
@@ -211,7 +211,9 @@
 ---
 
 ## Logic
+
 [Logic](https://mike-mosher.github.io/python-notes.html#logic)
+
 - [if statement](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
 - [multiple if statement with else](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
 - [one-liner if statement](https://mike-mosher.github.io/python-notes.html#logic-if-statements)
@@ -245,6 +247,7 @@
 ---
 
 ## Loops
+
 - [for loop](https://mike-mosher.github.io/python-notes.html#loops)
 - [for else loop](https://mike-mosher.github.io/python-notes.html#loops)
 - [while statement](https://mike-mosher.github.io/python-notes.html#loops)
@@ -254,6 +257,7 @@
 ---
 
 ## Operators
+
 - [Relational:](https://mike-mosher.github.io/python-notes.html#operators-relational)
   - [equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
   - [not equal to](https://mike-mosher.github.io/python-notes.html#operators-relational)
@@ -284,6 +288,7 @@
 ---
 
 ## Comprehensions
+
 - [list](https://mike-mosher.github.io/python-notes.html#comprehensions-list)
 - [set](https://mike-mosher.github.io/python-notes.html#comprehensions-set)
 - [dict](https://mike-mosher.github.io/python-notes.html#comprehensions-dict)
@@ -301,6 +306,7 @@
 ---
 
 ## Files
+
 - [How to read from a file](https://mike-mosher.github.io/python-notes.html#files-reading)
   - [how to open a file and read and mess with each line, one at a time](https://mike-mosher.github.io/python-notes.html#files-reading)
   - [how to open a file and get the entire contents](https://mike-mosher.github.io/python-notes.html#files-reading)
@@ -313,23 +319,26 @@
 ---
 
 ## HTTP Requests
+
 - [How to check if a response is good or not (two ways)](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [How to set query string params in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [How to set headers in a request](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [How to set the body of the POST request](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [how to send a request and disable ssl cert verification](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [How to check the properties of the HTTP request](https://mike-mosher.github.io/python-notes.html#http-requests)
-    - [(method, url, body, headers, etc)](https://mike-mosher.github.io/python-notes.html#http-requests)
+  - [(method, url, body, headers, etc)](https://mike-mosher.github.io/python-notes.html#http-requests)
 - [What data can we see of the response, and how do we access it?](https://mike-mosher.github.io/python-notes.html#http-requests)
 
 ---
 
 ## Regex
+
 - [how to search text with regex statement](https://mike-mosher.github.io/python-notes.html#regex)
 
 ---
 
 ## Json
+
 - [how to write (serialize) data to a file](https://mike-mosher.github.io/python-notes.html#json)
 - [how to write (serialize) data to a string](https://mike-mosher.github.io/python-notes.html#json)
 - [how to convert (deserialize) data from a file into a dict object](https://mike-mosher.github.io/python-notes.html#json)
@@ -342,6 +351,7 @@
 ---
 
 ## Zip
+
 - [what does it do, why use it?](https://mike-mosher.github.io/python-notes.html#zip)
 - [How to zip](https://mike-mosher.github.io/python-notes.html#zip)
 - [how to unzip](https://mike-mosher.github.io/python-notes.html#zip)
@@ -349,21 +359,24 @@
 ---
 
 ## Logging
+
 - [how to use the logging module](https://mike-mosher.github.io/python-notes.html#logging)
 
 ---
 
 ## Random
+
 - [How to emulate `Switch/Case` in Python](https://mike-mosher.github.io/python-notes.html#emulate-switch-case)
 - [How to parse command line arguments with sys module](https://mike-mosher.github.io/python-notes.html#cli)
 
 ## Interesting Problems
-  - sort a dictionary based on the values: `{'a': 24, 'g': 52, 'i': 12, 'k': 33}`
-  - Remove duplicates from list, but keep the same order:  `L1 = [ 'b', 'c', 'd', 'c', 'a', 'a']`
+
+- sort a dictionary based on the values: `{'a': 24, 'g': 52, 'i': 12, 'k': 33}`
+- Remove duplicates from list, but keep the same order:  `L1 = [ 'b', 'c', 'd', 'c', 'a', 'a']`
   
 ## Answers to Interesting Problems
 
-  - `sorted(d.items(), key=lambda x: x[1])`
-  - usually you would do: `list(set(L1))`, however, this doesn't keep the same order of the original list. Need to do: `sorted(set(L1), key=L1.index)`
+- `sorted(d.items(), key=lambda x: x[1])`
+- usually you would do: `list(set(L1))`, however, this doesn't keep the same order of the original list. Need to do: `sorted(set(L1), key=L1.index)`
 
 ---
