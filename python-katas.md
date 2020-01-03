@@ -1,17 +1,19 @@
 # Python Katas
----
-
-## Naming Things:
-
-  - [Camel Case](https://mike-mosher.github.io/python-notes.html#naming-things)
-  - [Pascal Case](https://mike-mosher.github.io/python-notes.html#naming-things)
-  - [Snake Case](https://mike-mosher.github.io/python-notes.html#naming-things)
-  - [What's the recommended way (PEP8)](https://mike-mosher.github.io/python-notes.html#naming-things)
 
 ---
 
-## Line Indentation:
-  - [How to properly indent lines](https://mike-mosher.github.io/python-notes.html#line-indentation)
+## Naming Things
+
+- [Camel Case](https://mike-mosher.github.io/python-notes.html#naming-things)
+- [Pascal Case](https://mike-mosher.github.io/python-notes.html#naming-things)
+- [Snake Case](https://mike-mosher.github.io/python-notes.html#naming-things)
+- [What's the recommended way (PEP8)](https://mike-mosher.github.io/python-notes.html#naming-things)
+
+---
+
+## Line Indentation
+
+- [How to properly indent lines](https://mike-mosher.github.io/python-notes.html#line-indentation)
 
 ## Strings:
 
