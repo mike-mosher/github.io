@@ -8,6 +8,7 @@
 - [Pascal Case](https://mike-mosher.github.io/python-notes.html#naming-things)
 - [Snake Case](https://mike-mosher.github.io/python-notes.html#naming-things)
 - [What's the recommended way (PEP8)](https://mike-mosher.github.io/python-notes.html#naming-things)
+something
 
 ---
 
