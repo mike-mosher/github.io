@@ -2681,6 +2681,23 @@ if response:
     print('Success!')
 ```
 
+Another great way to check the response:
+
+- `response.raise_for_status()` will raise an error if a 4XX or 5XX status code is returned 
+
+```python
+>>> bad_r = requests.get('https://httpbin.org/status/404')
+>>> bad_r.status_code
+404
+
+>>> bad_r.raise_for_status()
+Traceback (most recent call last):
+  File "requests/models.py", line 832, in raise_for_status
+    raise http_error
+requests.exceptions.HTTPError: 404 Client Error
+```
+
+
 Passing Query String Parameters to a request:
 
 ```python
