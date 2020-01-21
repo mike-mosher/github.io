@@ -3548,3 +3548,46 @@ def first_match(iterable, check_condition, default_value=None):
 - [Python Anti-Patterns](https://docs.quantifiedcode.com/python-anti-patterns/maintainability/using_the_global_statement.html)
 
 ---
+
+## [Disable Insecure HTTPS SSL Connection Warnings](#disable-insecure-https-connection-warnings)
+
+- Work in progress.  Need to test this
+- Possible ways:
+
+```python
+
+import warnings
+warnings.simplefilter("ignore", category=DeprecationWarning)
+
+```
+
+- from: https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho
+
+"""
+
+You can disable any Python warnings via the PYTHONWARNINGS environment variable. In this case, you want:
+
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
+To disable using Python code (requests >= 2.16.0):
+
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+For requests < 2.16.0, see original answer below.
+
+Original answer
+
+The reason doing urllib3.disable_warnings() didn't work for you is because it looks like you're using a separate instance of urllib3 vendored inside of requests.
+
+I gather this based on the path here: /usr/lib/python2.6/site-packages/requests/packages/urllib3/connectionpool.py
+
+To disable warnings in requests' vendored urllib3, you'll need to import that specific instance of the module:
+
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+"""
+
+
+---
