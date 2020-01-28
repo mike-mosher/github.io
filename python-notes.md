@@ -3588,5 +3588,3 @@ warnings.simplefilter("ignore", category=DeprecationWarning)
   - Just add env var: `export PYTHONWARNINGS="ignore:Unverified HTTPS request"` and you won't need to import warnings module.  However, this only works on your local machine while the env var exists.  Might be better to fix it in the file.
 
 ---
-
-new
